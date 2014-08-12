@@ -20,7 +20,7 @@ html {
 
 body {
 	background: $white;
-  font: 18px/1.4 $helvetica;
+  font: 18px/1.4 $roboto;
   color: $darkGray;
 }
 
@@ -32,9 +32,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
+  font-family: $robotoslab;
   color: $darkerGray;
-  font-weight: 600;
+  font-weight: 700;
   
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -192,7 +192,7 @@ img {
   margin: 0;
   color: $darkGray;
   cursor: pointer;
-  font-family: $helveticaNeue; 
+  font-family: $roboto; 
   font-weight: 300;
   font-size: 28px;
   letter-spacing: 1px;
@@ -211,7 +211,7 @@ img {
 nav {
   float: right;
   margin-top: 23px; // @TODO: Vertically middle align
-  font-family: $helveticaNeue; 
+  font-family: $roboto; 
   font-size: 18px;
   
   @include mobile {
