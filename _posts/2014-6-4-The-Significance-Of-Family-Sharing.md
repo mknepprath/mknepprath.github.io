@@ -1,7 +1,7 @@
- ---
- layout: post
- title: The Significance of Family Sharing
- ---
+---
+layout: post
+title: The Significance of Family Sharing
+---
 
 [Apple](http://www.apple.com/) announced a new feature during WWDC called [Family Sharing](http://www.apple.com/ios/ios8/family-sharing/) that will “bring harmony to your family’s digital life” by allowing up to six users share apps they buy using the same credit card. This is a genius play, but not all the reasons are obvious.
 
