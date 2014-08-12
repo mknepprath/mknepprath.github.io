@@ -3,12 +3,12 @@ layout: page
 title: About
 ---
 
-Some information about you!
+I am a front-end developer and designer at [Pear Tree Greetings](http://www.peartreegreetings.com/).
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself. 
+I am going to use this blog to share and discuss the latest news in the categories of Social Media, Design and Technology. I will constantly be sharing new apps and services as I discover them.
 
 ### Contact me
 
-[michael@mknepprath.com](mailto:michael@mknepprath.com)
+You can contact me via [my email](michael@mknepprath.com) or send me a message on [Facebook](http://www.facebook.com/mknepprath/) or [Twitter](http://www.facebook.com/mknepprath/).
