@@ -115,12 +115,12 @@
   <script>
   $(document).ready(function() {
     $( ".toggleAlbums" ).click(function() {
-      $( "#user_albums" ).slideDown( "slow" );
+      $( "#user_albums" ).slideDown( "fast", "swing" );
       $( "#user_albums" ).css( "display", "block" );
     });
     $( ".slide_up" ).click(function() {
-      $("#user_albums" ).slideUp( "slow" );
-      $( "user_albums" ).css( "display", "none" );
+      $( "#user_albums" ).slideUp( "fast", "swing" );
+      $( "#user_albums" ).css( "display", "none" );
     });
   });
   </script>
