@@ -28,7 +28,13 @@
   <script>
   $(document).ready(function() {
     $( ".toggleAlbums" ).click(function() {
+      $( "#user_albums" ).css( "display", "block" );
+      $( "#user_albums" ).addClass( "testClass" );
       $( "#user_albums" ).slideDown("slow");
+    });
+    $( ".toggleAlbums" ).click(function() {
+      $( "#user_albums" ).css( "display", "block" );
+      $( "#user_albums" ).addClass( "testClass" );
     });
   });
   </script>
@@ -53,9 +59,11 @@
         </button>
       </section>
     </div>
-    <div id="back_to_album_spfb">
-      <a href="javascript:void(0);" class="toggleAlbums" onclick="document.getElementById('user_albums').style.display = 'block';">CHOOSE ALBUM</a>
-    </div>
+    <section id="back_to_album_spfb">
+      <button class="toggleAlbums" onclick="document.getElementById('user_albums').style.display = 'block';">
+        <span class="content">CHOOSE ALBUM</span>
+      </button>
+    </section>
     <ul id="user_albums">
       <li id="album_li_379678626546637351" class="">
         <a href="###" onclick="facebook_photo(&quot;379678626546637351&quot;)">Lost In The Echo</a>
