@@ -115,9 +115,9 @@
   <script>
   $(document).ready(function() {
     $( ".toggleAlbums" ).click(function() {
+      $( "#user_albums" ).slideDown( "slow" );
       $( "#user_albums" ).css( "display", "block" );
       $( "#user_albums" ).addClass( "testClass" );
-      $( "#user_albums" ).slideDown("slow");
     });
   });
   </script>
