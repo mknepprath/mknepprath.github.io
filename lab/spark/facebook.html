@@ -44,19 +44,6 @@
       height: 70px;
     }
   </style>
-  <script>
-  $(document).ready(function() {
-    $( ".toggleAlbums" ).click(function() {
-      $( "#user_albums" ).css( "display", "block" );
-      $( "#user_albums" ).addClass( "testClass" );
-      $( "#user_albums" ).slideDown("slow");
-    });
-    $( ".toggleAlbums" ).click(function() {
-      $( "#user_albums" ).css( "display", "block" );
-      $( "#user_albums" ).addClass( "testClass" );
-    });
-  });
-  </script>
 </head>
 <body class="spark">
   <div class="fbBar" id="sp_fb_drawer_img" style="display: block; left: 0px;">
@@ -124,5 +111,14 @@
       <nav id="imagePagination" class="user_pag"></nav>
     </div>
   </div>
+  <script>
+  $(document).ready(function() {
+    $( ".toggleAlbums" ).click(function() {
+      $( "#user_albums" ).css( "display", "block" );
+      $( "#user_albums" ).addClass( "testClass" );
+      $( "#user_albums" ).slideDown("slow");
+    });
+  });
+  </script>
 </body>
 </html>
