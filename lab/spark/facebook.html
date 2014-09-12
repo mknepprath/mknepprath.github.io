@@ -208,7 +208,7 @@
       $( ".toggleAlbums" ).removeClass( "albumsOpen" );
     });
   });
-  $(#choose_album).on('click','.albumsOpen',function() {
+  $(document).on('click','.albumsOpen',function() {
     $( ".albumsOpen" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
       $( ".toggleAlbums" ).css( "border-bottom-left-radius","0" );
