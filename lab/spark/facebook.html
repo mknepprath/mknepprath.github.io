@@ -159,13 +159,13 @@
     </div>
   </div>
   <script>
-  $(document).on('click','.albumsClosed',function() {
+  $(document).ready(function() {
     $( ".albumsClosed" ).click(function() {
       $( "#user_albums" ).slideDown( "400", "swing" );
       $( ".toggleAlbums" ).toggleClass( "albumsOpen albumsClosed" );
     });
   });
-  $(document).on('click','.albumsOpen',function() {
+  $(document).ready(function() {
     $( ".albumsOpen" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
       $( ".toggleAlbums" ).toggleClass( "albumsClosed albumsOpen" );
