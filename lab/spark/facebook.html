@@ -160,15 +160,14 @@
   </div>
   <script>
   $(document).ready(function() {
-    $( ".albumsClosed" ).click(function() {
-      $( "#user_albums" ).slideDown( "400", "swing" );
+    $( ".toggleAlbums" ).click(function() {
+      if ($('.toggleAlbums').hasClass( "albumsOpen" )) {
+        $( "#user_albums" ).slideDown( "400", "swing" );
+      }
+      else {
+        $( "#user_albums" ).slideUp( "400", "swing" );
+      }
       $( ".toggleAlbums" ).toggleClass( "albumsOpen albumsClosed" );
-    });
-  });
-  $(document).ready(function() {
-    $( ".albumsOpen" ).click(function() {
-      $( "#user_albums" ).slideUp( "400", "swing" );
-      $( ".toggleAlbums" ).toggleClass( "albumsClosed albumsOpen" );
     });
   });
   </script>
