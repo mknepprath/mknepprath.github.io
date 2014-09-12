@@ -22,6 +22,9 @@
     }
     #sp_fb_drawer_img #choose_album {
       padding-top: 0;
+      /*DROPDOWN OVER*/
+      height: 70px;
+      /*END DROPDOWN OVER*/
     }
     #sp_fb_drawer_img #album_img li {
       width: 19.5%;
@@ -29,11 +32,16 @@
     }
     #user_albums {
       display: none;
-      height: 268px;
+      /*height: 268px;*/
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px;
       overflow-y: scroll;
       overflow-x: hidden;
+      /*DROPDOWN OVER*/
+      height: 310px;
+      position: relative;
+      z-index: 9999;
+      /*END DROPDOWN OVER*/
     }
     .toggleAlbums {
       position: relative;
@@ -200,6 +208,7 @@
       $( ".toggleAlbums" ).removeClass( "albumsOpen" );
     });
   });
+  $(document).on('click','.albumsOpen')
   </script>
 </body>
 </html>
