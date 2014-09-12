@@ -159,23 +159,23 @@
     </div>
   </div>
   <script>
-  $(document).on('click', '.albumsClosed', function() {
+  $(document).ready(function() {
     $( ".albumsClosed" ).click(function() {
       $( "#user_albums" ).slideDown( "400", "swing" );
       $( "#user_albums" ).css( "display", "block" );
       $( ".toggleAlbums" ).css( "border-bottom-left-radius","0" );
       $( ".toggleAlbums" ).css( "border-bottom-right-radius","0" );
-      $( ".toggleAlbums" ).toggleClass( "albumsOpen albumsClosed" );
+      $( ".toggleAlbums" ).addClass( "albumsOpen" );
+      $( ".toggleAlbums" ).removeClass( "albumsClosed" );
     });
     $( ".slide_up" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
       $( ".toggleAlbums" ).css( "border-bottom-left-radius","3px" );
       $( ".toggleAlbums" ).css( "border-bottom-right-radius","3px" );
-      $( ".toggleAlbums" ).toggleClass( "albumsClosed albumsOpen" );
+      $( ".toggleAlbums" ).addClass( "albumsClosed" );
+      $( ".toggleAlbums" ).removeClass( "albumsOpen" );
     });
-  });
-  $(document).on('click', '.albumsOpen', function() {
-    $( ".albumsOpen" ).click(function() {
+    $( ".albumsClosed" ).click(function() {
       alert("close it!");
     });
   });
