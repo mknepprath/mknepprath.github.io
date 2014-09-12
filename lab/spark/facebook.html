@@ -197,6 +197,8 @@
     });
     $( ".slide_up" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
+      $( ".toggleAlbums" ).toggleClass( "albumsClosed" );
+      $( ".toggleAlbums" ).toggleClass( "albumsOpen" );
     });
   });
   </script>
