@@ -188,6 +188,12 @@
       $( "#user_albums" ).slideDown( "400", "swing" );
       $( "#user_albums" ).css( "display", "block" );
       $( ".toggleAlbums" ).addClass( "albumsOpen" );
+      $( ".toggleAlbums" ).removeClass( "toggleAlbums" );
+    });
+    $( ".albumsOpen" ).click(function() {
+      $( "#user_albums" ).slideUp( "400", "swing" );
+      $( ".albumsOpen" ).addClass( "toggleAlbums" );
+      $( ".albumsOpen" ).removeClass( "albumsOpen" );
     });
     $( ".slide_up" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
