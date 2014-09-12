@@ -191,9 +191,9 @@
       $( this ).toggleClass( "albumsClosed" );
     });
     $( ".toggleAlbums" ).click(function() {
+      $( "#user_albums" ).slideUp( "400", "swing" );
       $( this ).toggleClass( "albumsClosed" );
       $( this ).toggleClass( "albumsOpen" );
-      $( "#user_albums" ).slideUp( "400", "swing" );
     });
     $( ".slide_up" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
