@@ -175,8 +175,14 @@
       $( ".toggleAlbums" ).addClass( "albumsClosed" );
       $( ".toggleAlbums" ).removeClass( "albumsOpen" );
     });
-    $( ".albumsClosed" ).click(function() {
-      alert("close it!");
+  });
+  $(document).on('click','.albumsOpen',function() {
+    $( ".albumsOpen" ).click(function() {
+      $( "#user_albums" ).slideUp( "400", "swing" );
+      $( ".toggleAlbums" ).css( "border-bottom-left-radius","0" );
+      $( ".toggleAlbums" ).css( "border-bottom-right-radius","0" );
+      $( ".toggleAlbums" ).addClass( "albumsClosed" );
+      $( ".toggleAlbums" ).removeClass( "albumsOpen" );
     });
   });
   </script>
