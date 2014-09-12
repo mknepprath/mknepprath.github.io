@@ -159,7 +159,7 @@
     </div>
   </div>
   <script>
-  $(document).ready(function() {
+  $(document).on('click','.albumsClosed',function() {
     $( ".albumsClosed" ).click(function() {
       $( "#user_albums" ).slideDown( "400", "swing" );
       $( "#user_albums" ).css( "display", "block" );
