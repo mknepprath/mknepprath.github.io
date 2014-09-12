@@ -198,14 +198,6 @@
       $( ".toggleAlbums" ).toggleClass( "albumsOpen albumsClosed" );
     });
   });
-  $(document).on('click', '.albumsOpen', function() {
-    $( ".albumsOpen" ).click(function() {
-      $( "#user_albums" ).slideUp( "400", "swing" );
-      $( ".toggleAlbums" ).css( "border-bottom-left-radius","3px" );
-      $( ".toggleAlbums" ).css( "border-bottom-right-radius","3px" );
-      $( ".toggleAlbums" ).toggleClass( "albumsOpen albumsClosed" );
-    });
-  });
   </script>
 </body>
 </html>
