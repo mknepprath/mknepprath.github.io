@@ -187,14 +187,13 @@
     $( ".albumsClosed" ).click(function() {
       $( "#user_albums" ).slideDown( "400", "swing" );
       $( "#user_albums" ).css( "display", "block" );
-      $( ".albumsClosed" ).addClass( "albumsOpen" );
-      $( ".albumsClosed" ).removeClass( "albumsClosed" );
+      $( this ).addClass( "albumsOpen" );
+      $( this ).removeClass( "albumsClosed" );
     });
     $( ".albumsOpen" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
-      $( "#user_albums" ).css( "display", "none" );
-      $( ".albumsOpen" ).addClass( "albumsClosed" );
-      $( ".albumsOpen" ).removeClass( "albumsOpen" );
+      $( this ).addClass( "albumsClosed" );
+      $( this ).removeClass( "albumsOpen" );
     });
     $( ".slide_up" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
