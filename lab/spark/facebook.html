@@ -186,6 +186,8 @@
   $(document).ready(function() {
     $( ".albumsOpen" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
+      $( ".toggleAlbums" ).css( "border-bottom-left-radius","3px" );
+      $( ".toggleAlbums" ).css( "border-bottom-right-radius","3px" );
       $( ".toggleAlbums" ).toggleClass( "albumsClosed" );
       $( ".toggleAlbums" ).toggleClass( "albumsOpen" );
     });
@@ -199,6 +201,8 @@
     });
     $( ".slide_up" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
+      $( ".toggleAlbums" ).css( "border-bottom-left-radius","3px" );
+      $( ".toggleAlbums" ).css( "border-bottom-right-radius","3px" );
       $( ".toggleAlbums" ).toggleClass( "albumsClosed" );
       $( ".toggleAlbums" ).toggleClass( "albumsOpen" );
     });
