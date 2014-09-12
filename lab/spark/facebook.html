@@ -162,23 +162,12 @@
   $(document).on('click','.albumsClosed',function() {
     $( ".albumsClosed" ).click(function() {
       $( "#user_albums" ).slideDown( "400", "swing" );
-      $( "#user_albums" ).css( "display", "block" );
-      $( ".toggleAlbums" ).css( "border-bottom-left-radius","0" );
-      $( ".toggleAlbums" ).css( "border-bottom-right-radius","0" );
       $( ".toggleAlbums" ).addClass( "albumsOpen" ).removeClass( "albumsClosed" );
     });
   });
   $(document).on('click','.albumsOpen',function() {
     $( ".albumsOpen" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
-      $( ".toggleAlbums" ).css( "border-bottom-left-radius","3px" );
-      $( ".toggleAlbums" ).css( "border-bottom-right-radius","3px" );
-      $( ".toggleAlbums" ).addClass( "albumsClosed" ).removeClass( "albumsOpen" );
-    });
-    $( ".slide_up" ).click(function() {
-      $( "#user_albums" ).slideUp( "400", "swing" );
-      $( ".toggleAlbums" ).css( "border-bottom-left-radius","3px" );
-      $( ".toggleAlbums" ).css( "border-bottom-right-radius","3px" );
       $( ".toggleAlbums" ).addClass( "albumsClosed" ).removeClass( "albumsOpen" );
     });
   });
