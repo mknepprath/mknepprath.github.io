@@ -28,7 +28,6 @@
       cursor: pointer;
     }
     #user_albums {
-      display: none;
       height: 268px;
       border-bottom-left-radius: 3px;
       border-bottom-right-radius: 3px;
@@ -102,7 +101,7 @@
       </section>
     </div>
     <section id="choose_album">
-      <button class="toggleAlbums albumsClosed">
+      <button class="toggleAlbums albumsClosed albumsOpen">
         <span class="content">CHANGE ALBUM</span>
       </button>
       <ul id="user_albums">
@@ -184,6 +183,8 @@
   </div>
   <script>
   $(document).ready(function() {
+    $( "#user_albums" ).css( "display", "none" );
+    $( ".toggleAlbums" ).removeClass(" albumsOpen" );
     $( ".albumsClosed" ).click(function() {
       $( "#user_albums" ).slideDown( "400", "swing" );
       $( "#user_albums" ).css( "display", "block" );
