@@ -192,6 +192,7 @@
     });
     $( ".albumsOpen" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
+      $( "#user_albums" ).css( "display", "none" );
       $( ".albumsOpen" ).addClass( "albumsClosed" );
       $( ".albumsOpen" ).removeClass( "albumsOpen" );
     });
