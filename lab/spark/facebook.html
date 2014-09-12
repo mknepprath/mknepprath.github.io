@@ -191,13 +191,15 @@
       $( ".toggleAlbums" ).css( "border-bottom-right-radius","0" );
       $( ".toggleAlbums" ).toggleClass( "albumsOpen albumsClosed" );
     });
-    $( ".albumsOpen" ).click(function() {
+    $( ".slide_up" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
       $( ".toggleAlbums" ).css( "border-bottom-left-radius","3px" );
       $( ".toggleAlbums" ).css( "border-bottom-right-radius","3px" );
       $( ".toggleAlbums" ).toggleClass( "albumsOpen albumsClosed" );
     });
-    $( ".slide_up" ).click(function() {
+  });
+  $(document).on('click', ".albumOpen", function() {
+    $( ".albumsOpen" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
       $( ".toggleAlbums" ).css( "border-bottom-left-radius","3px" );
       $( ".toggleAlbums" ).css( "border-bottom-right-radius","3px" );
