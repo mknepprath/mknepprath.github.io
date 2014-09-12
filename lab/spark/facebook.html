@@ -162,13 +162,13 @@
   $(document).on('click','.albumsClosed',function() {
     $( ".albumsClosed" ).click(function() {
       $( "#user_albums" ).slideDown( "400", "swing" );
-      $( ".toggleAlbums" ).addClass( "albumsOpen" ).removeClass( "albumsClosed" );
+      $( ".toggleAlbums" ).toggleClass( "albumsOpen albumsClosed" );
     });
   });
   $(document).on('click','.albumsOpen',function() {
     $( ".albumsOpen" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
-      $( ".toggleAlbums" ).addClass( "albumsClosed" ).removeClass( "albumsOpen" );
+      $( ".toggleAlbums" ).toggleClass( "albumsClosed albumsOpen" );
     });
   });
   </script>
