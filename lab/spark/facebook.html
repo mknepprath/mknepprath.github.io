@@ -102,7 +102,7 @@
       </section>
     </div>
     <section id="choose_album">
-      <button class="toggleAlbums">
+      <button class="toggleAlbums albumsClosed">
         <span class="content">CHANGE ALBUM</span>
       </button>
       <ul id="user_albums">
@@ -184,15 +184,15 @@
   </div>
   <script>
   $(document).ready(function() {
-    $( ".toggleAlbums" ).click(function() {
+    $( ".albumsClosed" ).click(function() {
       $( "#user_albums" ).slideDown( "400", "swing" );
       $( "#user_albums" ).css( "display", "block" );
-      $( ".toggleAlbums" ).addClass( "albumsOpen" );
-      $( ".toggleAlbums" ).removeClass( "toggleAlbums" );
+      $( ".albumsClosed" ).addClass( "albumsOpen" );
+      $( ".albumsClosed" ).removeClass( "albumsClosed" );
     });
     $( ".albumsOpen" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
-      $( ".albumsOpen" ).addClass( "toggleAlbums" );
+      $( ".albumsOpen" ).addClass( "albumsClosed" );
       $( ".albumsOpen" ).removeClass( "albumsOpen" );
     });
     $( ".slide_up" ).click(function() {
