@@ -159,7 +159,7 @@
     </div>
   </div>
   <script>
-  $(document).on('click','.albumsClosed',function() {
+  $(document).ready(function() {
     $( ".albumsClosed" ).click(function() {
       $( "#user_albums" ).slideDown( "400", "swing" );
       $( "#user_albums" ).css( "display", "block" );
@@ -168,7 +168,7 @@
       $( ".toggleAlbums" ).addClass( "albumsOpen" ).removeClass( "albumsClosed" );
     });
   });
-  $(document).on('click','.albumsOpen',function() {
+  $(document).ready(function() {
     $( ".albumsOpen" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
       $( ".toggleAlbums" ).css( "border-bottom-left-radius","0" );
