@@ -184,16 +184,16 @@
   </div>
   <script>
   $(document).ready(function() {
-    $( ".toggleAlbums" ).click(function() {
+    $( ".albumsClosed" ).click(function() {
       $( "#user_albums" ).slideDown( "400", "swing" );
       $( "#user_albums" ).css( "display", "block" );
-      $( this ).addClass( "albumsOpen" );
-      $( this ).removeClass( "albumsClosed" );
+      $( this ).toggleClass( "albumsOpen" );
+      $( this ).toggleClass( "albumsClosed" );
     });
-    $( ".toggleAlbums" ).click(function() {
+    $( ".albumsOpen" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
-      $( this ).addClass( "albumsClosed" );
-      $( this ).removeClass( "albumsOpen" );
+      $( this ).toggleClass( "albumsClosed" );
+      $( this ).toggleClass( "albumsOpen" );
     });
     $( ".slide_up" ).click(function() {
       $( "#user_albums" ).slideUp( "400", "swing" );
