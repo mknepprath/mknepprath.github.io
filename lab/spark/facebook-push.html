@@ -41,6 +41,15 @@
     #sp_fb_drawer_img #user_albums .selected:hover {
       background: none repeat scroll 0 0 #D4D6F3;
     }
+    #sp_fb_drawer_img #user_albums::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+    }
+    #sp_fb_drawer_img #user_albums::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0,0,0,.5);
+      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+    }
     .toggleAlbums {
       position: relative;
       border: none;
@@ -84,15 +93,6 @@
     #sp_fb_drawer_img .current_album_title {
       margin-bottom: 6px;
       font-size: 135%;
-    }
-    ::-webkit-scrollbar {
-      -webkit-appearance: none;
-      width: 7px;
-    }
-    ::-webkit-scrollbar-thumb {
-      border-radius: 4px;
-      background-color: rgba(0,0,0,.5);
-      -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
     }
   </style>
 </head>
