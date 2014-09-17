@@ -3,128 +3,174 @@
 <head>
   <link rel="stylesheet" type="text/css" href="http://www.peartreegreetings.com/assets/ptg/css/gracelandv2r1.css">
   <link rel="stylesheet" href="http://use.typekit.net/c/7a4851/p22-underground-1:n3:n6,proxima-nova-soft-1:n5:n7.P22:N:2,P25:N:2,S2x:N:2,S2z:N:2/d?3bb2a6e53c9684ffdc9a99ff195b2a62c3af7c8cd154b3fad4bafd06b6ebae7938240fad13874e8c7f10f5689586f8baea7cdc0e54c233c2720e186cf78b265aa543fc34d6d7ace7248e85a581172405d3995c44fa33c6c003eed63dc680d10dd901e00da5d2ac81f852b844815af5090f28ea0e2199f5d532adfb50b6765b158c87810d11c3e186024b85f2bc7d6908020e1b01fcb4cbbc3812b794ba267d6d2a24de83b44610493a91cb4bf367ba89d9ae0540e7f01fb47f677d9b5befb5dcb7a3154c6b3c706b41ffe755aea9b84480cb92d35095ef597bfbb700d0325df9bcb67f4a46382ee16f43958353147d684251ed73fb263fc0a2c3f63336b8434ad67409afc8b4525000c6a05958972701ba6bf45eb669658bdf2fa33832648b01b621e9b6ec6f6a87d19b4d330f1944babbb62e4986ec944c2f721365e2e1e9860446173d39260e31a63c004147ea2274a4143bd7ba922d07763b8e65726dbabaa8b390d3dbb22f3a0d913f58519541883037e7a9b9e696174504a831d5c973e7297e4f03ac9a73ef50">
- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
- <script type="text/javascript"> 
-$(document).ready(function() {
-    var showChar = 131;
-    var ellipsestext = "...";
-    var moretext = "Read more";
-    var lesstext = "Read less";
-    $('.more').each(function() {
-        var content = $(this).html();
- 
-        if(content.length > showChar) {
- 
-            var c = content.substr(0, showChar);
-            var h = content.substr(showChar-1, content.length - showChar);
- 
-            var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
- 
-            $(this).html(html);
-        }
- 
-    });
- 
-    $(".morelink").click(function(){
-        if($(this).hasClass("less")) {
-            $(this).removeClass("less");
-            $(this).html(moretext);
-        } else {
-            $(this).addClass("less");
-            $(this).html(lesstext);
-        }
-        $(this).parent().prev().toggle();
-        $(this).prev().toggle();
-        return false;
-    });
-});
-var opts = ["24","48","72","96","120","144","168","192","216","240","264","288","312","336","360","384","408","432","456","480","504","528","552","576","600"];
-
-var each = ["3.69","3.50","3.29","3.08","3.08","2.99","2.99","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94"];
-
-var total = ["88.52","167.77","236.84","296.05","370.06","430.60","502.37","564.43","634.98","705.53","776.08","846.63","917.18","987.73","1058.28","1128.83","1199.38","1269.93","1340.48","1411.03","1481.58","1552.13","1622.68","1693.23","1763.78"];
-</script> 
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <meta name="viewport" content="width=device-width">
 <!-- PDP SPECIFIC STYLES -->
 <style>
-#pdp-main-img {
-		border: 2px solid #333; 
+  #pdp-main-img {
+		border: 2px solid #333;
 		border-radius: 3px;
 		background-color: #fff;
-		max-height: 600px;min-height: 600px;
-		max-width: 600px;min-width: 600px;
+		max-height: 600px;
+    min-height: 600px;
+		max-width: 600px;
+    min-width: 600px;
 		margin: 30px 80px 0 -70px;
-		position:relative;
-		}
+		position: relative;
+	}
+  
 /* HOVER BOX STYLES */
-.hoverbox{cursor:default;list-style:none; position:relative; top: 500px;}.hoverbox a{cursor:default}.hoverbox a .preview{display:none}.hoverbox a:hover .preview{-webkit-animation:showPrev 500ms ease-in-out both;-animation:showPrev 500ms ease-in-out both;display:block;position:absolute;top:-33px;left:-45px;z-index:1}@-webkit-keyframes showPrev{from{opacity:0}to{opacity:1}}@-moz-keyframes{from{opacity:0}to{opacity:1}}.hoverbox img{background:#fff;border-color:#aaa #ccc #ddd #bbb;border-style:solid;border-width:1px;color:inherit;padding:2px;vertical-align:top;width:100px;height:75px}.hoverbox li{background:0 0;color:inherit;display:inline;float:left;padding:5px;position:relative}.hoverbox .preview{border-color:#000;width:200px;height:150px}	
-/* END HOVERBOX STYLES */	
-.rCol h1 {color: #333;text-align: left;text-transform: none;}		
-.rCol {
-/* float: right; */
-width: 450px;
-text-align: left;
-padding: 10px 0;
-position: relative;
-top: -520px;
-left: -80px;
-}
-.itemNumber{font-style: italic; text-align:left;}
-.morecontent span {
+  .hoverbox {
+    cursor: default;
+    list-style: none;
+    position: relative;
+    top: 500px;
+  }
+  .hoverbox a {
+    cursor:default
+  }
+  .hoverbox a .preview {
+    display: none
+  }
+  .hoverbox a:hover .preview {
+    -webkit-animation: showPrev 500ms ease-in-out both;
+    -animation: showPrev 500ms ease-in-out both;
+    display: block;
+    position: absolute;
+    top: -33px;
+    left: -45px;
+    z-index: 1;
+  }
+  @-webkit-keyframes showPrev{from{opacity:0}to{opacity:1}}
+  @-moz-keyframes{from{opacity:0}to{opacity:1}}
+  .hoverbox img {
+    background: #fff;
+    border-color: #aaa #ccc #ddd #bbb;
+    border-style: solid;
+    border-width: 1px;
+    color: inherit;
+    padding: 2px;
+    vertical-align: top;
+    width: 100px;
+    height: 75px;
+  }
+  .hoverbox li {
+    background:0 0;
+    color: inherit;
+    display: inline;
+    float:left;
+    padding: 5px;
+    position: relative;
+  }
+  .hoverbox .preview {
+    border-color:#000;
+    width:200px;
+    height:150px;
+  }
+
+/* END HOVERBOX STYLES */
+  .rCol h1 {
+    color: #333;
+    text-align: left;
+    text-transform: none;
+  }
+  .rCol {
+    width: 450px;
+    text-align: left;
+    padding: 10px 0;
+    position: relative;
+    top: -520px;
+    left: -80px;
+  }
+  .itemNumber{
+    font-style: italic;
+    text-align:left;
+  }
+  .morecontent span {
     display: none;
-}
-.miniProdDescription p {
+  }
+  .miniProdDescription p {
     width: 400px;
     margin: 10px;
-}
-.plus, .minus{margin: 0px; padding: 0px;}
-table {vertical-align: middle;}
-td, th {height: 40px;vertical-align: middle;margin-bottom: 20px;}
-#qty{position: relative; top:-10px;}
-.inactive {background-color: #fff; color: #644c3b;}
-.includesArea,.includesArea p {padding: 0px;}
-.hero-full {height: 750px;}
-/* PRODUCT ATTRIBUTES SECTION */
- #prodAttributes {
-	 width: 1090px;
-	 margin: 0 auto;
-	 text-align: left;
-	 
-    display: table;
-    }
+  }
+  .plus, .minus {
+    margin: 0px;
+    padding: 0px;
+  }
+  table {
+    vertical-align: middle;
+  }
+  td, th {
+    height: 40px;
+    vertical-align: middle;
+    margin-bottom: 20px;
+  }
+  #qty{
+    position: relative;
+    top:-10px;
+  }
+  .inactive {
+    background-color: #fff;
+    color: #644c3b;
+  }
+  .includesArea,.includesArea p {
+    padding: 0px;
+  }
+  .hero-full {
+    height: 750px;
+  }
 
+/* PRODUCT ATTRIBUTES SECTION */
+  #prodAttributes {
+	  width: 1090px;
+	  margin: 0 auto;
+	  text-align: left;
+    display: table;
+  }
   .row  {
     display: table-row;
-	height: 300px;
-    }
-
+	  height: 300px;
+  }
   .left, .right, .middle {
     display: table-cell;
-	width: 300px;
-	/*border: 1px solid #333;*/
-	padding:10px;
-    }
-
-.left header, .right header, .middle header, .content-block header, .coord header, .special header {font-size: 2em;position:relative; bottom:0;line-height: 1.5;}
+	  width: 300px;
+	  padding:10px;
+  }
+  .left header, .right header, .middle header, .content-block header, .coord header, .special header {
+    font-size: 2em;
+    position:relative;
+    bottom:0;
+    line-height: 1.5;
+  }
 
 /* COORDINATING PRODUCTS */
-.coord {width: 100%; padding-top: 40px; padding-bottom: 40px;}
-.coord-prod
-{
-float: left;
-width: 240px;
-border: 10px solid transparent;
-}
-.full-width {max-width: 1090px;}
-#roots .no-divided {
-    overflow: hidden;
-	padding-top: 40px;
+  .coord {
+    width: 100%;
+    padding-top: 40px;
     padding-bottom: 40px;
-}
-
-.slaw {background-color: #eee;}
-.content-block p {line-height: 1.5;}
-.special {text-align: center;}
+  }
+  .coord-prod {
+    float: left;
+    width: 240px;
+    border: 10px solid transparent;
+  }
+  .full-width {
+    max-width: 1090px;
+  }
+  #roots .no-divided {
+    overflow: hidden;
+  	padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .slaw {
+    background-color: #eee;
+  }
+  .content-block p {
+    line-height: 1.5;
+  }
+  .special {
+    text-align: center;
+  }
 </style>
 <!-- END PDP SPECIFIC STYLES -->
 
@@ -482,9 +528,9 @@ border: 10px solid transparent;
 				<li><div id="category_subtext"><a href="/Baby-Announcements/Birth-Announcements/index.cat">Birth Announcements</a></div></li>
 				<li><a href="javascript:void(0)">Birth Announcements -- My Baby Girl Ribbon Booklet</a></li>
 		    </ul>
-		    
+
 		    <div class="save_item_success_OnPopup"></div>
-			
+
 			<div class="favoritesBtn">
             <ul class="addTo" style="background:url('not specified');">
 			        <li><a id="addToFavoritesNoLoginHrefId" href="javascript:void(0)" onclick="loginPrompt('Please log in or create an account to access My Favorites page.', 'addToFavoritesNoLoginHrefId','');addFavoritesCookies();">Add To Favorites</a></li>
@@ -522,14 +568,14 @@ border: 10px solid transparent;
 </ul>
 </div>
 
-        
+
        <div class="rCol">
        <h1>My Baby Girl Ribbon Booklet</h1>
        <p class="itemNumber">Item Number PTG33962G2</p>
        <div class="miniProdDescription more">A white ribbon is threaded through these unique birth announcements filled with photos of your precious new baby girl, then folded up and tied with a bow for friends and family to open. The front panel features one vertical photo, with your choice of three welcoming messages: 'Our New Arrival,' 'Hello World,' or 'Say Hello To....' You can change the color of the message and add her name below it to make sure it stands out on your photo. You can also change the color of the binding edge. Inside, the first two panels hold your baby girl's full name, and another full photo. When these two panels are opened, four photos form a collage in the center, with all the birth details on one side and room for a personal message, story, quote or blessing on the right. Your baby girl's initials are featured in a color block in the center. All the text inside is editable and all the solid colors can be changed. These unique birth announcements are sure to become a keepsake for close friends and family.</div>
         <a href="#" class="btn_std shadow">girl</a> <a href="#" class="btn_std shadow inactive">boy</a><br /><br />
         <!-- GET IT BY DATE -->
-       
+
 <p class="orderBy">Get it by <span class="deliveryDate"></span>, via economy shipping.</p>
 <br />
 <style>
@@ -550,7 +596,7 @@ th {color: #999; border-bottom: 1px solid #dbdcde;}
 </table>
 <br/><br/>
 <div class="includesArea">
-							<!--  
+							<!--
 								<p class="includedTitle">What's Included?</p>
 								<ul>
 									<li>bullet #1</li>
@@ -561,7 +607,7 @@ th {color: #999; border-bottom: 1px solid #dbdcde;}
 								-->
 								<p>Includes: 5 1/2" x 4 1/4" folded cards featuring your personalization, 21" White Ribbons, Bright White Envelopes</p><!--/includesArea--></div><br/>
         <button class="btn_std shadow">personalize ></button>
-       </div> 
+       </div>
       </div>
     </div>
     <!-- END EDITABLE BLOCK 1 "hero" -->
@@ -607,19 +653,19 @@ th {color: #999; border-bottom: 1px solid #dbdcde;}
       <div class="full-width no-divided three-seeds"><header>Coordinating Products</header>
 <div class="coord-prod">
 <img src="images/coord.png" width="240" height="202" alt=""/><br>
-Caption 
+Caption
 </div>
 <div class="coord-prod">
 <img src="images/coord.png" width="240" height="202" alt=""/><br>
-Caption 
+Caption
 </div>
 <div class="coord-prod">
 <img src="images/coord.png" width="240" height="202" alt=""/><br>
-Caption 
+Caption
 </div>
 <div class="coord-prod">
 <img src="images/coord.png" width="240" height="202" alt=""/><br>
-Caption 
+Caption
 </div>
       </div>
       <!-- END EDITABLE BLOCK 2 "radicle" -->
@@ -628,22 +674,22 @@ Caption
     <div class="full-width divided link-lists">
       <!-- EDITABLE BLOCK 3 "content-block" -->
 <header>See more unique designs like this</header>
-<p> 
-				<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000016&amp;ajaxCall=false&amp;refName=Photo Book" title="Photo Book">Photo Book</a>, 
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000007&amp;ajaxCall=false&amp;refName=Uniquely Folded" title="Uniquely Folded">Uniquely Folded</a>, 
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000005&amp;ajaxCall=false&amp;refName=Ribbons" title="Ribbons">Ribbons</a>, 
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000013&amp;ajaxCall=false&amp;refName=Collage" title="Collage">Collage</a>, 
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000128&amp;ajaxCall=false&amp;refName=Collage (4+)" title="Collage (4+)">Collage (4+)</a>, 
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000028&amp;ajaxCall=false&amp;refName=You Pick Color" title="You Pick Color">You Pick Color</a>, 
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000001&amp;ajaxCall=false&amp;refName=Folded" title="Folded">Folded</a>, 
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000063&amp;ajaxCall=false&amp;refName=4 1/4 x 5 1/2" title="4 1/4 x 5 1/2">4 1/4 x 5 1/2</a>, 
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=170000010&amp;ajaxCall=false&amp;refName=Vertical" title="Vertical">Vertical</a>, 
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=170000003&amp;ajaxCall=false&amp;refName=Horizontal" title="Horizontal">Horizontal</a>, 
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000034&amp;ajaxCall=false&amp;refName=Portrait" title="Portrait">Portrait</a>, 
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=170000005&amp;ajaxCall=false&amp;refName=Golden Pears" title="Golden Pears">Golden Pears</a>, 
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=170000096&amp;ajaxCall=false&amp;refName=$$$" title="$$$">$$$</a>, 
+<p>
+				<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000016&amp;ajaxCall=false&amp;refName=Photo Book" title="Photo Book">Photo Book</a>,
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000007&amp;ajaxCall=false&amp;refName=Uniquely Folded" title="Uniquely Folded">Uniquely Folded</a>,
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000005&amp;ajaxCall=false&amp;refName=Ribbons" title="Ribbons">Ribbons</a>,
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000013&amp;ajaxCall=false&amp;refName=Collage" title="Collage">Collage</a>,
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000128&amp;ajaxCall=false&amp;refName=Collage (4+)" title="Collage (4+)">Collage (4+)</a>,
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000028&amp;ajaxCall=false&amp;refName=You Pick Color" title="You Pick Color">You Pick Color</a>,
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000001&amp;ajaxCall=false&amp;refName=Folded" title="Folded">Folded</a>,
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000063&amp;ajaxCall=false&amp;refName=4 1/4 x 5 1/2" title="4 1/4 x 5 1/2">4 1/4 x 5 1/2</a>,
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=170000010&amp;ajaxCall=false&amp;refName=Vertical" title="Vertical">Vertical</a>,
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=170000003&amp;ajaxCall=false&amp;refName=Horizontal" title="Horizontal">Horizontal</a>,
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000034&amp;ajaxCall=false&amp;refName=Portrait" title="Portrait">Portrait</a>,
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=170000005&amp;ajaxCall=false&amp;refName=Golden Pears" title="Golden Pears">Golden Pears</a>,
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=170000096&amp;ajaxCall=false&amp;refName=$$$" title="$$$">$$$</a>,
 						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000029&amp;ajaxCall=false&amp;refName=Recycled" title="Recycled">Recycled</a> and
-						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000030&amp;ajaxCall=false&amp;refName=Matte Card Stock" title="Matte Card Stock">Matte Card Stock</a>. 
+						<a href="catalog/category.jsp?categoryId=382&amp;parentCategoryId=381&amp;refIds=330000030&amp;ajaxCall=false&amp;refName=Matte Card Stock" title="Matte Card Stock">Matte Card Stock</a>.
 						</p>
       <!-- END EDITABLE 3 BLOCK "content-block" -->
       </div>
@@ -690,8 +736,8 @@ Caption
       </div>
       <!-- END EDITABLE BLOCK 5 "content-block" -->
     </div>
-    
-    
+
+
     <div class="content-block">
       <!-- EDITABLE BLOCK 8 "content-block" -->
       <div class="tiles">
@@ -776,12 +822,51 @@ $('.minus').click(function() {
 	if(current !=0){
     $("#qty").text(opts[current - 1]);
     $("#each").text("$"+each[current - 1]+" each");
-    $("#total").text("$"+total[current - 1]);	
+    $("#total").text("$"+total[current - 1]);
 	current=current-1;
 	}
 });
 });
 </script>
- 
+<script type="text/javascript">
+$(document).ready(function() {
+   var showChar = 131;
+   var ellipsestext = "...";
+   var moretext = "Read more";
+   var lesstext = "Read less";
+   $('.more').each(function() {
+       var content = $(this).html();
+
+       if(content.length > showChar) {
+
+           var c = content.substr(0, showChar);
+           var h = content.substr(showChar-1, content.length - showChar);
+
+           var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+           $(this).html(html);
+       }
+
+   });
+
+   $(".morelink").click(function(){
+       if($(this).hasClass("less")) {
+           $(this).removeClass("less");
+           $(this).html(moretext);
+       } else {
+           $(this).addClass("less");
+           $(this).html(lesstext);
+       }
+       $(this).parent().prev().toggle();
+       $(this).prev().toggle();
+       return false;
+   });
+});
+var opts = ["24","48","72","96","120","144","168","192","216","240","264","288","312","336","360","384","408","432","456","480","504","528","552","576","600"];
+
+var each = ["3.69","3.50","3.29","3.08","3.08","2.99","2.99","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94"];
+
+var total = ["88.52","167.77","236.84","296.05","370.06","430.60","502.37","564.43","634.98","705.53","776.08","846.63","917.18","987.73","1058.28","1128.83","1199.38","1269.93","1340.48","1411.03","1481.58","1552.13","1622.68","1693.23","1763.78"];
+</script>
 </body>
 </html>
