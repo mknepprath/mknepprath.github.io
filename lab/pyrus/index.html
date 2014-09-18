@@ -19,7 +19,7 @@
     <div class="full-width">
       <div class="bosc-left">
         <!-- EDITABLE BLOCK 0 "bosc-left" -->
-        <span class="bosc-left-wrap"><h1 class="bot-bosc">Photo Cards, Announcements, and Invitations</h1><span class="bot-friend"> | </span><a href="/content.jsp?pageName=free-shipping"><span style="font-weight: 600;">FREE SHIPPING</span> <span class="shipping-full">ON ORDERS OVER $100</span><span class="shipping-mobile">[more details]</span></a></span>
+        <span class="bosc-left-wrap"><h1 class="bot-bosc">Photo Cards, Announcements, and Invitations</h1><span class="bot-friend"> | </span><a href="/content.jsp?pageName=free-shipping" class="free-shipping-content"><span style="font-weight: 600;">FREE SHIPPING</span> <span class="shipping-full">ON ORDERS OVER $100</span><span class="shipping-mobile">[more details]</span><div class="bosc-tooltip">or $8 flat rate anytime.</div></a></span>
         <!-- END EDITABLE BLOCK 0 "bosc-left" -->
       </div>
       <div class="bosc-right">
@@ -573,5 +573,15 @@
       <!-- END EDITABLE BLOCK 11 "content-block" -->
     </div>
 </div>
+<script>
+  $(".free-shipping-content").bind("mouseenter", function(event) {
+      $("div.bosc-tooltip").css({
+          top: 18 + "px",
+          left: 40 + "px"
+      }).show();
+  }).bind("mouseleave", function() {
+      $("div.bosc-tooltip").hide();
+  });
+</script>
 </body>
 </html>
