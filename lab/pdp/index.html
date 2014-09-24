@@ -175,51 +175,6 @@
   .btn_personalize {
     margin: 10px 0;
   }
-  .plus, .minus {
-    margin: 0px;
-    padding: 0px;
-  }
-  .minus {
-    width: 50px;
-    height: 38px;
-    -webkit-border-radius: 6px 0 0 6px;
-    border-radius: 6px 0 0 6px;
-    background: url("//cdn.shopify.com/s/files/1/0245/8513/t/7/assets/minus.svg?4812") center center no-repeat;
-    float: left;
-    font-size: 0;
-    box-sizing: border-box;
-    line-height: 0;
-    border: solid 2px #a49e93;
-    border-right: 0;
-  }
-  .plus {
-    -webkit-border-radius: 0 6px 6px 0;
-    border-radius: 0 6px 6px 0;
-    background: url("//cdn.shopify.com/s/files/1/0245/8513/t/7/assets/plus.svg?4812") center center no-repeat;
-    width: 52px;
-    float: left;
-    font-size: 0;
-    line-height: 0;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    border: solid 2px #a49e93;
-    background-color: transparent;
-    color: transparent;
-    height: 38px;
-  }
-  table {
-    vertical-align: middle;
-  }
-  td, th {
-    height: 40px;
-    vertical-align: middle;
-    margin-bottom: 20px;
-  }
-  #qty{
-    position: relative;
-    top:-10px;
-  }
   .inactive {
     background-color: #fff;
     color: #644c3b;
@@ -736,7 +691,7 @@
       <div class="product-attribute">
         <img src="images/featuresFPO.png" width="121" height="121" alt=""/>
         <h2>Heavy 100 LB Matte Cardstock</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin diam augue, feugiat ut dui id, imperdiet fermentum orci. <a href="#">Read more</a></p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin diam augue, feugiat ut dui id. <a href="#">Read more</a></p>
       </div>
       <div class="product-attribute">
         <img src="images/featuresFPO.png" width="121" height="121" alt=""/>
@@ -936,32 +891,6 @@
     <!-- END EDITABLE BLOCK 11 "content-block" -->
   </div>
 </div>
-<script>
-
-var current = 0;
-var maximum = parseInt(opts.length-2);
-$( document ).ready(function() {
-$('.plus').click(function() {
-    var sp = parseFloat(current);
-  if(current <=maximum){
-    $("#qty").text(opts[current + 1]);
-    $("#each").text("$"+each[current + 1]+" each");
-    $("#total").text("$"+total[current + 1]);
-  current=current+1;
-  }
-});
-
-$('.minus').click(function() {
-  var sp = parseFloat(current);
-  if(current !=0){
-    $("#qty").text(opts[current - 1]);
-    $("#each").text("$"+each[current - 1]+" each");
-    $("#total").text("$"+total[current - 1]);
-  current=current-1;
-  }
-});
-});
-</script>
 <script type="text/javascript">
 $(document).ready(function() {
    var showChar = 131;
