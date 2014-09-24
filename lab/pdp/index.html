@@ -5,6 +5,46 @@
   <link rel="stylesheet" type="text/css" href="http://www.peartreegreetings.com/assets/ptg/css/gracelandv2r1.css">
   <link rel="stylesheet" href="http://use.typekit.net/c/7a4851/p22-underground-1:n3:n6,proxima-nova-soft-1:n5:n7.P22:N:2,P25:N:2,S2x:N:2,S2z:N:2/d?3bb2a6e53c9684ffdc9a99ff195b2a62c3af7c8cd154b3fad4bafd06b6ebae7938240fad13874e8c7f10f5689586f8baea7cdc0e54c233c2720e186cf78b265aa543fc34d6d7ace7248e85a581172405d3995c44fa33c6c003eed63dc680d10dd901e00da5d2ac81f852b844815af5090f28ea0e2199f5d532adfb50b6765b158c87810d11c3e186024b85f2bc7d6908020e1b01fcb4cbbc3812b794ba267d6d2a24de83b44610493a91cb4bf367ba89d9ae0540e7f01fb47f677d9b5befb5dcb7a3154c6b3c706b41ffe755aea9b84480cb92d35095ef597bfbb700d0325df9bcb67f4a46382ee16f43958353147d684251ed73fb263fc0a2c3f63336b8434ad67409afc8b4525000c6a05958972701ba6bf45eb669658bdf2fa33832648b01b621e9b6ec6f6a87d19b4d330f1944babbb62e4986ec944c2f721365e2e1e9860446173d39260e31a63c004147ea2274a4143bd7ba922d07763b8e65726dbabaa8b390d3dbb22f3a0d913f58519541883037e7a9b9e696174504a831d5c973e7297e4f03ac9a73ef50">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script type="text/javascript">
+ $(document).ready(function() {
+     var showChar = 131;
+     var ellipsestext = "...";
+     var moretext = "Read more";
+     var lesstext = "Read less";
+     $('.more').each(function() {
+         var content = $(this).html();
+
+         if(content.length > showChar) {
+
+             var c = content.substr(0, showChar);
+             var h = content.substr(showChar-1, content.length - showChar);
+
+             var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+
+             $(this).html(html);
+         }
+
+     });
+
+     $(".morelink").click(function(){
+         if($(this).hasClass("less")) {
+             $(this).removeClass("less");
+             $(this).html(moretext);
+         } else {
+             $(this).addClass("less");
+             $(this).html(lesstext);
+         }
+         $(this).parent().prev().toggle();
+         $(this).prev().toggle();
+         return false;
+     });
+ });
+ var opts = ["24","48","72","96","120","144","168","192","216","240","264","288","312","336","360","384","408","432","456","480","504","528","552","576","600"];
+
+ var each = ["3.69","3.50","3.29","3.08","3.08","2.99","2.99","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94"];
+
+ var total = ["88.52","167.77","236.84","296.05","370.06","430.60","502.37","564.43","634.98","705.53","776.08","846.63","917.18","987.73","1058.28","1128.83","1199.38","1269.93","1340.48","1411.03","1481.58","1552.13","1622.68","1693.23","1763.78"];
+ </script> 
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="/images/lab-favicon.ico">
   <link rel="apple-touch-icon" href="/images/lab-apple-touch-icon.png">
@@ -135,6 +175,7 @@
   .itemNumber{
     font-style: italic;
     text-align:left;
+    font-size: 0.8125rem;
   }
   .morecontent span {
     display: none;
@@ -890,64 +931,24 @@ var maximum = parseInt(opts.length-2);
 $( document ).ready(function() {
 $('.plus').click(function() {
     var sp = parseFloat(current);
-	if(current <=maximum){
+  if(current <=maximum){
     $("#qty").text(opts[current + 1]);
     $("#each").text("$"+each[current + 1]+" each");
     $("#total").text("$"+total[current + 1]);
-	current=current+1;
-	}
+  current=current+1;
+  }
 });
 
 $('.minus').click(function() {
     var sp = parseFloat(current);
-	if(current !=0){
+  if(current !=0){
     $("#qty").text(opts[current - 1]);
     $("#each").text("$"+each[current - 1]+" each");
     $("#total").text("$"+total[current - 1]);
-	current=current-1;
-	}
+  current=current-1;
+  }
 });
 });
-</script>
-<script type="text/javascript">
-$(document).ready(function() {
-   var showChar = 131;
-   var ellipsestext = "...";
-   var moretext = "Read more";
-   var lesstext = "Read less";
-   $('.more').each(function() {
-       var content = $(this).html();
-
-       if(content.length > showChar) {
-
-           var c = content.substr(0, showChar);
-           var h = content.substr(showChar-1, content.length - showChar);
-
-           var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
-
-           $(this).html(html);
-       }
-
-   });
-
-   $(".morelink").click(function(){
-       if($(this).hasClass("less")) {
-           $(this).removeClass("less");
-           $(this).html(moretext);
-       } else {
-           $(this).addClass("less");
-           $(this).html(lesstext);
-       }
-       $(this).parent().prev().toggle();
-       $(this).prev().toggle();
-       return false;
-   });
-});
-var opts = ["24","48","72","96","120","144","168","192","216","240","264","288","312","336","360","384","408","432","456","480","504","528","552","576","600"];
-
-var each = ["3.69","3.50","3.29","3.08","3.08","2.99","2.99","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94","2.94"];
-
-var total = ["88.52","167.77","236.84","296.05","370.06","430.60","502.37","564.43","634.98","705.53","776.08","846.63","917.18","987.73","1058.28","1128.83","1199.38","1269.93","1340.48","1411.03","1481.58","1552.13","1622.68","1693.23","1763.78"];
 </script>
 </body>
 </html>
