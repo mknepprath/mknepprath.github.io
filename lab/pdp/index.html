@@ -646,51 +646,59 @@
         <a href="#" class="btn_std product-options shadow inactive">boy</a>
         <!-- GET IT BY DATE -->
         <p class="orderBy">Get it by <span class="deliveryDate"></span>, via economy shipping.</p>
-        <style>
-          .plus, .minus{
-            margin: 0px;
-            padding: 0px;
-          }
-          table {
-            vertical-align: middle;
-          }
-          td, th {
-            height: 50px;
-            vertical-align: middle;
-          }
-          th {
-            color: #999;
-            border-bottom: 1px solid #dbdcde;
-          }
-          #qty{
-            position: relative;
-            top:-10px;
-          }
-        </style>
-        <table cellpadding="5" cellspacing="0" width="400">
-          <tr>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-          </tr>
-          <tr>
-            <td>
-              <span id="each"><script>document.write("$"+each[0]+" each");</script>
-              </span>
-            </td>
-            <td>
-              <span id="qty"><script>document.write(opts[0]);</script>
-              </span>&nbsp;&nbsp;&nbsp;
-              <a class="minus" href="javascript:void(0);">-</a>
-              <a class="plus" href="javascript:void(0);">+</a>
-            </td>
-            <td>
-              <span id="total">
-                <script>document.write("$"+total[0]);</script>
-              </span>
-            </td>
-          </tr>
-        </table>
+        <div class="productQuantity">
+					<h5>Select Quantity</h5>
+					<div class="productFactoids">
+            <p>
+              <img id="loading" name="loading" alt="loading.." src="/assets/ptg/images/global/graceland-feedback-loader.gif" style="display:none">
+	            <select class="factoidDropdown" size="1" id="qtyList" onchange="changeQtyList(this);">
+  							<option each="$3.34" total="$80.17" value="80.17" qty="24">24&nbsp;($3.34 each)</option>
+  							<option each="$3.13" total="$150.13" value="150.13" qty="48">48&nbsp;($3.13 each)</option>
+  							<option each="$2.95" total="$212.17" value="212.17" qty="72">72&nbsp;($2.95 each)</option>
+  							<option each="$2.77" total="$265.79" value="265.79" qty="96">96&nbsp;($2.77 each)</option>
+  							<option each="$2.77" total="$332.24" value="332.24" qty="120">120&nbsp;($2.77 each)</option>
+  							<option each="$2.63" total="$378.96" value="378.96" qty="144">144&nbsp;($2.63 each)</option>
+  							<option each="$2.63" total="$442.12" value="442.12" qty="168">168&nbsp;($2.63 each)</option>
+  							<option each="$2.43" total="$465.80" value="465.80" qty="192" class="optionBestValue">192&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$524.03" value="524.03" qty="216">216&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$582.26" value="582.26" qty="240">240&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$640.49" value="640.49" qty="264">264&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$698.72" value="698.72" qty="288">288&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$756.95" value="756.95" qty="312">312&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$815.18" value="815.18" qty="336">336&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$873.41" value="873.41" qty="360">360&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$931.64" value="931.64" qty="384">384&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$989.87" value="989.87" qty="408">408&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1048.10" value="1,048.10" qty="432">432&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1106.33" value="1,106.33" qty="456">456&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1164.56" value="1,164.56" qty="480">480&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1222.79" value="1,222.79" qty="504">504&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1281.02" value="1,281.02" qty="528">528&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1339.25" value="1,339.25" qty="552">552&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1397.48" value="1,397.48" qty="576">576&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1455.71" value="1,455.71" qty="600">600&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1513.94" value="1,513.94" qty="624">624&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1572.17" value="1,572.17" qty="648">648&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1630.40" value="1,630.40" qty="672">672&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1688.63" value="1,688.63" qty="696">696&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1746.86" value="1,746.86" qty="720">720&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1805.09" value="1,805.09" qty="744">744&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1863.32" value="1,863.32" qty="768">768&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1921.55" value="1,921.55" qty="792">792&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$1979.78" value="1,979.78" qty="816">816&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$2038.01" value="2,038.01" qty="840">840&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$2096.24" value="2,096.24" qty="864">864&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$2154.47" value="2,154.47" qty="888">888&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$2212.70" value="2,212.70" qty="912">912&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$2270.93" value="2,270.93" qty="936">936&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$2329.16" value="2,329.16" qty="960">960&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$2387.39" value="2,387.39" qty="984">984&nbsp;($2.43 each)</option>
+  							<option each="$2.43" total="$2445.62" value="2,445.62" qty="1008">1008&nbsp;($2.43 each)</option>
+							</select>
+						  <input type="hidden" id="qtyField" name="quantity" value="72">
+            </p>
+          </div><!--/productFactoids-->
+        </div>
         <div class="includesArea">
 				  <!--
 					<p class="includedTitle">What's Included?</p>
