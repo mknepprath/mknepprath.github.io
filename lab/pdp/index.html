@@ -632,32 +632,13 @@
           }
         </style>
         <table cellpadding="5" cellspacing="0" width="400">
-          <tr>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Total</th>
-          </tr>
-          <tr>
-            <td>
-              <span id="each"><script>document.write("$"+each[0]+" each");</script>
-              </span>
-            </td>
-            <td>
-              <span id="qty"><script>document.write(opts[0]);</script>
-              </span>&nbsp;&nbsp;&nbsp;
-              <a class="minus" href="javascript:void(0);">
-                <img src="images/minus.png" width="41" height="37" alt=""/>
-              </a>
-              <a class="plus" href="javascript:void(0);">
-                <img src="images/plus.png" width="41" height="37" alt=""/>
-              </a>
-            </td>
-            <td>
-              <span id="total">
-                <script>document.write("$"+total[0]);</script>
-              </span>
-            </td>
-          </tr>
+        <tr><th>Price</th><th>Quantity</th><th>Total</th></tr>
+        <tr>
+        <td><span id="each"><script>document.write("$"+each[0]+" each");</script></span></td>
+        <td>
+        <span id="qty"><script>document.write(opts[0]);</script></span>&nbsp;&nbsp;&nbsp;
+        <a class="minus" href="javascript:void(0);"><img src="images/minus.png" width="41" height="37" alt=""/></a><a class="plus" href="javascript:void(0);"><img src="images/plus.png" width="41" height="37" alt=""/></a></td>
+        <td><span id="total"><script>document.write("$"+total[0]);</script></span></td></tr>
         </table>
         <div class="includesArea">
 				  <!--
