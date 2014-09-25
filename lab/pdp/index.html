@@ -99,7 +99,7 @@
     top: 495px;
     left: 15px;
   }
-  .hoverbox a {
+  .hoverbox a img {
     cursor:default;
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
@@ -107,14 +107,12 @@
     transition: all .2s ease-in-out;
     z-index: 1;
   }
-  .hoverbox a:hover .preview {
+  .hoverbox a img:hover .preview {
     transform: scale(1.3,1.3);
     -ms-transform: scale(1.3,1.3);
     -webkit-transform: scale(1.3,1.3);
     z-index: 2;
   }
-  @-webkit-keyframes showPrev{from{opacity:0}to{opacity:1}}
-  @-moz-keyframes{from{opacity:0}to{opacity:1}}
   .hoverbox img {
     background: #fff;
     color: inherit;
