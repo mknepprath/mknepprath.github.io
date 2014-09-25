@@ -100,10 +100,16 @@
     left: 15px;
   }
   .hoverbox a {
-    cursor:default
+    cursor:default;
+    -webkit-transition: 0 .1s ease-in;
+    -moz-transition: 0 .1s ease-in;
+    -o-transition: 0 .1s ease-in;
+    transition: transform .1s ease-in;
   }
   .hoverbox a:hover .preview {
-
+    transform: scale(1.03,1.03);
+    -ms-transform: scale(1.03,1.03);
+    -webkit-transform: scale(1.03,1.03);
   }
   @-webkit-keyframes showPrev{from{opacity:0}to{opacity:1}}
   @-moz-keyframes{from{opacity:0}to{opacity:1}}
