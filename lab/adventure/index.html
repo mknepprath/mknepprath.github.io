@@ -69,17 +69,35 @@
       color: #000;
       background: #fff;
     }
+    li > ul > li > ul > li {
+      color: #fff;
+      background: #000;
+    }
   </style>
 </head>
 <body>
   <ul>
-    <li>Choice 1</li>
+    <li>Choice 1
+      <ul>
+        <li>Choice 1</li>
+        <li>Choice 2</li>
+        <li>Choice 3</li>
+        <li>Choice 4</li>
+      </ul>
+    </li>
     <li>Choice 2</li>
     <li>Choice 3
       <ul>
         <li>Choice 1</li>
         <li>Choice 2</li>
-        <li>Choice 3</li>
+        <li>Choice 3
+          <ul>
+            <li>Choice 1</li>
+            <li>Choice 2</li>
+            <li>Choice 3</li>
+            <li>Choice 4</li>
+          </ul>
+        </li>
         <li>Choice 4</li>
       </ul>
     </li>
