@@ -33,15 +33,15 @@
   #product-img {
     background: #fff url('http://s7d3.scene7.com/is/image/TOP/2775_PTG33962Gzm?&wid=600') top center no-repeat;
     background-size: 100%;
-		border-radius: 3px;
-		width: 600px;
+    border-radius: 3px;
+    width: 600px;
     height: 600px;
     margin: 40px 0 60px;
     float: left;
     -webkit-box-shadow: 0 1px 2px 1px rgba(0,0,0,.1);
     -moz-box-shadow: 0 1px 2px 1px rgba(0,0,0,.1);
     box-shadow: 0 1px 2px 1px rgba(0,0,0,.1);
-	}
+  }
 
   #product-container {
     width: 100%;
@@ -170,13 +170,17 @@
     line-height: 1.1rem;
     border-top: 1px solid #ddd;
   }
+  .product-sellbox .personalizeButton {
+    border-top: 1px solid #ddd;
+  }
   .product-sellbox .standardItem td, .product-sellbox .addonItem td {
     padding: 10px 12px;
   }
   .product-sellbox .itemQuantity, .product-sellbox .itemPrice, .product-sellbox .itemSubtotal {
     text-align: center;
+    vertical-align: middle;
   }
-  .product-sellbox .itemDescription {
+  .product-sellbox .itemDescription, .product-sellbox .itemSubtotal {
     font-weight: 700;
   }
   .product-sellbox .brief.assembly {
@@ -217,8 +221,11 @@
   }
   .orderBy, .includesArea p {
     line-height: 1.5;
-    font-size: .9rem;
-    margin: 20px 0;
+    font-size: 0.8rem;
+    margin: 14px 0 34px;
+    padding-right: 0;
+    width: 50%;
+    display: inline-block;
   }
   .product-description p {
     width: 400px;
@@ -687,6 +694,7 @@
         <!--<hr>-->
         <!-- GET IT BY DATE -->
         <p class="orderBy">Get it by <span class="deliveryDate"></span>, via economy shipping.</p>
+        <button class="btn_std btn_blue btn_personalize shadow" style="float:right;">personalize &gt;</button>
         <div class="productPricingDetails">
           <table class="productItemized" cellspacing="0">
   					<colgroup>
