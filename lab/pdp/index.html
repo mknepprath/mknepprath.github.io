@@ -154,6 +154,27 @@
   .product-sellbox .product-options {
     padding: 8px 25px;
   }
+  .product-sellbox .standardItem, .product-sellbox #addonItemId {
+    font-size: .9rem;
+  }
+  .product-sellbox .standardItem td, .product-sellbox .addonItem td {
+    padding: 10px 12px;
+  }
+  .product-sellbox .itemDescription {
+    font-weight: 700;
+  }
+  .product-sellbox .brief.assembly {
+    font-weight:400;
+    font-size: 75%;
+  }
+  .product-sellbox .brief.assembly:before {
+    width: 28px;
+    height: 32px;
+    content: "";
+    float: left;
+    background: url('http://www.peartreegreetings.com/assets/ptg/images/global/gracelandSprites.png') no-repeat -288px -352px;
+    margin: 5px;
+  }
   .itemNumber{
     font-style: italic;
     text-align:left;
@@ -196,8 +217,14 @@
     background-color: #fff;
     color: #644c3b;
   }
+  .includesArea h5 {
+    color: #616161;
+    font-weight: 700;
+  }
   .includesArea,.includesArea p {
     padding: 0px;
+    font-size: .9rem;
+    line-height: 1.5;
   }
   .productQuantity {
     overflow: hidden;
@@ -698,6 +725,21 @@
     						<td class="itemPrice" id="itemPrice_id">$3.68<br>each</td>
     						<td class="itemSubtotal" id="itemSubtotal_id">$264.85</td>
     					</tr>
+              <tr class="standardItem">
+						    <td colspan="4">
+						    <div class="includesArea">
+							<!--
+								<p class="includedTitle">What's Included?</p>
+								<ul>
+									<li>bullet #1</li>
+									<li>bullet #1</li>
+									<li>bullet #1</li>
+								</ul>
+								<a class="stdOval" href="">See All Product Features &#9658</a>
+								-->
+								<h5>Includes:</h5><li>4 - 2 3/8" x 3 1/4" specialty shaped cards featuring your personalization</li><li>21" Grey Ribbons</li><li>Bright white envelopes</li><!--/includesArea--></div>
+						    </td>
+						  </tr>
               <tr class="addonItem" id="addonItemId">
     						<td class="itemQuantity">
     						  <input type="checkbox" class="largeCheckbox" id="assemblyItemcheckbox" name="assemblyItemcheckbox" checked="checked" onclick="ASCheckboxClick();">
@@ -710,14 +752,6 @@
     					</tr>
             </tbody>
           </table>
-          <div class="includesArea">
-					  <h5>Includes:</h5>
-            <ul>
-              <li>5 1/2" x 4 1/4" folded cards featuring your personalization</li>
-              <li>21" White Ribbons</li>
-              <li>Bright White Envelopes</li>
-            </ul>
-          </div>
           <button class="btn_std btn_personalize shadow">personalize ></button>
         </div>
       </div>
