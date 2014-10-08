@@ -181,8 +181,12 @@
     text-align: center;
     vertical-align: middle;
   }
-  .product-sellbox .itemDescription, .product-sellbox .itemSubtotal {
+  .product-sellbox .itemQuantity, .product-sellbox .itemSubtotal {
     font-weight: 700;
+  }
+  .product-sellbox .itemDescription, .product-sellbox .itemPrice {
+    font-size: 85%;
+    line-height: 1rem;
   }
   .product-sellbox .brief.assembly {
     font-weight:400;
@@ -778,7 +782,7 @@
     						<td class="itemQuantity">
     						  <input type="checkbox" class="largeCheckbox" id="assemblyItemcheckbox" name="assemblyItemcheckbox" checked="checked" onclick="ASCheckboxClick();">
     						</td>
-    						<td class="itemDescription">Short on time?
+    						<td class="itemQuantity">Short on time?
     							<p class="brief assembly"> Let us help assemble your cards for you. <a id="ASHelpLink" href="javascript:void(0);" onclick="showASHelp();">Learn More</a></p>
                 </td>
     						<td id="assemblyMoneyEach">$1.00<br>each</td>
