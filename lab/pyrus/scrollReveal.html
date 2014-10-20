@@ -10,7 +10,17 @@
   <link rel="apple-touch-icon" href="/images/lab-apple-touch-icon.png">
   <script src="http://mknepprath.com/lab/pyrus/js/scrollReveal.min.js"></script>
   <script>
-    window.sr = new scrollReveal();
+      (function($) {
+
+        'use strict';
+
+        window.sr= new scrollReveal({
+          reset: true,
+          move: '50px',
+          mobile: true
+        });
+
+      })();
   </script>
 </head>
 <body class="home">
