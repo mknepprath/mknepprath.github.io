@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+  <title>scrollReveal.js | Easily reveal elements as they enter the viewport.</title>
+  <meta content="Easily reveal elements as they enter the viewport. An open-source project by Julian Lloyd" name="description"><!-- Initialize proper device scaling for media queries. (Yay responsive!) -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"><!-- Serve Typekit font familes (Proxima Nova) -->
+  <script async="" src="//www.google-analytics.com/analytics.js"></script>
+  <script type="text/javascript" src="//use.typekit.net/fhe3tec.js"></script>
+  <link rel="stylesheet" href="http://use.typekit.net/c/b0a90f/1w;proxima-nova,2,b5r:N:n1,b5t:N:n3/d?3bb2a6e53c9684ffdc9a9bf51f5b2a62e77d9d6d2de4b3b4786eaaa1d6f52fd6293b894ac158d6299b0084a76411d802cbdaddbeec4484200459beab2b52011eba8cbd8ec90515d55a728be06e45256c921348af3d370dd89dbafe10877d1e408a7e700c431b2c62e03893d4476f9625633def1835f85ce3821223f4d62eb3da63dad719b6d66b">
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <style> [data-sr] { visibility: hidden; } </style>
+</head>
+<body>
+
+  <p><a href="https://github.com/julianlloyd/scrollReveal.js"><img alt="Fork me on GitHub" src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" style="position: fixed; top: 0; right: 0; border: 0; z-index: 5; width: 35%; max-width: 149px;"> </a></p>
+
+  <h1 data-sr="enter from the top and hustle 50px over 1.5s" data-sr-id="1" style="visibility: visible; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 1.5s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s, opacity 1.5s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s; transition: transform 1.5s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s, opacity 1.5s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; ">scrollReveal<small>.js</small></h1>
+
+  <p data-sr="enter bottom wait 1s" data-sr-id="2" style="visibility: visible; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; ">Easily reveal elements as they enter the viewport.</p>
+
+  <hr class="lil-block-dude" data-sr="enter bottom and move 8px over 4s" data-sr-id="3" style="visibility: visible; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 4s ease 0s, opacity 4s ease 0s; transition: transform 4s ease 0s, opacity 4s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; ">
+
+  <p style="font-size: 80%; visibility: visible; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; " data-sr="enter bottom wait 1.3s" data-sr-id="4">An open-source project by <a class="inline" href="https://twitter.com/julianlloyd" title="Julian Lloyd on Twitter">Julian Lloyd</a></p>
+
+  <div class="column-container clearfix"><!-- col 1 -->
+  <div class="column">
+  <div class="block block-1x block-slate" data-sr="enter top over 3s wait 0.5s" data-sr-id="5" style="visibility: visible; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 3s ease 0s, opacity 3s ease 0s; transition: transform 3s ease 0s, opacity 3s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-2x block-mango" data-sr="enter right wait 0.5s" data-sr-id="6" style="visibility: visible; transform: translateX(50px) scale(0.95); opacity: 0; -webkit-transform: translateX(50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-kiwi" data-sr="enter bottom over 1s and move 110px wait 0.3s" data-sr-id="7" style="visibility: visible; transform: translateY(110px) scale(0.95); opacity: 0; -webkit-transform: translateY(110px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-3x block-blueberry" data-sr="enter top over 0.5s and move 140px" data-sr-id="8" style="visibility: visible; transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.5s ease 0s, opacity 0.5s ease 0s; transition: transform 0.5s ease 0s, opacity 0.5s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-2x block-raspberry" data-sr="enter bottom over 1s and move 65px" data-sr-id="9" style="visibility: visible; transform: translateY(65px) scale(0.95); opacity: 0; -webkit-transform: translateY(65px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-grape" data-sr="enter top" data-sr-id="10" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+  </div>
+  <!-- col 2 -->
+
+  <div class="column">
+  <div class="block block-3x block-kiwi" data-sr="enter bottom over 1s and move 110px wait 0.3s" data-sr-id="11" style="visibility: visible; transform: translateY(110px) scale(0.95); opacity: 0; -webkit-transform: translateY(110px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-orange" data-sr="enter left" data-sr-id="12" style="visibility: visible; transform: translateX(-50px) scale(0.95); opacity: 0; -webkit-transform: translateX(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-2x block-grape" data-sr="enter top" data-sr-id="13" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-orange" data-sr="enter left" data-sr-id="14" style="visibility: visible; transform: translateX(-50px) scale(0.95); opacity: 0; -webkit-transform: translateX(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-grape" data-sr="enter top" data-sr-id="15" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-2x block-slate" data-sr="enter top over 3s wait 0.5s" data-sr-id="16" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 3s ease 0s, opacity 3s ease 0s; transition: transform 3s ease 0s, opacity 3s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+  </div>
+  <!-- col 3 -->
+
+  <div class="column">
+  <div class="block block-2x block-raspberry" data-sr="enter bottom over 1s and move 65px" data-sr-id="17" style="visibility: visible; transform: translateY(65px) scale(0.95); opacity: 0; -webkit-transform: translateY(65px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-blueberry" data-sr="enter top over 0.5s and move 140px" data-sr-id="18" style="visibility: visible; transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.5s ease 0s, opacity 0.5s ease 0s; transition: transform 0.5s ease 0s, opacity 0.5s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-2x block-slate" data-sr="enter top over 3s wait 0.5s" data-sr-id="19" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 3s ease 0s, opacity 3s ease 0s; transition: transform 3s ease 0s, opacity 3s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-mango" data-sr="enter right wait 0.5s" data-sr-id="20" style="visibility: visible; transform: translateX(50px) scale(0.95); opacity: 0; -webkit-transform: translateX(50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-slate" data-sr="enter top over 3s wait 0.5s" data-sr-id="21" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 3s ease 0s, opacity 3s ease 0s; transition: transform 3s ease 0s, opacity 3s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-3x block-orange" data-sr="enter left" data-sr-id="22" style="visibility: visible; transform: translateX(-50px) scale(0.95); opacity: 0; -webkit-transform: translateX(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+  </div>
+  <!-- col 4 -->
+
+  <div class="column">
+  <div class="block block-1x block-orange" data-sr="enter left" data-sr-id="23" style="visibility: visible; transform: translateX(0) scale(1); opacity: 1; -webkit-transform: translateX(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-2x block-grape" data-sr="enter top" data-sr-id="24" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-3x block-raspberry" data-sr="enter bottom over 1s and move 65px" data-sr-id="25" style="visibility: visible; transform: translateY(65px) scale(0.95); opacity: 0; -webkit-transform: translateY(65px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-blueberry" data-sr="enter top over 0.5s and move 140px" data-sr-id="26" style="visibility: visible; transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.5s ease 0s, opacity 0.5s ease 0s; transition: transform 0.5s ease 0s, opacity 0.5s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-2x block-kiwi" data-sr="enter bottom over 1s and move 110px wait 0.3s" data-sr-id="27" style="visibility: visible; transform: translateY(110px) scale(0.95); opacity: 0; -webkit-transform: translateY(110px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-mango" data-sr="enter right wait 0.5s" data-sr-id="28" style="visibility: visible; transform: translateX(50px) scale(0.95); opacity: 0; -webkit-transform: translateX(50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+  </div>
+  <!-- col 5 -->
+
+  <div class="column">
+  <div class="block block-3x block-mango" data-sr="enter right wait 0.5s" data-sr-id="29" style="visibility: visible; transform: translateX(50px) scale(0.95); opacity: 0; -webkit-transform: translateX(50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-kiwi" data-sr="enter bottom over 1s and move 110px wait 0.3s" data-sr-id="30" style="visibility: visible; transform: translateY(110px) scale(0.95); opacity: 0; -webkit-transform: translateY(110px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-2x block-orange" data-sr="enter left" data-sr-id="31" style="visibility: visible; transform: translateX(-50px) scale(0.95); opacity: 0; -webkit-transform: translateX(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-grape" data-sr="enter top" data-sr-id="32" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-slate" data-sr="enter top over 3s wait 0.5s" data-sr-id="33" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 3s ease 0s, opacity 3s ease 0s; transition: transform 3s ease 0s, opacity 3s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-2x block-raspberry" data-sr="enter bottom over 1s and move 65px" data-sr-id="34" style="visibility: visible; transform: translateY(65px) scale(0.95); opacity: 0; -webkit-transform: translateY(65px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+  </div>
+  <!-- col 6 -->
+
+  <div class="column">
+  <div class="block block-1x block-kiwi" data-sr="enter bottom over 1s and move 110px wait 0.3s" data-sr-id="35" style="visibility: visible; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-3x block-slate" data-sr="enter top over 3s wait 0.5s" data-sr-id="36" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 3s ease 0s, opacity 3s ease 0s; transition: transform 3s ease 0s, opacity 3s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-blueberry" data-sr="enter top over 0.5s and move 140px" data-sr-id="37" style="visibility: visible; transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.5s ease 0s, opacity 0.5s ease 0s; transition: transform 0.5s ease 0s, opacity 0.5s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-3x block-kiwi" data-sr="enter bottom over 1s and move 110px wait 0.3s" data-sr-id="38" style="visibility: visible; transform: translateY(110px) scale(0.95); opacity: 0; -webkit-transform: translateY(110px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-orange" data-sr="enter left" data-sr-id="39" style="visibility: visible; transform: translateX(-50px) scale(0.95); opacity: 0; -webkit-transform: translateX(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-blueberry" data-sr="enter top over 0.5s and move 140px" data-sr-id="40" style="visibility: visible; transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.5s ease 0s, opacity 0.5s ease 0s; transition: transform 0.5s ease 0s, opacity 0.5s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+  </div>
+  <!-- col 7 -->
+
+  <div class="column">
+  <div class="block block-2x block-blueberry" data-sr="enter top over 0.5s and move 140px" data-sr-id="41" style="visibility: visible; transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.5s ease 0s, opacity 0.5s ease 0s; transition: transform 0.5s ease 0s, opacity 0.5s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-raspberry" data-sr="enter bottom over 1s and move 65px" data-sr-id="42" style="visibility: visible; transform: translateY(65px) scale(0.95); opacity: 0; -webkit-transform: translateY(65px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-mango" data-sr="enter right wait 0.5s" data-sr-id="43" style="visibility: visible; transform: translateX(50px) scale(0.95); opacity: 0; -webkit-transform: translateX(50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-3x block-raspberry" data-sr="enter bottom over 1s and move 65px" data-sr-id="44" style="visibility: visible; transform: translateY(65px) scale(0.95); opacity: 0; -webkit-transform: translateY(65px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-2x block-mango" data-sr="enter right wait 0.5s" data-sr-id="45" style="visibility: visible; transform: translateX(50px) scale(0.95); opacity: 0; -webkit-transform: translateX(50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-slate" data-sr="enter top over 3s wait 0.5s" data-sr-id="46" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 3s ease 0s, opacity 3s ease 0s; transition: transform 3s ease 0s, opacity 3s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+  </div>
+  <!-- col 8 -->
+
+  <div class="column">
+  <div class="block block-1x block-grape" data-sr="enter top" data-sr-id="47" style="visibility: visible; transform: translateY(0) scale(1); opacity: 1; -webkit-transform: translateY(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-2x block-orange" data-sr="enter left" data-sr-id="48" style="visibility: visible; transform: translateX(-50px) scale(0.95); opacity: 0; -webkit-transform: translateX(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-grape" data-sr="enter top" data-sr-id="49" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.6s ease 0s, opacity 0.6s ease 0s; transition: transform 0.6s ease 0s, opacity 0.6s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-3x block-slate" data-sr="enter top over 3s wait 0.5s" data-sr-id="50" style="visibility: visible; transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transform: translateY(-50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 3s ease 0s, opacity 3s ease 0s; transition: transform 3s ease 0s, opacity 3s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-1x block-blueberry" data-sr="enter top over 0.5s and move 140px" data-sr-id="51" style="visibility: visible; transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transform: translateY(-140px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 0.5s ease 0s, opacity 0.5s ease 0s; transition: transform 0.5s ease 0s, opacity 0.5s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+
+  <div class="block block-2x block-kiwi" data-sr="enter bottom over 1s and move 110px wait 0.3s" data-sr-id="52" style="visibility: visible; transform: translateY(110px) scale(0.95); opacity: 0; -webkit-transform: translateY(110px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "></div>
+  </div>
+  </div>
+
+  <p data-sr="wait 1.3s enter bottom over 1s hustle 50px" data-sr-id="53" style="visibility: visible; transform: translateY(50px) scale(0.95); opacity: 0; -webkit-transform: translateY(50px) scale(0.95); opacity: 0; -webkit-transition: -webkit-transform 1s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s, opacity 1s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s; transition: transform 1s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s, opacity 1s cubic-bezier( 0.6, 0.2, 0.1, 1 ) 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; "><small class="floater">Have you tried scrolling back up?</small></p>
+
+  <div class="withLove"><span class="alpha" data-sr="move 50px enter left over 1s no reset" data-sr-id="54" style="visibility: visible; transform: translateX(0) scale(1); opacity: 1; -webkit-transform: translateX(0) scale(1); opacity: 1; -webkit-transition: -webkit-transform 1s ease 0s, opacity 1s ease 0s; transition: transform 1s ease 0s, opacity 1s ease 0s; -webkit-perspective: 1000; -webkit-backface-visibility: hidden; ">Made with</span> <svg class="heart" enable-background="new 0 0 92.515 73.161" height="73.161px" version="1.1" viewBox="0 0 92.515 73.161" width="92.515px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <g> <path d="M82.32,7.888c-8.359-7.671-21.91-7.671-30.271,0l-5.676,5.21l-5.678-5.21c-8.357-7.671-21.91-7.671-30.27,0
+            c-9.404,8.631-9.404,22.624,0,31.255l35.947,32.991L82.32,39.144C91.724,30.512,91.724,16.52,82.32,7.888z" fill="#010101"></path> </g> </svg> <span class="omega" data-sr="move 50px enter right over 1s no reset" data-sr-id="55" style="visibility: visible; " data-sr-complete="true">in California</span></div>
+
+<script src="js/scrollReveal.min.js?ver=2.0.1"></script><script type="text/javascript">
+      (function($) {
+
+        'use strict';
+
+        window.sr= new scrollReveal({
+          reset: true,
+          move: '50px',
+          mobile: true
+        });
+
+      })();
+</script>
+<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55186174-1', 'auto');
+      ga('send', 'pageview');
+
+</script>
+
+</body></html>
