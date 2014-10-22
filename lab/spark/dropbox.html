@@ -11,10 +11,10 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="jquery.nicescroll.js"></script>
   <style>
-    #sp_db_drawer_img {
+    #sp_fb_drawer_img {
       background: #1581E3;
     }
-    .toggleAlbums.dropboxAlbums {
+    .toggleAlbums {
       border-bottom: 2px solid #87AFD2;
       background: #D7E8FA;
       background-image: url('http://www.mknepprath.com/lab/spark/album-arrows-dark.png');
@@ -28,7 +28,7 @@
       background-position: right;
       color: #05559E;
     }
-    .toggleAlbums.dropboxAlbums:hover {
+    .toggleAlbums:hover {
       background: #DAEBFD;
       background-image: url('http://www.mknepprath.com/lab/spark/album-arrows-dark.png');
       background-image: url('http://www.mknepprath.com/lab/spark/album-arrows-dark.png'), -webkit-gradient(linear, left top, left bottom, from(#DAEBFD), to(#BFD7ED));
@@ -43,7 +43,7 @@
   </style>
 </head>
 <body class="spark">
-  <div class="fbBar" id="sp_db_drawer_img" style="display: block; left: 0px;">
+  <div class="fbBar" id="sp_fb_drawer_img" style="display: block; left: 0px;">
     <div class="close_spwd">
       <a href="#" onclick="javascript:hideFacebook();">
         <img src="/assets/ptg/images/spark/spark-x.png">
@@ -63,7 +63,7 @@
       </section>
     </div>
     <section id="choose_album">
-      <button class="toggleAlbums dropboxAlbums albumsClosed">
+      <button class="toggleAlbums albumsClosed">
         <span class="content">CHANGE ALBUM</span>
       </button>
       <ul id="user_albums">
