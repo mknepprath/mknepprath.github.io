@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>jquery.rss example</title>
+    <title>Pear Tree blog feed test</title>
     <script src="lib/jquery-1.6.4.min.js"></script>
     <script src="src/jquery.rss.js"></script>
     <script>
       jQuery(function($) {
         $("#rss-feeds").rss("http://peartreegreetings.com/blog?feed=rss2", {
-          limit: 3
+          limit: 3,
+          layoutTemplate: "<table><tr><th>Title</th></tr>{entries}</table>",
+          entryTemplate:  "<tr><td>{title}</td></tr>"
         })
       })
     </script>
