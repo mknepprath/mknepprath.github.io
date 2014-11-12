@@ -197,7 +197,7 @@
 				}
 
 				if (options.linkcontent) {
-					content = '<a href="'+ options.linkredirect + feedLink +'" title="View this feed at '+ feeds.title +'">'+ content +'</a>'
+					content = '<img src="http://mknepprath.com/images/apple-watch.jpg"/>'+'<a href="'+ options.linkredirect + feedLink +'" title="View this feed at '+ feeds.title +'">'+ content +'</a>'
 				}
 				
 				rowArray[rowIndex]['html'] += '<p>'+ content +'</p>'
