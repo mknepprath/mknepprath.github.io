@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="http://www.peartreegreetings.com/assets/ptg/css/gracelandv2r1.css">
     <script>
       jQuery(function($) {
-        $("#rss-feeds").rss("http://peartreegreetings.com/articles?feed=rss2", {
+        $("#rss-feeds").rss("http://peartreegreetings.com/blog?feed=rss2", {
           layoutTemplate: "<ul class='blog-bottom'>{entries}</ul>",
           entryTemplate: "<li class='blog-post'><h4><a href='{url}'><div style='background:url({teaserImageUrl});background-position:50%;background-size:100%;width:100%;height:172px;' class='ref' title='View this feed at Pear Tree Greetings'></div>&nbsp;</a><br><a href='{url}'>{title}</a></h4></li>",
           limit: 3
