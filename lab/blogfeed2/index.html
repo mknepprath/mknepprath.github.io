@@ -8,7 +8,7 @@
       jQuery(function($) {
         $("#rss-feeds").rss("http://peartreegreetings.com/blog?feed=rss2", {
           layoutTemplate: "<ul>{entries}</ul>",
-          entryTemplate:  "<li>{title}</li>",
+          entryTemplate:  "<li>{teaserImageUrl}{title}</li>",
           limit: 3
         })
       })
