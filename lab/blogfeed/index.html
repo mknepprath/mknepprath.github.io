@@ -21,7 +21,8 @@
 <script type="text/javascript">
 $(document).ready(function () {
   $('#ticker1').rssfeed('http://www.peartreegreetings.com/blog/feed/',{
-    snippet: false,
+    snippet: true,
+    media: true,
     limit: 3
   });
 });
