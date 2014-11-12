@@ -21,11 +21,8 @@
 <script type="text/javascript">
 $(document).ready(function () {
 	$('#ticker1').rssfeed('http://www.peartreegreetings.com/blog/feed/',{
-		snippet: false
-	}, function(e) {
-		$(e).find('div.rssBody').vTicker({
-			showItems: 3
-		});
+		snippet: false;
+		showItems: 3;
 	});
 });
 </script>
