@@ -24,7 +24,7 @@ $(document).ready(function () {
 		snippet: false
 	}, function(e) {
 		$(e).find('div.rssBody').vTicker({
-			showItems: 1
+			showItems: 3
 		});
 	});
 });
@@ -33,23 +33,8 @@ $(document).ready(function () {
 </head>
 <body>
 
-<h1>zRSSFeed - RSS feed with images and ticker animation</h1>
-<p>This example shows scrolling feed which includes images using the vTicker plugin.</p>
+<h1>Bog Feed</h1>
 
-<h4>Script</h4>
-<pre>
-$(document).ready(function () {
-	$('#ticker1').rssfeed('http://feeds.bbc.co.uk/iplayer/highlights/tv/list',{
-		snippet: false
-	}, function(e) {
-		$(e).find('div.rssBody').vTicker({
-			showItems: 3
-		});
-	});
-});
-</pre>
-
-<h4>Result</h4>
 <div id="ticker1"></div>
 
 </body>
