@@ -13,9 +13,9 @@
 <!--ID="CROWN" REPLACES THE HEADER ACROSS THE WHOLE WEBSITE-->
 <header id="crown">
   <div class="mould" style="display: none;">
-	    <div class="full-width">
+      <div class="full-width">
           <p>Uh, oh. You’re using Internet Explorer 8, a browser we no longer support. Please update to IE9, Firefox or Google Chrome.</p></div>
-	</div>
+  </div>
   <div class="bosc">
     <div class="full-width">
       <div class="bosc-left">
@@ -25,11 +25,11 @@
       </div>
       <div class="bosc-right">
         <ul class="bosc-account">
-  			  <li class="welcome">Welcome</li>
-  			  <li class="myaccount"><a href="javascript:void(0);" class="signIn" onclick="switchToURL('signin');">Sign In</a></li>
-  			  <li class="referral"><a href="/Elvis/referral.jsp">Refer A Friend</a></li>
-  			  <li class="cart"><a href="/Elvis/basket.jsp">Cart (0)</a></li>
-  		  </ul>
+          <li class="welcome">Welcome</li>
+          <li class="myaccount"><a href="javascript:void(0);" class="signIn" onclick="switchToURL('signin');">Sign In</a></li>
+          <li class="referral"><a href="/Elvis/referral.jsp">Refer A Friend</a></li>
+          <li class="cart"><a href="/Elvis/basket.jsp">Cart (0)</a></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -60,7 +60,7 @@
   </div>
   <div class="nav">
     <ul id="navBarMain">
-			  <!-- EDITABLE BLOCK "navBarMain" -->
+        <!-- EDITABLE BLOCK "navBarMain" -->
         <!--Imported Main Navigation-->
         <li class="nb1 rounded"><a href="/Baby-Announcements/index.cat" class="doubletap">Baby &amp; Kids</a>
         <div class="multi"> <span>
@@ -341,7 +341,7 @@
         <li class="nb14 rounded less anchor"><a href="/Storybooks/Personalized-Childrens-Books/index.cat">Storybooks</a></li>
         <li class="nb15 rounded less anchor more"><a class="more" onclick="return window.location.hash = 'responsiveNav';" style="cursor:pointer">More</a></li>
         <li class="nb16 rounded less anchor nav"><a class="nav" onclick="return window.location.hash = 'responsiveNav';" style="cursor:pointer">Menu</a></li>
-			  <!-- END EDITABLE BLOCK "navBarMain" -->
+        <!-- END EDITABLE BLOCK "navBarMain" -->
       </ul>
   </div>
   <div class="anjou">
@@ -354,18 +354,14 @@
 <div id="trunk">
   <div class="hero">
     <!-- EDITABLE BLOCK 1 "hero" -->
-    <div class="hero-bg" style="background: url('/assets/ptg/images/home/skin_side_up_Homepage.jpg') fixed; background-size: 110px 110px;">
-      <img class="hero-full" style="width: 100%; max-width: 1090px;" src="/assets/ptg/images/home/NewHomepageMockup_02.png" />
-      <img class="hero-mobile" style="width: 100%; max-width: 1090px;" src="/assets/ptg/images/home/140903_heroMobile.png" />
-      <div class="hero-layer">
-        <div class="hero-copy">
-          <p>Introducing our 2014 Holiday Collection! Gather your photos and get a head start on finding the perfect, one-and-only Christmas card for you.</p>
-          <a href="/Holiday-Cards/Christmas-Cards/index.cat">
-            <button class="btn_std shadow">Shop Holiday</button>
-          </a>
-        </div>
+    <style>.btn_ghost:hover {background: #fff!important;color: #4E5963;}</style>
+    <div class="hero-bg hero-full" data-0="background-position:0% 35%;" data-500="background-position:0% 10%;" style="background: #223C53 url('http://www.mknepprath.com/lab/pyrus/assets/golden-hero.jpg');background-position:0% 35%;background-size:115%;height:400px;">
+      <div class="hero-content" style="padding-top:95px;margin:0 auto;max-width:619px;">
+        <img src="http://www.mknepprath.com/lab/pyrus/assets/golden-text.png" style="margin:20px auto;display:block;width:100%;" />
+        <a href="/Holiday-Cards/index.cat"><button class="btn_std btn_ghost" style="background: none;border:1px solid #fff;margin:0 auto;display:block;">Holiday Collection</button></a>
       </div>
     </div>
+    <a href="/Holiday-Cards/index.cat"><img class="hero-mobile" style="width: 100%; max-width: 1244px;" src="http://www.mknepprath.com/lab/pyrus/assets/golden-mobile.jpg" /></a>
     <!-- END EDITABLE BLOCK 1 "hero" -->
   </div>
   <div class="newsletter">
@@ -410,10 +406,14 @@
     </div>
     <div class="content-block">
       <!-- EDITABLE BLOCK 3 "content-block" -->
-      <div class="tiled-background halloween-block">
+      <div style="background: url(/assets/ptg/images/home/halloween-bg.jpg);background-size:130%;" class="tiled-background halloween-block">
         <p>GET TRICKED OUT FOR HALLOWEEN</p>
-        <a href="/Halloween-Cards/Halloween-Invitations/index.cat"><button alt="halloween party invitations" class="btn_std btn_orange shadow">Shop Halloween Party Invitations</button></a>
-        <a href="/Halloween-Cards/Halloween-Photo-Cards/index.cat"><button alt="halloween photo cards" class="btn_std btn_orange shadow">Shop Halloween Photo Cards</button></a>
+        <a href="/Halloween-Cards/Halloween-Invitations/index.cat">
+          <button class="btn_std btn_orange shadow" alt="halloween party invitations">Shop Halloween Party Invitations</button>
+        </a>
+        <a href="/Halloween-Cards/Halloween-Photo-Cards/index.cat">
+          <button class="btn_std btn_orange shadow" alt="halloween photo cards">Shop Halloween Photo Cards</button>
+        </a>
       </div>
       <!-- END EDITABLE 3 BLOCK "content-block" -->
     </div>
@@ -583,6 +583,10 @@
   }).bind("mouseleave", function() {
       $("div.bosc-tooltip").hide();
   });
+</script>
+<script type="text/javascript" src="http://mknepprath.com/lab/pyrus/js/skrollr.min.js"></script>
+<script type="text/javascript">
+  var s = skrollr.init();
 </script>
 </body>
 </html>
