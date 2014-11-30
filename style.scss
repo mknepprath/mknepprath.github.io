@@ -157,7 +157,6 @@ img {
 //
 
 .wrapper-masthead {
-  /*background: $black;**/
   margin-bottom: 50px;
 }
 
@@ -198,7 +197,6 @@ img {
 
 .site-name {
   margin: 0;
-  color: $white;
   cursor: pointer;
   font-family: $roboto;
   font-weight: 300;
@@ -231,7 +229,7 @@ nav {
 
   a {
     margin-left: 40px;
-    color: $white;
+    color: $black;
     text-align: right;
     text-transform: uppercase;
     font-weight: 300;
