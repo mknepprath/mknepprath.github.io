@@ -78,7 +78,7 @@ a {
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: mix($accentColor, $white, 20%);
   }
 }
 
@@ -231,7 +231,7 @@ nav {
 
   a {
     margin-left: 40px;
-    color: mix($accentColor, $white, 20%);
+    color: $white;
     text-align: right;
     font-weight: 500;
     letter-spacing: 1px;
