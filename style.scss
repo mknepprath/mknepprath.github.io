@@ -7,7 +7,7 @@
 
 @import "_reset";
 @import "_variables";
-@import url(http://fonts.googleapis.com/css?family=Quicksand:300,400,700|Copse|Roboto|Roboto+Slab);
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,700,800|Lato:400,700|Istok+Web:400,700|Quicksand:300,400,700|Cagliostro|Copse|Asap:400,700|Roboto|Roboto+Slab|Signika);
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -245,7 +245,7 @@ nav {
   padding: 20px 0;
 
   h2 {
-    font-family: $quicksand;
+    font-family: "Lato";
     font-size: 65px;
     line-height: 1.2em;
 
