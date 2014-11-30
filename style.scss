@@ -245,9 +245,11 @@ nav {
   padding: 20px 0;
 
   h2 {
-    font-family: "Lato";
+    font-family: "Dosis";
     font-size: 65px;
+    font-weight: 700;
     line-height: 1.2em;
+    margin: 1em 0 1.5em;
 
     @include mobile {
       font-size: 35px;
