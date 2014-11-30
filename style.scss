@@ -231,7 +231,7 @@ nav {
 
   a {
     margin-left: 40px;
-    color: $accentColor + $white;
+    color: ($accentColor + $white);
     text-align: right;
     font-weight: 500;
     letter-spacing: 1px;
