@@ -231,8 +231,7 @@ nav {
     margin-left: 40px;
     color: $black;
     text-align: right;
-    text-transform: lowercase;
-    font-weight: 700;
+    font-weight: 500;
     letter-spacing: 1px;
 
     @include mobile {
