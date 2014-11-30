@@ -156,9 +156,8 @@ img {
 // .masthead
 //
 
-div.wrapper-masthead {
-  position: absolute;
-  width: 100%;
+.wrapper-masthead {
+  background: #accentColor;
 }
 
 .masthead {
@@ -240,15 +239,6 @@ nav {
       margin: 0 10px;
     }
   }
-}
-
-//
-// /* particles */
-//
-
-canvas{
-  display:block;
-  vertical-align:bottom;
 }
 
 //
