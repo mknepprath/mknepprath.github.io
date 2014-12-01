@@ -17,7 +17,6 @@ avatar: https://avatars3.githubusercontent.com/u/1000280?v=2&s=460
 
 # Includes an icon in the footer for each username you enter
 footer-links:
-  twitter: mknepprath
   dribbble: mknepprath
   email: michael@mknepprath.com
   facebook:
@@ -27,6 +26,7 @@ footer-links:
   linkedin: mknepprath
   pinterest: mknepprath
   rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
+  twitter: mknepprath
   stackoverflow: # your stackoverflow profile, e.g. "users/50476/bart-kiers"
 
 # Your disqus shortname, entering this will enable commenting on posts
