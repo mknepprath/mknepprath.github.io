@@ -286,8 +286,12 @@ nav {
   }
 
   .read-more {
-    text-transform: uppercase;
-    font-size: 15px;
+    color: #fff;
+    background: #26d8d2;
+    border-radius: 3px;
+    padding: 10px 20px;
+    margin-top: 5px;
+    display: inline-block;
   }
 }
 
