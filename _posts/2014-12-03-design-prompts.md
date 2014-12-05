@@ -3,7 +3,7 @@ layout: post
 title: Design Prompts
 ---
 
-<img class="aligncenter" src="/images/designprompts-logo.jpg" alt="design prompts" />
+<img class="aligncenter" src="/images/designprompts.jpg" alt="design prompts" />
 
 [Design Prompts](http://www.twitter.com/designprompts/) is a service dedicated to getting you past a creative roadblock. To get past doing nothing, sometimes you just have to do *something*. Design Prompts posts a new word every day to rekindle your creative fire.
 
