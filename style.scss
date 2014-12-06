@@ -299,6 +299,9 @@ nav {
     padding: 0px 10px;
     margin-top: 5px;
     display: inline-block;
+    &:hover, &:active {
+      color: mix($accentColor, $white, 60%);
+    }
   }
 }
 
