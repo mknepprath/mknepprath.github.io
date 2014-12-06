@@ -11,4 +11,4 @@ I am going to use this blog to share and discuss the latest news in the categori
 
 ### Contact me
 
-You can contact me via [my email](michael@mknepprath.com) or send me a message on [Facebook](http://www.facebook.com/mknepprath/) or [Twitter](http://www.facebook.com/mknepprath/).
+You can contact me via [my email](mailto:michael@mknepprath.com) or send me a message on [Facebook](http://www.facebook.com/mknepprath/) or [Twitter](http://www.twitter.com/mknepprath/).
