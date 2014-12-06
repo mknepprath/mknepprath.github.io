@@ -78,7 +78,7 @@ a {
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: mix($accentColor, $white, 60%);
+    color: mix($accentColor, $white, 70%);
   }
 }
 
@@ -300,7 +300,7 @@ nav {
     margin-top: 5px;
     display: inline-block;
     &:hover, &:active {
-      background: mix($accentColor, $white, 60%);
+      background: mix($accentColor, $white, 70%);
     }
   }
 }
