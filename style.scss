@@ -78,7 +78,7 @@ a {
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: mix($accentColor, $white, 80%);
+    color: mix($accentColor, $white, 60%);
   }
 }
 
