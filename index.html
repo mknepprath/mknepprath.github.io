@@ -12,7 +12,9 @@ layout: home
         {{ post.content | truncatewords:60}}
       </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">•••</a>
+      <div class="read-more-container">
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">•••</a>
+  	  </div>
     </article>
   {% endfor %}
 </div>
