@@ -9,4 +9,4 @@ title: Design Prompts
 
 <p style="text-align:center;"><blockquote class="twitter-tweet" lang="en"><p>aardvark</p>&mdash; Design Prompts (@designprompts) <a href="https://twitter.com/designprompts/status/530781871043784704">November 7, 2014</a></blockquote></p>
 
-<div class="button">[Design Prompts→](http://www.twitter.com/designprompts/)</div>
+<div class="button"><a href="http://www.twitter.com/designprompts/">Design Prompts →</a></div>
