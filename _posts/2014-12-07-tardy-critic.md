@@ -9,4 +9,4 @@ title: Tardy Critic
 
 This tweet quickly sparked [Tardy Critic](http://www.tardycritic.com/), a site where films are reviewed ten years after their original release date.
 
-<div class="button"><a href="http://www.twitter.com/tardycritic/">Tardy Critic on Twitter →</a></div>
+<!--<div class="button"><a href="http://www.twitter.com/tardycritic/">Tardy Critic on Twitter →</a></div>-->
