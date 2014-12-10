@@ -24,12 +24,12 @@
       ctx = canvas.getContext("2d");
 
       // Initialize animations
-      tire.rotateClock = new clock(45.00, 0.00, -1, false, 0, linear, 2.0 * Math.PI, 1.00, 0.0000);
-      bicycle.alphaClock = new clock(5.00, 0.00, 1, false, 0, linear, 1.0, 1.00, 0.0000);
+      flourish.rotateClock = new clock(45.00, 0.00, -1, false, 0, linear, 2.0 * Math.PI, 1.00, 0.0000);
+      tire.rotateClock = new clock(5.00, 0.00, -1, false, 0, linear, 2.0 * Math.PI, 1.00, 0.0000);
 
       // Start animation clocks
+      flourish.rotateClock.start();
       tire.rotateClock.start();
-      bicycle.alphaClock.start();
 
       // Set animation timer
       setInterval(drawFrame, (1000 / fps));
@@ -51,7 +51,11 @@
 
       background(ctx);
 
+      ctx.save();
+      ctx.translate(267.3, 225.2);
+      ctx.rotate(flourish.rotateClock.value);
       flourish(ctx);
+      ctx.restore();
 
       ctx.save();
       ctx.translate(406.9, 259.8);
@@ -59,10 +63,7 @@
       tire(ctx);
       ctx.restore();
 
-      ctx.save();
-      ctx.globalAlpha = bicycle.alphaClock.value;
       bicycle(ctx);
-      ctx.restore();
 
       pear(ctx);
     }
@@ -103,15 +104,15 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(267.0, 450.3);
-      ctx.bezierCurveTo(266.8, 450.3, 267.0, 450.1, 267.0, 449.9);
-      ctx.lineTo(267.0, 0.4);
-      ctx.bezierCurveTo(267.0, 0.2, 266.8, 0.0, 267.0, 0.0);
-      ctx.bezierCurveTo(267.2, 0.0, 267.0, 0.2, 267.0, 0.4);
-      ctx.lineTo(267.0, 449.9);
-      ctx.bezierCurveTo(267.0, 450.1, 267.2, 450.3, 267.0, 450.3);
+      ctx.moveTo(-0.3, 225.2);
+      ctx.bezierCurveTo(-0.5, 225.2, -0.3, 225.0, -0.3, 224.7);
+      ctx.lineTo(-0.3, -224.7);
+      ctx.bezierCurveTo(-0.3, -225.0, -0.5, -225.2, -0.3, -225.2);
+      ctx.bezierCurveTo(-0.1, -225.2, -0.3, -225.0, -0.3, -224.7);
+      ctx.lineTo(-0.3, 224.7);
+      ctx.bezierCurveTo(-0.3, 225.0, -0.1, 225.2, -0.3, 225.2);
       ctx.closePath();
-      gradient = ctx.createRadialGradient(267.0, 225.2, 0.0, 267.0, 225.2, 159.2);
+      gradient = ctx.createRadialGradient(-0.3, 0.0, 0.0, -0.3, 0.0, 159.2);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
       gradient.addColorStop(1.00, "rgba(255, 255, 255, 0.00)");
@@ -124,15 +125,15 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(492.1, 227.7);
-      ctx.lineTo(42.6, 227.7);
-      ctx.bezierCurveTo(42.3, 227.7, 42.2, 226.9, 42.2, 226.7);
-      ctx.bezierCurveTo(42.2, 226.5, 42.3, 225.7, 42.6, 225.7);
-      ctx.lineTo(492.1, 225.7);
-      ctx.bezierCurveTo(492.3, 225.7, 492.5, 226.5, 492.5, 226.7);
-      ctx.bezierCurveTo(492.5, 226.9, 492.3, 227.7, 492.1, 227.7);
+      ctx.moveTo(224.7, 2.6);
+      ctx.lineTo(-224.7, 2.6);
+      ctx.bezierCurveTo(-225.0, 2.6, -225.2, 1.8, -225.2, 1.6);
+      ctx.bezierCurveTo(-225.2, 1.3, -225.0, 0.6, -224.7, 0.6);
+      ctx.lineTo(224.7, 0.6);
+      ctx.bezierCurveTo(225.0, 0.6, 225.2, 1.3, 225.2, 1.6);
+      ctx.bezierCurveTo(225.2, 1.8, 225.0, 2.6, 224.7, 2.6);
       ctx.closePath();
-      gradient = ctx.createRadialGradient(267.3, 226.7, 0.0, 267.3, 226.7, 159.2);
+      gradient = ctx.createRadialGradient(0.0, 1.6, 0.0, 0.0, 1.6, 159.2);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
       gradient.addColorStop(1.00, "rgba(255, 255, 255, 0.00)");
@@ -145,16 +146,16 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(426.5, 384.2);
-      ctx.bezierCurveTo(426.4, 384.2, 426.3, 384.2, 426.2, 384.1);
-      ctx.lineTo(108.4, 66.2);
-      ctx.bezierCurveTo(108.2, 66.1, 108.2, 65.8, 108.4, 65.7);
-      ctx.bezierCurveTo(108.6, 65.5, 108.8, 65.5, 109.0, 65.7);
-      ctx.lineTo(426.8, 383.5);
-      ctx.bezierCurveTo(427.0, 383.7, 427.0, 383.9, 426.8, 384.1);
-      ctx.bezierCurveTo(426.7, 384.2, 426.6, 384.2, 426.5, 384.2);
+      ctx.moveTo(159.2, 159.0);
+      ctx.bezierCurveTo(159.1, 159.0, 159.0, 159.0, 158.9, 158.9);
+      ctx.lineTo(-158.9, -158.9);
+      ctx.bezierCurveTo(-159.1, -159.1, -159.1, -159.3, -158.9, -159.5);
+      ctx.bezierCurveTo(-158.8, -159.7, -158.5, -159.7, -158.3, -159.5);
+      ctx.lineTo(159.5, 158.3);
+      ctx.bezierCurveTo(159.7, 158.5, 159.7, 158.8, 159.5, 158.9);
+      ctx.bezierCurveTo(159.4, 159.0, 159.3, 159.0, 159.2, 159.0);
       ctx.closePath();
-      gradient = ctx.createRadialGradient(267.6, 224.9, 0.0, 267.6, 224.9, 159.3);
+      gradient = ctx.createRadialGradient(0.3, -0.3, 0.0, 0.3, -0.3, 159.3);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
       gradient.addColorStop(1.00, "rgba(255, 255, 255, 0.00)");
@@ -167,16 +168,16 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(108.7, 384.8);
-      ctx.bezierCurveTo(108.6, 384.8, 108.5, 384.7, 108.4, 384.7);
-      ctx.bezierCurveTo(108.2, 384.5, 108.2, 384.2, 108.4, 384.1);
-      ctx.lineTo(426.2, 66.2);
-      ctx.bezierCurveTo(426.4, 66.1, 426.7, 66.1, 426.8, 66.2);
-      ctx.bezierCurveTo(427.0, 66.4, 427.0, 66.7, 426.8, 66.8);
-      ctx.lineTo(109.0, 384.7);
-      ctx.bezierCurveTo(108.9, 384.7, 108.8, 384.8, 108.7, 384.8);
+      ctx.moveTo(-158.6, 159.6);
+      ctx.bezierCurveTo(-158.7, 159.6, -158.8, 159.6, -158.9, 159.5);
+      ctx.bezierCurveTo(-159.1, 159.3, -159.1, 159.1, -158.9, 158.9);
+      ctx.lineTo(158.9, -158.9);
+      ctx.bezierCurveTo(159.1, -159.1, 159.3, -159.1, 159.5, -158.9);
+      ctx.bezierCurveTo(159.7, -158.8, 159.7, -158.5, 159.5, -158.3);
+      ctx.lineTo(-158.3, 159.5);
+      ctx.bezierCurveTo(-158.4, 159.6, -158.5, 159.6, -158.6, 159.6);
       ctx.closePath();
-      gradient = ctx.createRadialGradient(267.6, 225.5, 0.0, 267.6, 225.5, 159.3);
+      gradient = ctx.createRadialGradient(0.3, 0.3, 0.0, 0.3, 0.3, 159.3);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
       gradient.addColorStop(1.00, "rgba(255, 255, 255, 0.00)");
@@ -189,16 +190,16 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(353.7, 433.1);
-      ctx.bezierCurveTo(353.5, 433.1, 353.4, 433.0, 353.3, 432.8);
-      ctx.lineTo(181.3, 17.5);
-      ctx.bezierCurveTo(181.2, 17.3, 181.3, 17.1, 181.5, 17.0);
-      ctx.bezierCurveTo(181.7, 16.9, 182.0, 17.0, 182.1, 17.2);
-      ctx.lineTo(354.1, 432.5);
-      ctx.bezierCurveTo(354.2, 432.7, 354.1, 432.9, 353.9, 433.0);
-      ctx.bezierCurveTo(353.8, 433.0, 353.8, 433.1, 353.7, 433.1);
+      ctx.moveTo(86.4, 207.9);
+      ctx.bezierCurveTo(86.2, 207.9, 86.1, 207.8, 86.0, 207.6);
+      ctx.lineTo(-86.0, -207.6);
+      ctx.bezierCurveTo(-86.1, -207.8, -86.0, -208.1, -85.8, -208.2);
+      ctx.bezierCurveTo(-85.6, -208.3, -85.3, -208.2, -85.2, -208.0);
+      ctx.lineTo(86.8, 207.3);
+      ctx.bezierCurveTo(86.9, 207.5, 86.8, 207.8, 86.5, 207.9);
+      ctx.bezierCurveTo(86.5, 207.9, 86.4, 207.9, 86.4, 207.9);
       ctx.closePath();
-      gradient = ctx.createRadialGradient(267.7, 225.0, 0.0, 267.7, 225.0, 159.3);
+      gradient = ctx.createRadialGradient(0.4, -0.2, 0.0, 0.4, -0.2, 159.3);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
       gradient.addColorStop(1.00, "rgba(255, 255, 255, 0.00)");
@@ -211,16 +212,16 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(59.8, 312.0);
-      ctx.bezierCurveTo(59.7, 312.0, 59.5, 311.9, 59.5, 311.7);
-      ctx.bezierCurveTo(59.4, 311.5, 59.5, 311.3, 59.7, 311.2);
-      ctx.lineTo(474.9, 139.2);
-      ctx.bezierCurveTo(475.2, 139.1, 475.4, 139.2, 475.5, 139.4);
-      ctx.bezierCurveTo(475.6, 139.6, 475.5, 139.8, 475.3, 139.9);
-      ctx.lineTo(60.0, 311.9);
-      ctx.bezierCurveTo(59.9, 312.0, 59.9, 312.0, 59.8, 312.0);
+      ctx.moveTo(-207.5, 86.8);
+      ctx.bezierCurveTo(-207.6, 86.8, -207.8, 86.7, -207.9, 86.5);
+      ctx.bezierCurveTo(-207.9, 86.3, -207.8, 86.1, -207.6, 86.0);
+      ctx.lineTo(207.6, -86.0);
+      ctx.bezierCurveTo(207.8, -86.1, 208.1, -86.0, 208.2, -85.8);
+      ctx.bezierCurveTo(208.3, -85.6, 208.2, -85.3, 208.0, -85.2);
+      ctx.lineTo(-207.3, 86.8);
+      ctx.bezierCurveTo(-207.4, 86.8, -207.4, 86.8, -207.5, 86.8);
       ctx.closePath();
-      gradient = ctx.createRadialGradient(267.5, 225.5, 0.0, 267.5, 225.5, 159.3);
+      gradient = ctx.createRadialGradient(0.2, 0.4, 0.0, 0.2, 0.4, 159.3);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
       gradient.addColorStop(1.00, "rgba(255, 255, 255, 0.00)");
@@ -233,16 +234,16 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(475.1, 311.2);
-      ctx.bezierCurveTo(475.1, 311.2, 475.0, 311.2, 474.9, 311.2);
-      ctx.lineTo(59.7, 139.2);
-      ctx.bezierCurveTo(59.5, 139.1, 59.4, 138.8, 59.5, 138.6);
-      ctx.bezierCurveTo(59.5, 138.4, 59.8, 138.3, 60.0, 138.4);
-      ctx.lineTo(475.3, 310.4);
-      ctx.bezierCurveTo(475.5, 310.5, 475.6, 310.7, 475.5, 310.9);
-      ctx.bezierCurveTo(475.4, 311.1, 475.3, 311.2, 475.1, 311.2);
+      ctx.moveTo(207.8, 86.0);
+      ctx.bezierCurveTo(207.7, 86.0, 207.7, 86.0, 207.6, 86.0);
+      ctx.lineTo(-207.6, -86.0);
+      ctx.bezierCurveTo(-207.8, -86.1, -207.9, -86.3, -207.9, -86.5);
+      ctx.bezierCurveTo(-207.8, -86.8, -207.5, -86.9, -207.3, -86.8);
+      ctx.lineTo(208.0, 85.2);
+      ctx.bezierCurveTo(208.2, 85.3, 208.3, 85.6, 208.2, 85.8);
+      ctx.bezierCurveTo(208.1, 85.9, 208.0, 86.0, 207.8, 86.0);
       ctx.closePath();
-      gradient = ctx.createRadialGradient(267.5, 224.8, 0.0, 267.5, 224.8, 159.3);
+      gradient = ctx.createRadialGradient(0.2, -0.4, 0.0, 0.2, -0.4, 159.3);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
       gradient.addColorStop(1.00, "rgba(255, 255, 255, 0.00)");
@@ -255,16 +256,16 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(181.7, 433.4);
-      ctx.bezierCurveTo(181.6, 433.4, 181.6, 433.4, 181.5, 433.3);
-      ctx.bezierCurveTo(181.3, 433.2, 181.2, 433.0, 181.3, 432.8);
-      ctx.lineTo(353.3, 17.5);
-      ctx.bezierCurveTo(353.4, 17.3, 353.6, 17.2, 353.9, 17.3);
-      ctx.bezierCurveTo(354.1, 17.4, 354.2, 17.6, 354.1, 17.8);
-      ctx.lineTo(182.1, 433.1);
-      ctx.bezierCurveTo(182.0, 433.3, 181.9, 433.4, 181.7, 433.4);
+      ctx.moveTo(-85.6, 208.2);
+      ctx.bezierCurveTo(-85.7, 208.2, -85.7, 208.2, -85.8, 208.2);
+      ctx.bezierCurveTo(-86.0, 208.1, -86.1, 207.8, -86.0, 207.6);
+      ctx.lineTo(86.0, -207.6);
+      ctx.bezierCurveTo(86.1, -207.8, 86.3, -207.9, 86.5, -207.9);
+      ctx.bezierCurveTo(86.8, -207.8, 86.9, -207.5, 86.8, -207.3);
+      ctx.lineTo(-85.2, 208.0);
+      ctx.bezierCurveTo(-85.3, 208.1, -85.5, 208.2, -85.6, 208.2);
       ctx.closePath();
-      gradient = ctx.createRadialGradient(267.7, 225.3, 0.0, 267.7, 225.3, 159.3);
+      gradient = ctx.createRadialGradient(0.4, 0.2, 0.0, 0.4, 0.2, 159.3);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
       gradient.addColorStop(1.00, "rgba(255, 255, 255, 0.00)");
@@ -282,16 +283,16 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(310.9, 446.1);
-      ctx.bezierCurveTo(310.7, 446.1, 310.5, 445.9, 310.5, 445.7);
-      ctx.lineTo(222.8, 4.9);
-      ctx.bezierCurveTo(222.7, 4.6, 222.8, 4.4, 223.0, 4.4);
-      ctx.bezierCurveTo(223.3, 4.3, 223.4, 4.5, 223.5, 4.7);
-      ctx.lineTo(311.2, 445.6);
-      ctx.bezierCurveTo(311.2, 445.8, 311.1, 446.0, 310.9, 446.1);
+      ctx.moveTo(43.6, 220.9);
+      ctx.bezierCurveTo(43.4, 220.9, 43.2, 220.8, 43.2, 220.6);
+      ctx.lineTo(-44.5, -220.3);
+      ctx.bezierCurveTo(-44.6, -220.5, -44.5, -220.7, -44.3, -220.8);
+      ctx.bezierCurveTo(-44.0, -220.8, -43.9, -220.7, -43.8, -220.4);
+      ctx.lineTo(43.8, 220.4);
+      ctx.bezierCurveTo(43.9, 220.7, 43.8, 220.9, 43.6, 220.9);
       ctx.closePath();
       ctx.save();
-      ctx.transform(0.981, -0.195, -0.195, -0.981, -32.5, 82.0);
+      ctx.transform(0.981, -0.195, -0.195, -0.981, -299.8, -143.1);
       gradient = ctx.createRadialGradient(265.8, -198.9, 0.0, 265.8, -198.9, 159.2);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
@@ -306,16 +307,16 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(488.1, 183.3);
-      ctx.lineTo(47.3, 271.0);
-      ctx.bezierCurveTo(47.1, 271.1, 46.8, 270.7, 46.8, 270.4);
-      ctx.bezierCurveTo(46.7, 270.2, 46.8, 269.7, 47.0, 269.7);
-      ctx.lineTo(487.9, 182.0);
-      ctx.bezierCurveTo(488.1, 181.9, 488.4, 182.4, 488.4, 182.6);
-      ctx.bezierCurveTo(488.5, 182.8, 488.4, 183.3, 488.1, 183.3);
+      ctx.moveTo(220.8, -41.8);
+      ctx.lineTo(-220.0, 45.9);
+      ctx.bezierCurveTo(-220.2, 45.9, -220.5, 45.5, -220.6, 45.3);
+      ctx.bezierCurveTo(-220.6, 45.1, -220.5, 44.6, -220.3, 44.5);
+      ctx.lineTo(220.6, -43.2);
+      ctx.bezierCurveTo(220.8, -43.2, 221.1, -42.8, 221.1, -42.6);
+      ctx.bezierCurveTo(221.1, -42.3, 221.1, -41.9, 220.8, -41.8);
       ctx.closePath();
       ctx.save();
-      ctx.transform(0.981, -0.195, -0.195, -0.981, -32.5, 82.0);
+      ctx.transform(0.981, -0.195, -0.195, -0.981, -299.8, -143.1);
       gradient = ctx.createRadialGradient(266.1, -200.3, 0.0, 266.1, -200.3, 159.2);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
@@ -330,17 +331,17 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(454.5, 350.1);
-      ctx.bezierCurveTo(454.4, 350.1, 454.3, 350.1, 454.2, 350.0);
-      ctx.lineTo(80.4, 100.3);
-      ctx.bezierCurveTo(80.3, 100.2, 80.2, 99.9, 80.3, 99.7);
-      ctx.bezierCurveTo(80.5, 99.5, 80.7, 99.5, 80.9, 99.6);
-      ctx.lineTo(454.6, 349.3);
-      ctx.bezierCurveTo(454.8, 349.5, 454.9, 349.7, 454.8, 349.9);
-      ctx.bezierCurveTo(454.7, 350.0, 454.6, 350.1, 454.5, 350.1);
+      ctx.moveTo(187.2, 124.9);
+      ctx.bezierCurveTo(187.1, 124.9, 187.0, 124.9, 186.9, 124.9);
+      ctx.lineTo(-186.9, -124.9);
+      ctx.bezierCurveTo(-187.1, -125.0, -187.1, -125.2, -187.0, -125.4);
+      ctx.bezierCurveTo(-186.9, -125.6, -186.6, -125.7, -186.4, -125.6);
+      ctx.lineTo(187.3, 124.2);
+      ctx.bezierCurveTo(187.5, 124.3, 187.6, 124.6, 187.4, 124.7);
+      ctx.bezierCurveTo(187.4, 124.8, 187.3, 124.9, 187.2, 124.9);
       ctx.closePath();
       ctx.save();
-      ctx.transform(0.981, -0.195, -0.195, -0.981, -32.5, 82.0);
+      ctx.transform(0.981, -0.195, -0.195, -0.981, -299.8, -143.1);
       gradient = ctx.createRadialGradient(266.4, -198.6, 0.0, 266.4, -198.6, 159.3);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
@@ -355,17 +356,17 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(142.9, 412.7);
-      ctx.bezierCurveTo(142.8, 412.7, 142.7, 412.7, 142.6, 412.6);
-      ctx.bezierCurveTo(142.4, 412.5, 142.3, 412.2, 142.5, 412.0);
-      ctx.lineTo(392.2, 38.3);
-      ctx.bezierCurveTo(392.3, 38.1, 392.6, 38.0, 392.7, 38.2);
-      ctx.bezierCurveTo(392.9, 38.3, 393.0, 38.6, 392.9, 38.8);
-      ctx.lineTo(143.1, 412.5);
-      ctx.bezierCurveTo(143.1, 412.6, 143.0, 412.6, 142.9, 412.7);
+      ctx.moveTo(-124.4, 187.5);
+      ctx.bezierCurveTo(-124.5, 187.5, -124.7, 187.5, -124.7, 187.4);
+      ctx.bezierCurveTo(-124.9, 187.3, -125.0, 187.1, -124.9, 186.9);
+      ctx.lineTo(124.9, -186.9);
+      ctx.bezierCurveTo(125.0, -187.1, 125.2, -187.1, 125.4, -187.0);
+      ctx.bezierCurveTo(125.6, -186.9, 125.7, -186.6, 125.6, -186.4);
+      ctx.lineTo(-124.2, 187.3);
+      ctx.bezierCurveTo(-124.2, 187.4, -124.3, 187.5, -124.4, 187.5);
       ctx.closePath();
       ctx.save();
-      ctx.transform(0.981, -0.195, -0.195, -0.981, -32.5, 82.0);
+      ctx.transform(0.981, -0.195, -0.195, -0.981, -299.8, -143.1);
       gradient = ctx.createRadialGradient(266.4, -199.2, 0.0, 266.4, -199.2, 159.3);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
@@ -380,17 +381,17 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(392.6, 412.2);
-      ctx.bezierCurveTo(392.4, 412.2, 392.3, 412.2, 392.2, 412.0);
-      ctx.lineTo(142.5, 38.3);
-      ctx.bezierCurveTo(142.3, 38.1, 142.4, 37.8, 142.6, 37.7);
-      ctx.bezierCurveTo(142.8, 37.6, 143.0, 37.6, 143.1, 37.8);
-      ctx.lineTo(392.9, 411.6);
-      ctx.bezierCurveTo(393.0, 411.8, 392.9, 412.0, 392.7, 412.1);
-      ctx.bezierCurveTo(392.7, 412.2, 392.7, 412.2, 392.6, 412.2);
+      ctx.moveTo(125.3, 187.0);
+      ctx.bezierCurveTo(125.1, 187.1, 125.0, 187.0, 124.9, 186.9);
+      ctx.lineTo(-124.9, -186.9);
+      ctx.bezierCurveTo(-125.0, -187.1, -124.9, -187.3, -124.7, -187.4);
+      ctx.bezierCurveTo(-124.6, -187.6, -124.3, -187.5, -124.2, -187.3);
+      ctx.lineTo(125.6, 186.4);
+      ctx.bezierCurveTo(125.7, 186.6, 125.6, 186.9, 125.4, 187.0);
+      ctx.bezierCurveTo(125.4, 187.0, 125.3, 187.0, 125.3, 187.0);
       ctx.closePath();
       ctx.save();
-      ctx.transform(0.981, -0.195, -0.195, -0.981, -32.5, 82.0);
+      ctx.transform(0.981, -0.195, -0.195, -0.981, -299.8, -143.1);
       gradient = ctx.createRadialGradient(266.5, -198.7, 0.0, 266.5, -198.7, 159.3);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
@@ -405,17 +406,17 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(80.8, 350.8);
-      ctx.bezierCurveTo(80.6, 350.8, 80.4, 350.7, 80.3, 350.6);
-      ctx.bezierCurveTo(80.2, 350.4, 80.3, 350.1, 80.4, 350.0);
-      ctx.lineTo(454.2, 100.3);
-      ctx.bezierCurveTo(454.4, 100.2, 454.6, 100.2, 454.8, 100.4);
-      ctx.bezierCurveTo(454.9, 100.6, 454.8, 100.9, 454.6, 101.0);
-      ctx.lineTo(80.9, 350.7);
-      ctx.bezierCurveTo(80.9, 350.7, 80.8, 350.8, 80.8, 350.8);
+      ctx.moveTo(-186.6, 125.6);
+      ctx.bezierCurveTo(-186.7, 125.6, -186.9, 125.6, -187.0, 125.4);
+      ctx.bezierCurveTo(-187.1, 125.2, -187.1, 125.0, -186.9, 124.9);
+      ctx.lineTo(186.9, -124.9);
+      ctx.bezierCurveTo(187.1, -125.0, 187.3, -124.9, 187.4, -124.7);
+      ctx.bezierCurveTo(187.6, -124.6, 187.5, -124.3, 187.3, -124.2);
+      ctx.lineTo(-186.4, 125.6);
+      ctx.bezierCurveTo(-186.5, 125.6, -186.5, 125.6, -186.6, 125.6);
       ctx.closePath();
       ctx.save();
-      ctx.transform(0.981, -0.195, -0.195, -0.981, -32.5, 82.0);
+      ctx.transform(0.981, -0.195, -0.195, -0.981, -299.8, -143.1);
       gradient = ctx.createRadialGradient(266.3, -199.3, 0.0, 266.3, -199.3, 159.3);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
@@ -430,17 +431,17 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(487.9, 269.0);
-      ctx.bezierCurveTo(487.8, 269.0, 487.8, 269.0, 487.7, 269.0);
-      ctx.lineTo(46.9, 181.3);
-      ctx.bezierCurveTo(46.7, 181.3, 46.5, 181.1, 46.6, 180.8);
-      ctx.bezierCurveTo(46.6, 180.6, 46.8, 180.5, 47.0, 180.5);
-      ctx.lineTo(487.9, 268.2);
-      ctx.bezierCurveTo(488.1, 268.2, 488.3, 268.5, 488.2, 268.7);
-      ctx.bezierCurveTo(488.2, 268.8, 488.1, 269.0, 487.9, 269.0);
+      ctx.moveTo(220.6, 43.8);
+      ctx.bezierCurveTo(220.5, 43.9, 220.5, 43.9, 220.4, 43.8);
+      ctx.lineTo(-220.4, -43.8);
+      ctx.bezierCurveTo(-220.6, -43.9, -220.8, -44.1, -220.8, -44.3);
+      ctx.bezierCurveTo(-220.7, -44.6, -220.5, -44.7, -220.3, -44.7);
+      ctx.lineTo(220.6, 43.0);
+      ctx.bezierCurveTo(220.8, 43.1, 221.0, 43.3, 220.9, 43.5);
+      ctx.bezierCurveTo(220.9, 43.7, 220.7, 43.8, 220.6, 43.8);
       ctx.closePath();
       ctx.save();
-      ctx.transform(0.981, -0.195, -0.195, -0.981, -32.5, 82.0);
+      ctx.transform(0.981, -0.195, -0.195, -0.981, -299.8, -143.1);
       gradient = ctx.createRadialGradient(266.3, -198.5, 0.0, 266.3, -198.5, 159.3);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
@@ -455,17 +456,17 @@
       // flourish/flourish/Group/Group/Path
       ctx.save();
       ctx.beginPath();
-      ctx.moveTo(224.0, 446.1);
-      ctx.bezierCurveTo(223.9, 446.1, 223.8, 446.1, 223.8, 446.1);
-      ctx.bezierCurveTo(223.6, 446.0, 223.4, 445.8, 223.5, 445.6);
-      ctx.lineTo(311.2, 4.7);
-      ctx.bezierCurveTo(311.2, 4.5, 311.4, 4.4, 311.6, 4.4);
-      ctx.bezierCurveTo(311.9, 4.5, 312.0, 4.7, 312.0, 4.9);
-      ctx.lineTo(224.3, 445.7);
-      ctx.bezierCurveTo(224.2, 445.9, 224.1, 446.0, 224.0, 446.1);
+      ctx.moveTo(-43.4, 220.9);
+      ctx.bezierCurveTo(-43.4, 220.9, -43.5, 220.9, -43.5, 220.9);
+      ctx.bezierCurveTo(-43.7, 220.9, -43.9, 220.6, -43.8, 220.4);
+      ctx.lineTo(43.8, -220.4);
+      ctx.bezierCurveTo(43.9, -220.7, 44.1, -220.8, 44.3, -220.8);
+      ctx.bezierCurveTo(44.6, -220.7, 44.7, -220.5, 44.7, -220.3);
+      ctx.lineTo(-43.0, 220.6);
+      ctx.bezierCurveTo(-43.1, 220.8, -43.2, 220.9, -43.4, 220.9);
       ctx.closePath();
       ctx.save();
-      ctx.transform(0.981, -0.195, -0.195, -0.981, -32.5, 82.0);
+      ctx.transform(0.981, -0.195, -0.195, -0.981, -299.8, -143.1);
       gradient = ctx.createRadialGradient(266.5, -199.0, 0.0, 266.5, -199.0, 159.3);
       gradient.addColorStop(0.00, "rgb(154, 231, 0)");
       gradient.addColorStop(0.50, "rgba(204, 243, 127, 0.50)");
