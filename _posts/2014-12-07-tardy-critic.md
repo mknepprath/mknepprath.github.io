@@ -13,7 +13,7 @@ You can view the conversation that ensued on Tardy Critic's [About page](http://
 
 So, what better way to escape this cycle than to review films long after their release? It's been over ten years since Ocean's Twelve, Kung Fu Hustle, and Shaun of the Dead came out - we can now review these films without the millions of dollars worth or marketing being pushed on us with the sole purpose of making us like them.
 
-A great team rallied around this idea right from the start, and I'll admit that nothing would have come of this without their excitement and contributions, so I'd like to send a big "Thank you!" out to [@MrBobDobolina](http://twitter.com/mrbobdobolina), [@commonfrequency](http://twitter.com/commonfrequency), [@SomeCallMeJonas](http://twitter.com/somecallmejonas), and [@aaronmievans](http://twitter.com/aaronmievans)for getting this idea off the ground.
+A great team rallied around this idea right from the start, and I'll admit that nothing would have come of this without their excitement and contributions, so I'd like to send a big "Thank you!" out to [@MrBobDobolina](http://twitter.com/mrbobdobolina), [@commonfrequency](http://twitter.com/commonfrequency), [@SomeCallMeJonas](http://twitter.com/somecallmejonas), and [@aaronmievans](http://twitter.com/aaronmievans) for getting this idea off the ground.
 
 Follow the Twitter account, [@tardycritic](http://twitter.com/tardycritic), to get updated whenever a new review is posted. Here are a few of my favorites:
 
