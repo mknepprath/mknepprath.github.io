@@ -60,15 +60,20 @@
       border-radius: 3px;
       margin: 12px 12px 0 0;
       flex: 1 1 auto;
+    }
+    .storygen-animate {
       -webkit-transition: 0 .1s ease-in;
       -moz-transition: 0 .1s ease-in;
       -o-transition: 0 .1s ease-in;
       transition: transform .1s ease-in;
     }
-    .storygen-blocks:hover {
-      transform: scale(1.02,1.02);
+    .storygen-animate:hover {
+            transform: scale(1.02,1.02);
       -ms-transform: scale(1.02,1.02);
       -webkit-transform: scale(1.02,1.02);
+    }
+    .storygen-animate:hover p {
+      text-shadow: 0 0 8px rgba(0,0,16,0.5);
     }
     .storygen-blocks p {
       color: #fff;
@@ -112,9 +117,9 @@
 </header>
 <div id="roots">
     <div class="content-block flex-block">
-      <a href="" data-sr="wait 0.03s" class="storygen-blocks storygen-christmas" style="background:url('http://mknepprath.com/images/stock/1sm.jpg') 50% 0;background-size:cover;"></a>
-      <a href="" data-sr="wait 0.06s" class="storygen-blocks storygen-christmas" style="background:url('http://mknepprath.com/images/stock/2sm.jpg') 50% 0;background-size:cover;"></a>
-      <a href="" data-sr="wait 0.09s" class="storygen-blocks storygen-christmas" style="background:url('http://mknepprath.com/images/stock/3sm.jpg') 50% 0;background-size:cover;"></a>
+      <a href="" data-sr="wait 0.03s" class="storygen-blocks storygen-animate" style="background:url('http://mknepprath.com/images/stock/1sm.jpg') 50% 0;background-size:cover;"></a>
+      <a href="" data-sr="wait 0.06s" class="storygen-blocks storygen-animate" style="background:url('http://mknepprath.com/images/stock/2sm.jpg') 50% 0;background-size:cover;"></a>
+      <a href="" data-sr="wait 0.09s" class="storygen-blocks storygen-animate" style="background:url('http://mknepprath.com/images/stock/3sm.jpg') 50% 0;background-size:cover;"></a>
       <div class="storygen-blocks storygen-secondary-nav"></div>
     </div>
     <script src='http://mknepprath.com/lab/story/js/scrollReveal.min.js'></script>
