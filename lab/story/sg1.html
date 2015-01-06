@@ -27,6 +27,20 @@
       background: #91B7BE;
       vertical-align: top;
     }
+    .flex-block {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      
+      -webkit-flex-flow: row wrap;
+      justify-content: space-around;
+    }
     .storygen-blocks {
       width: 33%;
       height: 200px;
@@ -37,6 +51,7 @@
     .storygen-blocks p {
       color: #fff;
       font-size: 200%;
+      text-shadow: 0 0 10px rgba(0,0,16,0.5);
       text-align: center;
       padding-top: 80px;
     }
@@ -61,7 +76,7 @@
   </div>
 </header>
 <div id="roots">
-    <div class="content-block">
+    <div class="content-block flex-block">
       <a href="" class="storygen-blocks storygen-christmas" style="background:url('http://mknepprath.com/images/stock/1sm.jpg') 50% 0;background-size:cover;"><p>Holiday</p></a>
       <a href="" class="storygen-blocks storygen-christmas" style="background:url('http://mknepprath.com/images/stock/2sm.jpg') 50% 0;background-size:cover;"><p>Christmas</p></a>
       <a href="" class="storygen-blocks storygen-christmas" style="background:url('http://mknepprath.com/images/stock/3sm.jpg') 50% 0;background-size:cover;"><p>Hannukah</p></a>
