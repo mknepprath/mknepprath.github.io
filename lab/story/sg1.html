@@ -45,7 +45,16 @@
       border-radius: 3px;
       margin: 12px 12px 0 0;
       flex: 1 1 auto;
-
+      -webkit-transition: 0 .1s ease-in;
+      -moz-transition: 0 .1s ease-in;
+      -o-transition: 0 .1s ease-in;
+      transition: transform .1s ease-in;
+    }
+    .storygen-blocks:hovere {
+      opacity: .9;
+      transform: scale(1.03,1.03);
+      -ms-transform: scale(1.03,1.03);
+      -webkit-transform: scale(1.03,1.03);
     }
     .storygen-blocks p {
       color: #fff;
