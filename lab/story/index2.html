@@ -375,41 +375,36 @@
     <style>.btn_ghost:hover {background: #fff!important;color: #4E5963;}</style>
     <div class="hero-bg hero-full" data-0="background-position:0% 35%;" data-500="background-position:0% 10%;" style="background: #223C53 url('http://www.mknepprath.com/images/stock/9.jpg');background-position:0% 35%;background-size:115%;height:400px;">
       <div class="hero-content" style="padding-top:175px;margin:0 auto;max-width:619px;">
-        <div class="demo">
-          <div class="control-group">
-            <label for="select-animal">I'm celebrating </label>
-            <select id="select-animal" class="demo-animals" placeholder="Select occasion..."></select>
-          </div>
-          <script>
-          $('#select-animal').selectize({
-            options: [
-              {class: 'occasion', value: "holiday", name: "Holiday" },
-              {class: 'occasion', value: "christmas", name: "Christmas" },
-              {class: 'occasion', value: "hannukah", name: "Hannukah" },
-              {class: 'occasion', value: "party", name: "Party" },
-              {class: 'occasion', value: 'newyear', name: 'New Year'},
-              {class: 'occasion', value: 'valentine', name: 'Valentine'},
-              {class: 'occasion', value: 'easter', name: 'Easter'},
-              {class: 'occasion', value: 'graduation', name: 'Graduation'},
-              {class: 'occasion', value: 'roshhashanah', name: 'Rosh Hashanah'},
-              {class: 'occasion', value: 'birthday', name: 'Birthday'},
-              {class: 'occasion', value: 'thanksgiving', name: 'Thanksgiving'},
-              {class: 'occasion', value: 'halloween', name: 'Halloween'}
-            ],
-            optgroups: [
-              {value: 'occasion', label: 'Occasion', label_scientific: 'Occasion'},
-            ],
-            optgroupField: 'class',
-            labelField: 'name',
-            searchField: ['name'],
-            render: {
-              optgroup_header: function(data, escape) {
-                return '';
-              }
+        <p>I'm celebrating <select id="select-animal" class="demo-animals" placeholder="Select occasion..."></select> and...</p>
+        <script>
+        $('#select-animal').selectize({
+          options: [
+            {class: 'occasion', value: "holiday", name: "Holiday" },
+            {class: 'occasion', value: "christmas", name: "Christmas" },
+            {class: 'occasion', value: "hannukah", name: "Hannukah" },
+            {class: 'occasion', value: "party", name: "Party" },
+            {class: 'occasion', value: 'newyear', name: 'New Year'},
+            {class: 'occasion', value: 'valentine', name: 'Valentine'},
+            {class: 'occasion', value: 'easter', name: 'Easter'},
+            {class: 'occasion', value: 'graduation', name: 'Graduation'},
+            {class: 'occasion', value: 'roshhashanah', name: 'Rosh Hashanah'},
+            {class: 'occasion', value: 'birthday', name: 'Birthday'},
+            {class: 'occasion', value: 'thanksgiving', name: 'Thanksgiving'},
+            {class: 'occasion', value: 'halloween', name: 'Halloween'}
+          ],
+          optgroups: [
+            {value: 'occasion', label: 'Occasion', label_scientific: 'Occasion'},
+          ],
+          optgroupField: 'class',
+          labelField: 'name',
+          searchField: ['name'],
+          render: {
+            optgroup_header: function(data, escape) {
+              return '';
             }
-          });
-          </script>
-        </div>
+          }
+        });
+        </script>
       </div>
     </div>
     <!-- END EDITABLE BLOCK 1 "hero" -->
