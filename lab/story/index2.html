@@ -358,7 +358,43 @@
     <style>.btn_ghost:hover {background: #fff!important;color: #4E5963;}</style>
     <div class="hero-bg hero-full" data-0="background-position:0% 35%;" data-500="background-position:0% 10%;" style="background: #223C53 url('http://www.mknepprath.com/images/stock/9.jpg');background-position:0% 35%;background-size:115%;height:400px;">
       <div class="hero-content" style="padding-top:175px;margin:0 auto;max-width:619px;">
-        
+        <div class="sandbox">
+            <label for="select-gear">Celebrating:</label>
+            <select id="select-gear" class="demo-default selectized" placeholder="Select gear..." tabindex="-1" style="display: none;">
+              <option value="" selected="selected"></option>
+            </select>
+            <div class="selectize-control demo-default single">
+              <div class="selectize-input items not-full has-options">
+                <input type="text" autocomplete="off" tabindex="" placeholder="Select gear..." style="width: 81px; opacity: 1; position: relative; left: 0px;">
+              </div>
+              <div class="selectize-dropdown single demo-default" style="display: none; width: 520px; top: 36px; left: 0px; visibility: visible;">
+                <div class="selectize-dropdown-content">
+                  <div data-group="Climbing" class="optgroup">
+                    <div class="optgroup-header">Climbing</div>
+                    <div data-value="bolts" data-selectable="" class="option">Bolts</div>
+                    <div data-value="cams" data-selectable="" class="option">Cams</div>
+                    <div data-value="nuts" data-selectable="" class="option">Nuts</div>
+                    <div data-value="pitons" data-selectable="" class="option">Pitons</div>
+                    <div data-value="sling" data-selectable="" class="option">Sling</div>
+                    <div data-value="stoppers" data-selectable="" class="option">Stoppers</div>
+                  </div>
+                  <div data-group="Skiing" class="optgroup">
+                    <div class="optgroup-header">Skiing</div>
+                    <div data-value="poles" data-selectable="" class="option">Poles</div>
+                    <div data-value="skins" data-selectable="" class="option">Skins</div>
+                    <div data-value="skis" data-selectable="" class="option">Skis</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="value">Current Value: <span>""</span>
+            </div>
+          </div>
+          <script>
+            $('#select-gear').selectize({
+                sortField: 'text'
+            });
+          </script>
         <a href="http://mknepprath.com/lab/story/sg1.html"><button class="btn_std btn_ghost" style="background: none;border:1px solid #fff;margin:0 auto;display:block;">Continue Your Story</button></a>
       </div>
     </div>
