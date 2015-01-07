@@ -32,16 +32,21 @@
     display: inline-block;
   }
   .selectize-input {
-    padding: 8px 32px 8px 16px!important;
+    padding: 0px 8px 0px 8px!important;
     background: none!important;
     border: none!important;
   }
+  .selectize-control.single .selectize-input {
+    box-shadow: none!important;
+  }
   .selectize-control.single .selectize-input:after {
     border-color: #fff transparent transparent transparent!important;
+    display: none;
   }
   .selectize-dropdown, .selectize-input, .selectize-input input {
     color: #fff!important;
     font-size: 32px!important;
+    line-height: 38px!important;
   }
   </style>
   <link rel="stylesheet" href="http://mknepprath.com/lab/selectize/dist/css/selectize.default.css">
@@ -395,7 +400,7 @@
     <style>.btn_ghost:hover {background: #fff!important;color: #4E5963;}</style>
     <div class="hero-bg hero-full" data-0="background-position:0% 35%;" data-500="background-position:0% 10%;" style="background: #223C53 url('http://www.mknepprath.com/images/stock/9.jpg');background-position:0% 35%;background-size:115%;height:400px;">
       <div class="hero-content" style="padding-top:175px;margin:0 auto;max-width:619px;">
-        <p>I'm celebrating <select id="select-animal" class="demo-animals" placeholder="Select occasion..."></select> and...</p>
+        <p>I'm celebrating <select id="select-animal" class="demo-animals" placeholder="type occasion..."></select> and...</p>
         <script>
         $('#select-animal').selectize({
           options: [
