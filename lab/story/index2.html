@@ -375,43 +375,33 @@
     <style>.btn_ghost:hover {background: #fff!important;color: #4E5963;}</style>
     <div class="hero-bg hero-full" data-0="background-position:0% 35%;" data-500="background-position:0% 10%;" style="background: #223C53 url('http://www.mknepprath.com/images/stock/9.jpg');background-position:0% 35%;background-size:115%;height:400px;">
       <div class="hero-content" style="padding-top:175px;margin:0 auto;max-width:619px;">
-        <div class="demo">
-          <h2>Optgroups (programmatic)</h2>
-          <div class="control-group">
-            <label for="select-animal">Animal:</label>
-            <select id="select-animal" class="demo-animals" placeholder="Select animal..."></select>
+          <div class="demo">
+            <h2>Optgroups (basic)</h2>
+            <div class="control-group">
+              <label for="select-gear">Gear:</label>
+              <select id="select-gear" class="demo-default" multiple placeholder="Select gear...">
+                <option value="">Select gear...</option>
+                <optgroup label="Climbing">
+                  <option value="pitons">Pitons</option>
+                  <option value="cams">Cams</option>
+                  <option value="nuts">Nuts</option>
+                  <option value="bolts">Bolts</option>
+                  <option value="stoppers">Stoppers</option>
+                  <option value="sling">Sling</option>
+                </optgroup>
+                <optgroup label="Skiing">
+                  <option value="skis">Skis</option>
+                  <option value="skins">Skins</option>
+                  <option value="poles">Poles</option>
+                </optgroup>
+              </select>
+            </div>
+            <script>
+            $('#select-gear').selectize({
+              sortField: 'text'
+            });
+            </script>
           </div>
-          <script>
-          $('#select-animal').selectize({
-            options: [
-              {class: 'mammal', value: "dog", name: "Dog" },
-              {class: 'mammal', value: "cat", name: "Cat" },
-              {class: 'mammal', value: "horse", name: "Horse" },
-              {class: 'mammal', value: "kangaroo", name: "Kangaroo" },
-              {class: 'bird', value: 'duck', name: 'Duck'},
-              {class: 'bird', value: 'chicken', name: 'Chicken'},
-              {class: 'bird', value: 'ostrich', name: 'Ostrich'},
-              {class: 'bird', value: 'seagull', name: 'Seagull'},
-              {class: 'reptile', value: 'snake', name: 'Snake'},
-              {class: 'reptile', value: 'lizard', name: 'Lizard'},
-              {class: 'reptile', value: 'alligator', name: 'Alligator'},
-              {class: 'reptile', value: 'turtle', name: 'Turtle'}
-            ],
-            optgroups: [
-              {value: 'mammal', label: 'Mammal', label_scientific: 'Mammalia'},
-              {value: 'bird', label: 'Bird', label_scientific: 'Aves'},
-              {value: 'reptile', label: 'Reptile', label_scientific: 'Reptilia'}
-            ],
-            optgroupField: 'class',
-            labelField: 'name',
-            searchField: ['name'],
-            render: {
-              optgroup_header: function(data, escape) {
-                return '<div class="optgroup-header">' + escape(data.label) + ' <span class="scientific">' + escape(data.label_scientific) + '</span></div>';
-              }
-            }
-          });
-          </script>
         </div>
       </div>
     </div>
