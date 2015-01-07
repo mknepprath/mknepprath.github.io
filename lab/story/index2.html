@@ -8,6 +8,25 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <link rel="shortcut icon" href="/images/lab-favicon.ico">
   <link rel="apple-touch-icon" href="/images/lab-apple-touch-icon.png">
+  <link rel="stylesheet" href="http://mknepprath.com/lab/selectize/examples/css/normalize.css">
+  <link rel="stylesheet" href="http://mknepprath.com/lab/selectize/examples/css/stylesheet.css">
+  <!--[if IE 8]><script src="js/es5.js"></script><![endif]-->
+  <script src="http://mknepprath.com/lab/selectize/examples/js/jquery.js"></script>
+  <script src="http://mknepprath.com/lab/selectize/dist/js/standalone/selectize.js"></script>
+  <script src="http://mknepprath.com/lab/selectize/examples/js/index.js"></script>
+  <style type="text/css">
+  .demo-animals .scientific {
+    font-weight: normal;
+    opacity: 0.3;
+    margin: 0 0 0 2px;
+  }
+  .demo-animals .scientific::before {
+    content: '(';
+  }
+  .demo-animals .scientific::after {
+    content: ')';
+  }
+  </style>
 </head>
 <body class="home">
 <!--ID="CROWN" REPLACES THE HEADER ACROSS THE WHOLE WEBSITE-->
@@ -616,8 +635,6 @@
       $("div.bosc-tooltip").hide();
   });
 </script>
-<script type="text/javascript" src="http://mknepprath.com/lab/story/js/selectize.min.js"></script>
-<link rel="stylesheet" type="text/css" href="http://mknepprath.com/lab/story/css/selectize.css" />
 <script type="text/javascript">
   $(function() {
     $('select').selectize(options);
