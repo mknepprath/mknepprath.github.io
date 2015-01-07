@@ -378,28 +378,26 @@
         <div class="demo">
           <div class="control-group">
             <label for="select-animal">I'm celebrating </label>
-            <select id="select-animal" class="demo-animals" placeholder="Select animal..."></select>
+            <select id="select-animal" class="demo-animals" placeholder="Select occasion..."></select>
           </div>
           <script>
           $('#select-animal').selectize({
             options: [
-              {class: 'mammal', value: "dog", name: "Dog" },
-              {class: 'mammal', value: "cat", name: "Cat" },
-              {class: 'mammal', value: "horse", name: "Horse" },
-              {class: 'mammal', value: "kangaroo", name: "Kangaroo" },
-              {class: 'bird', value: 'duck', name: 'Duck'},
-              {class: 'bird', value: 'chicken', name: 'Chicken'},
-              {class: 'bird', value: 'ostrich', name: 'Ostrich'},
-              {class: 'bird', value: 'seagull', name: 'Seagull'},
-              {class: 'reptile', value: 'snake', name: 'Snake'},
-              {class: 'reptile', value: 'lizard', name: 'Lizard'},
-              {class: 'reptile', value: 'alligator', name: 'Alligator'},
-              {class: 'reptile', value: 'turtle', name: 'Turtle'}
+              {class: 'occasion', value: "holiday", name: "Holiday" },
+              {class: 'occasion', value: "christmas", name: "Christmas" },
+              {class: 'occasion', value: "hannukah", name: "Hannukah" },
+              {class: 'occasion', value: "party", name: "Party" },
+              {class: 'occasion', value: 'newyear', name: 'New Year'},
+              {class: 'occasion', value: 'valentine', name: 'Valentine'},
+              {class: 'occasion', value: 'easter', name: 'Easter'},
+              {class: 'occasion', value: 'graduation', name: 'Graduation'},
+              {class: 'occasion', value: 'roshhashanah', name: 'Rosh Hashanah'},
+              {class: 'occasion', value: 'birthday', name: 'Birthday'},
+              {class: 'occasion', value: 'thanksgiving', name: 'Thanksgiving'},
+              {class: 'occasion', value: 'halloween', name: 'Halloween'}
             ],
             optgroups: [
-              {value: 'mammal', label: 'Mammal', label_scientific: 'Mammalia'},
-              {value: 'bird', label: 'Bird', label_scientific: 'Aves'},
-              {value: 'reptile', label: 'Reptile', label_scientific: 'Reptilia'}
+              {value: 'occasion', label: 'Occasion', label_scientific: 'Occasion'},
             ],
             optgroupField: 'class',
             labelField: 'name',
