@@ -217,7 +217,7 @@
 }
 .selectize-input.dropdown-active::before {
   content: ' ';
-  display: block;
+  display: none;
   position: absolute;
   background: #f0f0f0;
   height: 1px;
