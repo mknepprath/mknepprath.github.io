@@ -215,7 +215,7 @@
   display: block;
   clear: left;
 }
-.selectize-input.dropdown-active::before {
+/*.selectize-input.dropdown-active::before {
   content: ' ';
   display: block;
   position: absolute;
@@ -224,7 +224,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-}
+}*/
 .selectize-dropdown {
   position: absolute;
   z-index: 10;
