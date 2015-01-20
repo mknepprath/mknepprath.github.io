@@ -45,6 +45,11 @@
             <a href="http://medium.com/@mknepprath/">Writing</a>
             <a href="{{ site.baseurl }}/about">About</a>
           </nav>
+          <script type="text/javascript">
+          mixpanel.track_links("nav a", "click nav link", {
+              "referrer": document.referrer
+          });
+</script>
         </header>
       </div>
       <div class="container">
