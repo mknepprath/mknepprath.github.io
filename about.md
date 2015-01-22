@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-I am a front-end developer and designer at [Pear Tree Greetings](http://www.peartreegreetings.com/).
+Husband. Father. Almost Canadian. Front-End Designer/Developer at [Pear Tree Greetings](http://www.peartreegreetings.com/). I love the point at which technology and art converge. Tech, design, film, video games, etc.
 
 ### Side Projects
 
