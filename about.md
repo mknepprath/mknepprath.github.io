@@ -7,7 +7,7 @@ Husband. Father. Almost Canadian. Front-End Designer/Developer at [Pear Tree Gre
 
 ### Side Projects
 
-  - [Design Prompts](https://twiter.com/designprompts)
+  - [Design Prompts](https://twitter.com/designprompts)
   - [Design Prompts + Dribbble Series](https://dribbble.com/mknepprath/buckets/257652-Design-Prompts-Series)
   - [Tardy Critic](http://tardycritic.com)
   - [21st Century Mankato](https://twitter.com/21stCenturyKato)
