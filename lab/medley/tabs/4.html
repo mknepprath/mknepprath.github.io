@@ -48,6 +48,9 @@
         .medley-tab-ptg div {
           background: url('http://mknepprath.com/lab/medley/tabs/assets/ptg-hover.png');
         }
+        .medley-tab-ptg-inactive div {
+          background: url('http://mknepprath.com/lab/medley/tabs/assets/ptg.png');
+        }
         .medley-tab-rs div {
           background: url('http://mknepprath.com/lab/medley/tabs/assets/rs.png');
         }
@@ -68,6 +71,9 @@
         }
         .medley-tab-ptg {
           background: url('http://mknepprath.com/lab/medley/tabs/assets/ptg-arrow.png') no-repeat bottom!important;
+        }
+        .medley-tab-ptg-inactive {
+          background: transparent!important;
         }
         .medley-tab-rs:hover, .medley-tab-ibd:hover, .medley-tab-abb:hover {
           background: url('http://mknepprath.com/lab/medley/tabs/assets/ptg-arrow.png') no-repeat bottom!important;
@@ -656,7 +662,7 @@
 <script>
   $(document).ready(function(){
     $(".medley-tab-rs").hover(function(){
-      $(".medley-tab-ptg").toggleClass('ptg-inactive');
+      $(".medley-tab-ptg").toggleClass('medley-tab-ptg-inactive');
     });
   });
 </script>
