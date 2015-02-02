@@ -663,8 +663,11 @@
 </div>
 <script>
   $(document).ready(function(){
-    $(".medley-tab-rs, .medley-tab-ibd, .medley-tab-abb").hover(function(){
-      $(".medley-tab-ptg").toggleClass('medley-tab-ptg-inactive');
+    $(".medley-tab-rs, .medley-tab-ibd, .medley-tab-abb").mouseover(function(){
+      $(".medley-tab-ptg").addClass('medley-tab-ptg-inactive');
+    });
+    $(".medley-tab-rs, .medley-tab-ibd, .medley-tab-abb").mouseout(function(){
+      $(".medley-tab-ptg").removeClass('medley-tab-ptg-inactive');
     });
   });
 </script>
