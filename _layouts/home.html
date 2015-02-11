@@ -49,21 +49,25 @@
           mixpanel.track_links("nav a", "click nav link", {
               "referrer": document.referrer
           });
-</script>
+          </script>
         </header>
       </div>
+
       <div class="container">
         <div class="intro clearfix">
           <h2><span style="color:#fff">Hello!</span><br>I design &amp; develop things for the internet.</h2>
         </div>
       </div>
+
     </div>
+    
+    <div id="main" role="main" class="container">
+      {{ content }}
+    </div>
+
     <div id="portfolio">
       <div class="row center dribbble-shots">
       </div>
-    </div>
-    <div id="main" role="main" class="container">
-      {{ content }}
     </div>
 
     <div class="wrapper-footer">
