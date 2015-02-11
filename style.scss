@@ -281,6 +281,10 @@ nav {
 // .dribbble
 //
 
+#portfolio {
+  margin-top: 50px;
+}
+
 .dribbble-shot {
   width: 25%;
   display: inline-block;
@@ -337,7 +341,6 @@ nav {
 }
 
 .wrapper-footer {
-  margin-top: 50px;
   background-color: $darkerGray;
 }
 
