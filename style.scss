@@ -332,7 +332,7 @@ nav {
 footer {
   color: $white;
   font-size: 14px;
-  padding: 20px 0;
+  padding: 20px 0 30px;
   line-height: .5em;
 }
 
@@ -351,9 +351,13 @@ footer a svg:hover {
 }
 
 .footer-column {
-  width: 32%;
+  width: 30%;
   display: inline-block;
   vertical-align: top;
+}
+
+.footer-column:nth-child(2) {
+  width: 38%;
 }
 
 .footer-heading {
