@@ -326,12 +326,11 @@ nav {
 
 .wrapper-footer {
   margin-top: 50px;
-  background-color: $accentColor;
+  background-color: $darkerGray;
 }
 
 footer {
   padding: 20px 0;
-  text-align: center;
   line-height: 0;
 }
 
@@ -346,7 +345,7 @@ footer a {
 }
 
 .footer-heading {
-  color: #fff;
+  color: $white;
   font-weight: 500;
 }
 
