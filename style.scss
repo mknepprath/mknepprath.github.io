@@ -293,6 +293,9 @@ nav {
     width: 100%;
     vertical-align: top;
   }
+  &include mobile {
+    width: 50%;
+  }
 }
 
 .shot-info {
