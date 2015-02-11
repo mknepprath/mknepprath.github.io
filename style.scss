@@ -392,6 +392,9 @@ footer a svg {
   &:nth-child(2) {
     width: 38%;
   }
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .footer-heading {
