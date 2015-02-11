@@ -330,8 +330,13 @@ nav {
 }
 
 footer {
+  font-size: 14px;
   padding: 20px 0;
-  line-height: 0;
+  line-height: .5em;
+}
+
+footer a svg {
+  margin: 0 4px;
 }
 
 .footer-column {
