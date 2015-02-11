@@ -286,7 +286,6 @@ nav {
 }
 
 .dribbble-shot {
-  color: $white;
   width: 25%;
   display: inline-block;
   position: relative;
@@ -306,6 +305,9 @@ nav {
   display: none;
   color: white;
   overflow: hidden;
+  h3 {
+    color: $white;
+  }
 }
 
 .dribbble-shot:hover .shot-info {
