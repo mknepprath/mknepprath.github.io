@@ -58,7 +58,11 @@
         </div>
       </div>
     </div>
-
+    <div id="portfolio">
+      <h1>My Dribbble Shots</h1>
+      <div class="row center dribbble-shots">
+      </div>
+    </div>
     <div id="main" role="main" class="container">
       {{ content }}
     </div>
@@ -75,6 +79,20 @@
 
     {% include analytics.html %}
     <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-    
+    <script src="js/jribbble.js"></script>
+    <script>(function(){
+      var playerId = "envato";
+      $.jribbble.getShotsByPlayerId(mknepprath, function(data){
+        var shots = data.shots;
+        var h = '';
+        $(shots).each(function(i, shot){
+          h += '<div class="column-6--hand column-4--lap column-3--desk column-2--wall">';
+          h += '<a href="' + shot.url + '"><img src="' + shot.image_teaser_url + '"></a>';
+          h += '</div>';
+        });
+        $('.dribbble-shots').html(h);
+      });
+    }());
+    </script>
   </body>
 </html>
