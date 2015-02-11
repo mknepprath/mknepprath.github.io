@@ -28,7 +28,7 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 890px;
   padding: 0 10px;
   width: 100%;
 }
@@ -337,6 +337,17 @@ footer {
 
 footer a {
   margin: 0 12px;
+}
+
+.footer-column {
+  width: 32%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.footer-heading {
+  color: #fff;
+  font-weight: 500;
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
