@@ -354,26 +354,23 @@ footer a svg {
   -moz-transition: 0 .1s ease-in;
   -o-transition: 0 .1s ease-in;
   transition: transform .1s ease-in;
-}
-
-footer a svg:hover {
-  transform: scale(1.04,1.04);
-  -ms-transform: scale(1.04,1.04);
-  -webkit-transform: scale(1.04,1.04);
+  &:hover, $:active {
+    transform: scale(1.04,1.04);
+    -ms-transform: scale(1.04,1.04);
+    -webkit-transform: scale(1.04,1.04); 
+  }
 }
 
 .footer-column {
   width: 30%;
   display: inline-block;
   vertical-align: top;
-}
-
-.footer-column:nth-child(2) {
-  width: 38%;
-}
-
-.footer-heading {
-  font-weight: 500;
+  .footer-header {
+    font-weight: 500;
+  }
+  &:nth-child(2) {
+    width: 38%;
+  }
 }
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
