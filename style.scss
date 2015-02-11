@@ -294,6 +294,22 @@ nav {
   }
 }
 
+.shot-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  display: none;
+  color: white;
+  overflow: hidden;
+}
+
+.dribbble-shot:hover .shot-info {
+  display:block;
+}
+
 //
 // .main
 //

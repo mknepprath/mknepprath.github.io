@@ -60,7 +60,7 @@
       </div>
 
     </div>
-    
+
     <div id="main" role="main" class="container">
       {{ content }}
     </div>
@@ -91,7 +91,10 @@
         var h = '';
         $(shots).each(function(i, shot){
           h += '<div class="dribbble-shot">';
-          h += '<a href="' + shot.url + '"><img src="' + shot.image_teaser_url + '"></a>';
+          h += '<a href="' + shot.url + '">';
+          h += '<div class="shot-info">Test</div>'
+          h += '<img src="' + shot.image_teaser_url + '">';
+          h += '</a>';
           h += '</div>';
         });
         $('.dribbble-shots').html(h);
