@@ -391,6 +391,10 @@ footer a svg {
   vertical-align: top;
   &:nth-child(2) {
     width: 38%;
+    @include mobile {
+      width: 100%;
+      margin-bottom: 14px;
+    }
   }
   @include mobile {
     width: 100%;
