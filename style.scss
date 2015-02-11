@@ -293,7 +293,7 @@ nav {
     width: 100%;
     vertical-align: top;
   }
-  &include mobile {
+  @include mobile {
     width: 50%;
   }
 }
