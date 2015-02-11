@@ -223,10 +223,11 @@ img {
   font-weight: 500;
   font-size: 28px;
   letter-spacing: 1px;
-  &:hover, &:active {
+}
+
+.site-name a:hover, .site-name a:active {
     color: mix($accentColor, $white, 20%);
   }
-}
 
 .site-description {
   margin: -5px 0 0 0;
