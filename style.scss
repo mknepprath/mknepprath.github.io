@@ -370,6 +370,11 @@ nav {
 
 .wrapper-footer {
   background-color: $darkerGray;
+  margin-top: 50px;
+}
+
+.home .wrapper-footer {
+  margin-top: 0px;
 }
 
 footer {
