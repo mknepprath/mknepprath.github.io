@@ -381,6 +381,10 @@ nav {
 
 .one-half {
   width: 50%;
+  @include mobile {
+      width: 100%;
+      margin-bottom: 14px;
+    }
 }
 
 .home .post h3 {
