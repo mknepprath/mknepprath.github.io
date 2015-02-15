@@ -420,7 +420,7 @@ nav {
   display: block;
 }
 
-.home .post:nth-child(2) {
+.home .post:nth-child(even) {
   .col {
     float: right;
     h3, h1, .read-more-container {
