@@ -330,6 +330,9 @@ nav {
   height: 450px;
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
+    @include mobile {
+      height: auto;
+    }
 }
 
 .posts > .post:last-child {
@@ -391,6 +394,13 @@ nav {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
+  @include mobile {
+    float: none;
+    position: static;
+    top: auto;
+    transform: none;
+    text-align: center;
+  }
 }
 
 .one-half {
