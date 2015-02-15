@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Design Prompts
-subtitle: A prompt a day, every day.
+subtitle: A prompt a day, every day
+twitterurl: http://twitter.com/designprompts
 
 images:
 

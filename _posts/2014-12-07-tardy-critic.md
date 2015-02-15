@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tardy Critic
-subtitle: Film reviews a decade overdue.
+subtitle: Film reviews a decade overdue
 
 images:
 
