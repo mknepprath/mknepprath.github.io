@@ -435,6 +435,12 @@ nav {
     float: right;
     h3, h1, .read-more-container {
       text-align: right;
+      @include mobile {
+        text-align: center;
+      }
+    }
+    @include mobile {
+      float: none;
     }
   }
 }
