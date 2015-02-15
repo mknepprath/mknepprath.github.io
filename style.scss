@@ -327,6 +327,7 @@ nav {
 //
 
 .posts > .post {
+  height: 450px;
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
 }
@@ -337,8 +338,6 @@ nav {
 }
 
 .post {
-  height: 100%;
-  margin: 0 7.5%;
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
