@@ -366,6 +366,20 @@ nav {
       background: mix($accentColor, $white, 70%);
     }
   }
+  .see-work {
+    color: $accentColor;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 2px solid $accentColor;
+    border-radius: 3px;
+    padding: 10px 24px;
+    display: inline-block;
+    &:hover, &:active {
+      color: $white;
+      background: mix($accentColor, $white, 70%);
+    }
+  }
 }
 
 .col {
