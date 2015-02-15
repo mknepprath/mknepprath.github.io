@@ -338,6 +338,9 @@ nav {
 }
 
 .post {
+  h1 {
+    text-align: left;
+  }
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -352,7 +355,6 @@ nav {
   }
   
   .read-more-container {
-    text-align: center;
     width: 100%;
   }
 
