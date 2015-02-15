@@ -338,9 +338,6 @@ nav {
 }
 
 .post {
-  h1 {
-    text-align: left;
-  }
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -384,6 +381,18 @@ nav {
 
 .one-half {
   width: 50%;
+}
+
+.home .post h1 {
+  text-align: left;
+  font-size: 42px;
+  margin: 0 0 24px 0;
+}
+
+.home .post img {
+  width: 300px;
+  margin: 0 auto;
+  display: block;
 }
 
 .wrapper-footer {
