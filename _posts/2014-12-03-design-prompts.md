@@ -5,7 +5,7 @@ subtitle: A prompt a day, every day.
 
 images:
 
-  - url: /images/designprompts.jpg
+  - url: /images/designprompts-feat.png
     alt: Design Prompts
     title: Design Prompts
 ---

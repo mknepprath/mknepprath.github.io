@@ -377,7 +377,7 @@ nav {
     display: inline-block;
     &:hover, &:active {
       color: $white;
-      background: mix($accentColor, $white, 70%);
+      background: $accentColor;
     }
   }
 }

@@ -5,7 +5,7 @@ subtitle: Film reviews a decade overdue.
 
 images:
 
-  - url: /images/tardycritic.jpg
+  - url: /images/tardycritic-feat.png
     alt: Tardy Critic
     title: Tardy Critic
 ---
