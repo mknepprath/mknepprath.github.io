@@ -6,12 +6,12 @@ layout: home
   {% for post in site.posts %}
     <article class="post">
 
-      <div class="image">
+      <div class="col one-half">
         {% assign image = post.images[0] %}
         {% include image.html image=image %}
       </div>
 
-      <div>
+      <div class="col one-half">
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
         <h3>{{ post.subtitle }}</h3>
         <div class="read-more-container">
