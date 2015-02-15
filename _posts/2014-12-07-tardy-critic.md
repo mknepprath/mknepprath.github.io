@@ -1,6 +1,12 @@
 ---
 layout: post
 title: Tardy Critic
+
+images:
+
+  - url: /images/tardycritic.jpg
+    alt: Tardy Critic
+    title: Tardy Critic
 ---
 
 <img class="aligncenter" style="border:1px solid #e8e8e8" src="/images/tardycritic.jpg" alt="tardy critic" />

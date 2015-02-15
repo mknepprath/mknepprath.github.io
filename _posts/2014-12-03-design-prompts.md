@@ -1,6 +1,12 @@
 ---
 layout: post
 title: Design Prompts
+
+images:
+
+  - url: /images/designprompts.jpg
+    alt: Design Prompts
+    title: Design Prompts
 ---
 
 <img class="aligncenter" style="border:1px solid #e8e8e8" src="/images/designprompts.jpg" alt="design prompts" />

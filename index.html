@@ -9,6 +9,8 @@ layout: home
       <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
 
       <div class="entry">
+        {% assign image = post.images[0] %}
+        {% include image.html image=image %}
         {{ post.content | truncatewords:70}}
       </div>
 
