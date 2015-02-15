@@ -332,6 +332,7 @@ nav {
   border-bottom: 1px solid $lightGray;
     @include mobile {
       height: auto;
+      padding: 2em 0;
     }
 }
 
