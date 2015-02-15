@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Design Prompts
+subtitle: A prompt a day, every day.
 
 images:
 
