@@ -420,6 +420,15 @@ nav {
   display: block;
 }
 
+.home .posts:nth-child(2) {
+  .col {
+    float: right;
+    h3, h3, .read-more-container {
+      text-align: right;
+    }
+  }
+}
+
 .wrapper-footer {
   background-color: $darkerGray;
   margin-top: 50px;
