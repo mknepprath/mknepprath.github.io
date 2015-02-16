@@ -2739,8 +2739,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .rollInRight {
-  -webkit-animation-name: rollIn;
-  animation-name: rollIn;
+  -webkit-animation-name: rollInRight;
+  animation-name: rollInRight;
 }
 
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
