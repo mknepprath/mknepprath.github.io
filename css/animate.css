@@ -2754,8 +2754,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   100% {
     opacity: 0;
-    -webkit-transform: translateX(100%) rotate(120deg);
-    transform: translateX(100%) rotate(120deg);
+    -webkit-transform: translateX(-100%) rotate(120deg);
+    transform: translateX(-100%) rotate(120deg);
   }
 }
 
@@ -2769,9 +2769,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
   100% {
     opacity: 0;
-    -webkit-transform: translateX(100%) rotate(120deg);
-    -ms-transform: translateX(100%) rotate(120deg);
-    transform: translateX(100%) rotate(120deg);
+    -webkit-transform: translateX(-100%) rotate(120deg);
+    -ms-transform: translateX(-100%) rotate(120deg);
+    transform: translateX(-100%) rotate(120deg);
   }
 }
 
