@@ -2706,6 +2706,43 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-name: rollIn;
 }
 
+/* originally authored by Michael Knepprath */
+
+@-webkit-keyframes rollInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%) rotate(120deg);
+    transform: translateX(100%) rotate(120deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+@keyframes rollInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100%) rotate(120deg);
+    -ms-transform: translateX(100%) rotate(120deg);
+    transform: translateX(100%) rotate(120deg);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
+  }
+}
+
+.rollInRight {
+  -webkit-animation-name: rollInRight;
+  animation-name: rollInRight;
+}
+
 /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes rollOut {
@@ -2735,43 +2772,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     -webkit-transform: translateX(100%) rotate(120deg);
     -ms-transform: translateX(100%) rotate(120deg);
     transform: translateX(100%) rotate(120deg);
-  }
-}
-
-.rollInRight {
-  -webkit-animation-name: rollInRight;
-  animation-name: rollInRight;
-}
-
-/* originally authored by Michael Knepprath */
-
-@-webkit-keyframes rollOut {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateX(0px) rotate(0deg);
-    transform: translateX(0px) rotate(0deg);
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(100%) rotate(-120deg);
-    transform: translateX(100%) rotate(-120deg);
-  }
-}
-
-@keyframes rollOut {
-  0% {
-    opacity: 1;
-    -webkit-transform: translateX(0px) rotate(0deg);
-    -ms-transform: translateX(0px) rotate(0deg);
-    transform: translateX(0px) rotate(0deg);
-  }
-
-  100% {
-    opacity: 0;
-    -webkit-transform: translateX(100%) rotate(-120deg);
-    -ms-transform: translateX(100%) rotate(-120deg);
-    transform: translateX(100%) rotate(-120deg);
   }
 }
 
