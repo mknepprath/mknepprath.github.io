@@ -327,15 +327,11 @@ nav {
 //
 
 .posts > .post {
+  width: auto;
   height: 450px;
   padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
-    h3 {
-      text-transform: uppercase;
-      color: #26D8D2;
-      font-size: 16px;
-      margin: 0 0 15px 0;
-    }
+
     h1 {
       text-align: left;
       font-size: 50px;
@@ -344,15 +340,25 @@ nav {
         text-align: center;
       }
     }
+
+    h3 {
+      text-transform: uppercase;
+      color: #26D8D2;
+      font-size: 16px;
+      margin: 0 0 15px 0;
+
+    }
+
     img {
       width: 300px;
       margin: 0 auto;
       display: block;
     }
+
     &:nth-child(even) {
       .col {
         float: right;
-        h3, h1, .read-more-container {
+        h1, h3, .read-more-container {
           text-align: right;
           @include mobile {
             text-align: center;
@@ -363,6 +369,7 @@ nav {
         }
       }
     }
+
     @include mobile {
       height: auto;
       padding: 2em 0;
@@ -375,6 +382,9 @@ nav {
 }
 
 .post {
+  width: 650px;
+  margin: 0 auto;
+
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
