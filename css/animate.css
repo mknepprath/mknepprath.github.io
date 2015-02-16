@@ -2748,8 +2748,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @-webkit-keyframes rollOut {
   0% {
     opacity: 1;
-    -webkit-transform: translateX(200%) rotate(0deg);
-    transform: translateX(200%) rotate(0deg);
+    -webkit-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
   }
 
   100% {
@@ -2762,9 +2762,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 @keyframes rollOut {
   0% {
     opacity: 1;
-    -webkit-transform: translateX(200%) rotate(0deg);
-    -ms-transform: translateX(200%) rotate(0deg);
-    transform: translateX(200%) rotate(0deg);
+    -webkit-transform: translateX(0px) rotate(0deg);
+    -ms-transform: translateX(0px) rotate(0deg);
+    transform: translateX(0px) rotate(0deg);
   }
 
   100% {
