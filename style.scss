@@ -326,7 +326,6 @@ nav {
 .posts > .post {
   width: auto;
   height: 450px;
-  padding-bottom: 2em;
   border-bottom: 1px solid $lightGray;
 
     h1 {
@@ -375,7 +374,6 @@ nav {
 }
 
 .posts > .post:last-child {
-  padding-bottom: 1em;
   border-bottom: none;
 }
 
