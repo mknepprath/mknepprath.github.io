@@ -445,6 +445,10 @@ nav {
     float: none;
     position: static;
     top: auto;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
     transform: none;
     text-align: center;
   }
