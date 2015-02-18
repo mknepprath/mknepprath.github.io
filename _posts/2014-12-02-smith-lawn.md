@@ -23,8 +23,6 @@ The next couple months were spent experimenting with different ideas and emailin
 On top of designing and developing the website, I also set up a business email, [Facebook page](https://www.facebook.com/SmithLawnLandscape), [Twitter account](https://twitter.com/smithlawn), and submitted Smith Lawn's business information to all of the major listing services online. I also offered some consultation on keeping those accounts and their blog updated (which automatically posts to their accounts using [IFTTT](https://ifttt.com/).
 
 <img class="aligncenter possst" src="/images/smithlawn-landscape.png" alt="smith lawn" />
-<img class="aligncenter possst" src="/images/smithlawn-lawn.png" alt="smith lawn" />
-<img class="aligncenter possst" src="/images/smithlawn-snow.png" alt="smith lawn" />
 
 The owner was kind enough to recommend my work - you can view his comments below. Thanks, Jordan!
 
