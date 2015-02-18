@@ -389,11 +389,9 @@ nav {
   margin: 0 auto;
 
   blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
+    margin: 1.8em;
+    border-left: 2px solid $accentColor;
     padding: 0.1em 1em;
-    color: $gray;
-    font-size: 22px;
     font-style: italic;
   }
 
