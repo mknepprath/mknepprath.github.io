@@ -2,7 +2,6 @@
 layout: post
 title: Smith Lawn and Landscape
 subtitle: Website Design & Development
-published: false
 
 images:
 
@@ -11,32 +10,5 @@ images:
     title: film and animation
 ---
 
-## The Engagement
-This is a pixel reenactment of my proposal to my wife created entirely in Photoshop as a project for one of my animation classes.
-
-<iframe src="//player.vimeo.com/video/18004921?byline=0&portrait=0" width="500" height="331" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-## Black Hole Face Man Loses His Tea
-Oh, bother. This hand-drawn frame-by-frame animation required nearly 200 drawings for only 8 seconds of footage.
-
-<iframe src="//player.vimeo.com/video/15226579?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-## Mankato Marathon Introduction
-This was created pro bono as an introduction for the [Mankato Marathon](http://mankatomarathon.com/)'s promotional videos and was used for many years. The animation had to transition cleanly into the the already-designed logo.
-
-<iframe src="//player.vimeo.com/video/21277712?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-## Ben and Mike at Formal
-Ben and Mike at Formal was played at the beginning of a formal dance and ended up being the most awkward two minutes of all of our lives. Enjoy!
-
-<iframe src="//player.vimeo.com/video/11584587?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-## MAKEUP
-My wife donated her time and face to this stop-motion animation about the horrors of out-of-control makeup.
-
-<iframe src="//player.vimeo.com/video/15614941?byline=0&portrait=0" width="500" height="283" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-## Ethan's Rap
-This acapella song was serendipitously captured on my phone one evening with no intention behind it. It ended up being the perfect animation companion, as you can see below.
-
-<iframe src="//player.vimeo.com/video/11917621?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+> Michael was a joy to work with from our first meeting to final edit. I had strong ideas about what i wanted and he made things happen while also offering his professional opinion on some of my not so good ideas. I asked him to do things that he wasn't sure was possible with the template I selected for my website, but he did the necessary research and went above and beyond to give me what i asked for. He also helped me make the launch of my site a success by submitting my info to local's searches for the major search engines and setting up a facebook and twitter page for my company. He had many suggestions on how to best get my name out there via these applications as well as SEO and was always willing to help out with questions i had after the job was finished. 
+> His level of service, promptness and service after sale were all very impressive and i would recommend him to anyone. I feel that i got a very good value with great results for the amount of work he put in As long as Michael is around i will have no need for a new web- designer, so step back, ya'll!
