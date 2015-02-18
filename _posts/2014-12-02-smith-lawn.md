@@ -16,7 +16,7 @@ images:
 
 <img class="aligncenter possst" src="/images/smithlawn-branding.png" alt="smith lawn" />
 
-The next couple months were spent experimenting with different ideas and emailing each other ideas and comments we had about where to go with the website, such as, "Maybe the leaf from my logo would work as the 'bullet'," or, "Can we change the background images? I rarely do sod work so not sure its best for my home screen :)" We went back and forth on quite a few details, but landed on something we both approved of for each one. One example - I wanted the top menu to stay hidden until the user hit "Get Started" so that they'd have a very focused point of interaction. This was ditched in favor of having the Contact link immediately available for those who didn't want to browse.
+The next couple months were spent experimenting with different ideas and emailing each comments we had about where to go with the website, such as, "Maybe the leaf from my logo would work as the 'bullet'," or, "Can we change the background images? I rarely do sod work so not sure its best for my home screen :)" We went back and forth on quite a few details, but landed on something we both approved of for each one. One example - I wanted the top menu to stay hidden until the user hit "Get Started" so that they'd have a very focused point of interaction. This was ditched in favor of having the Contact link immediately available for those who didn't want to browse.
 
 <img class="aligncenter possst" src="/images/smithlawn-fb.png" alt="smith lawn" />
 
