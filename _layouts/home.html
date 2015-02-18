@@ -106,5 +106,10 @@
     <script>
      new WOW().init();
     </script>
+    <script type="text/javascript">
+      mixpanel.track("engage landing page", {
+        "referrer": document.referrer
+      });
+    </script>
   </body>
 </html>
