@@ -1,0 +1,41 @@
+---
+layout: post
+title: Smith Lawn and Landscape
+subtitle: Website Design & Development
+
+images:
+
+  - url: /images/smithlawn-feat.png
+    alt: film and animation
+    title: film and animation
+---
+
+## The Engagement
+This is a pixel reenactment of my proposal to my wife created entirely in Photoshop as a project for one of my animation classes.
+
+<iframe src="//player.vimeo.com/video/18004921?byline=0&portrait=0" width="500" height="331" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+## Black Hole Face Man Loses His Tea
+Oh, bother. This hand-drawn frame-by-frame animation required nearly 200 drawings for only 8 seconds of footage.
+
+<iframe src="//player.vimeo.com/video/15226579?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+## Mankato Marathon Introduction
+This was created pro bono as an introduction for the [Mankato Marathon](http://mankatomarathon.com/)'s promotional videos and was used for many years. The animation had to transition cleanly into the the already-designed logo.
+
+<iframe src="//player.vimeo.com/video/21277712?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+## Ben and Mike at Formal
+Ben and Mike at Formal was played at the beginning of a formal dance and ended up being the most awkward two minutes of all of our lives. Enjoy!
+
+<iframe src="//player.vimeo.com/video/11584587?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+## MAKEUP
+My wife donated her time and face to this stop-motion animation about the horrors of out-of-control makeup.
+
+<iframe src="//player.vimeo.com/video/15614941?byline=0&portrait=0" width="500" height="283" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
+## Ethan's Rap
+This acapella song was serendipitously captured on my phone one evening with no intention behind it. It ended up being the perfect animation companion, as you can see below.
+
+<iframe src="//player.vimeo.com/video/11917621?byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
