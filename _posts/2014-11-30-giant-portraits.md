@@ -15,7 +15,7 @@ Upon deciding to take full advantage of my school's unlimited black and white pr
 <img class="aligncenter possst" src="/images/giantphoto1.jpg" alt="giant photo" />
 <img class="aligncenter possst" src="/images/giantphoto2.jpg" alt="giant photo" />
 
-A similar piece was displayed in the mid-year student art show. For the end-of-year student art show I decided to go even bigger. I illustrated a portrait of myself and followed the same process, except this time the piece ended up being 323 sheets of paper, or 12' x 17.5'. I was on a lift for a full day hanging it up.
+A similar piece was displayed in the mid-year student art show. For the end-of-year student art show I decided to go even bigger. I illustrated a portrait of myself and followed the same process, except this time the piece ended up being 323 sheets of paper, or 12' x 17.5'. I was on a lift for a full day hanging it up. For comparison, you can see some normal artwork at the bottom of the second photo.
 
 <img class="aligncenter possst" src="/images/giantportrait1.png" alt="giant portrait" />
 <img class="aligncenter possst" src="/images/giantportrait2.jpg" alt="giant portrait" />
