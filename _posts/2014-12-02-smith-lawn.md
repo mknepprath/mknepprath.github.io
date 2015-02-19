@@ -5,24 +5,24 @@ subtitle: Website Design & Development
 
 images:
 
-  - url: /images/smithlawn-feat.png
+  - url: /images/smithlawn/smithlawn-feat.png
     alt: film and animation
     title: film and animation
 ---
 
-<img class="aligncenter" src="/images/smithlawn.png" alt="smith lawn" />
+<img class="aligncenter" src="/images/smithlawn/smithlawn.png" alt="smith lawn" />
 
 [Smith Lawn and Landscape](http://smithlawn.net/) is a local full-service residential and commercial landscaping, lawn care and snow removal company. The owner approached me a couple years ago about redesigning his site which had become [a bit long in the tooth](/images/smithlawn-old.png). We decided that this would be a great opportunity to solve some problems - lack of mobile support, inability to display work well, lack of contact form, and more.
 
-<img class="aligncenter possst" src="/images/smithlawn-branding.png" alt="smith lawn" />
+<img class="aligncenter possst" src="/images/smithlawn/smithlawn-branding.png" alt="smith lawn" />
 
 The next couple months were spent experimenting with different ideas and emailing each other comments we had about where to go with the website, such as, "Maybe the leaf from my logo would work as the 'bullet'," or, "Can we change the background images? I rarely do sod work so not sure its best for my home screen :)" We went back and forth on quite a few details, but landed on something we both approved of for each one. One example - I wanted the top menu to stay hidden until the user hit "Get Started" so that they'd have a very focused point of interaction. This was ditched in favor of having the Contact link immediately available for those who didn't want to browse.
 
-<img class="aligncenter possst" src="/images/smithlawn-fb.png" alt="smith lawn" />
+<img class="aligncenter possst" src="/images/smithlawn/smithlawn-fb.png" alt="smith lawn" />
 
 On top of designing and developing the website, I also set up a business email, [Facebook page](https://www.facebook.com/SmithLawnLandscape), [Twitter account](https://twitter.com/smithlawn), and submitted Smith Lawn's business information to all of the major listing services online. I also offered some consultation on keeping those accounts and their blog updated (which automatically posts to their accounts using [IFTTT](https://ifttt.com/).
 
-<img class="aligncenter possst" src="/images/smithlawn-landscape.png" alt="smith lawn" />
+<img class="aligncenter possst" src="/images/smithlawn/smithlawn-landscape.png" alt="smith lawn" />
 
 The owner was kind enough to recommend my work - you can view his comments below. Thanks, Jordan!
 
