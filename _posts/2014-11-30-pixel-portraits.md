@@ -45,5 +45,16 @@ Until now. Enjoy!
 	<img class="possst" src="/images/pixel-portraits/jesus.gif" alt="pixel portrait of jesus" />
 	<img class="possst" src="/images/pixel-portraits/jill.gif" alt="pixel portrait of jill" />
 	<img class="possst" src="/images/pixel-portraits/jobs.gif" alt="pixel portrait of jobs" />
-	<img class="possst" src="/images/pixel-portraits/kojima.gif" alt="pixel portrait of kojima" />
+	<img class="possst" src="/images/pixel-portraits/kubrik.gif" alt="pixel portrait of kubrik" />
+	<img class="possst" src="/images/pixel-portraits/lang.gif" alt="pixel portrait of lang" />
+	<img class="possst" src="/images/pixel-portraits/lucas.gif" alt="pixel portrait of lucas" />
+	<img class="possst" src="/images/pixel-portraits/mcdowell.gif" alt="pixel portrait of mcdowell" />
+	<img class="possst" src="/images/pixel-portraits/metropolis.gif" alt="pixel portrait of metropolis" />
+	<img class="possst" src="/images/pixel-portraits/nolan.gif" alt="pixel portrait of nolan" />
+	<img class="possst" src="/images/pixel-portraits/ridley.gif" alt="pixel portrait of ridley" />
+	<img class="possst" src="/images/pixel-portraits/skywalker.gif" alt="pixel portrait of skywalker" />
+	<img class="possst" src="/images/pixel-portraits/snake.gif" alt="pixel portrait of snake" />
+	<img class="possst" src="/images/pixel-portraits/spiderhead.gif" alt="pixel portrait of spiderhead" />
+	<img class="possst" src="/images/pixel-portraits/they_live.gif" alt="pixel portrait of they live" />
+	<img class="possst" src="/images/pixel-portraits/vader.gif" alt="pixel portrait of vader" />
 </p>
