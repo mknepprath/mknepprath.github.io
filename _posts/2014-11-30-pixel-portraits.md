@@ -31,7 +31,7 @@ Until now. Enjoy!
 <img class="aligncenter possst" src="/images/pixel-portraits/large-vader.png" alt="pixel portrait of vader" />
 
 <p style="text-align:center">
-	<img class="possst" src="/images/pixel-portraits/aranofsky.gif" alt="pixel portrait of aranofsky" />
+	<img class="possst" src="/images/pixel-portraits/aronofsky.gif" alt="pixel portrait of aranofsky" />
 	<img class="possst" src="/images/pixel-portraits/asimov.gif" alt="pixel portrait of asimov" />
 	<img class="possst" src="/images/pixel-portraits/bird.gif" alt="pixel portrait of bird" />
 	<img class="possst" src="/images/pixel-portraits/burton.gif" alt="pixel portrait of burton" />
@@ -41,4 +41,9 @@ Until now. Enjoy!
 	<img class="possst" src="/images/pixel-portraits/disney.gif" alt="pixel portrait of disney" />
 	<img class="possst" src="/images/pixel-portraits/gates.gif" alt="pixel portrait of gates" />
 	<img class="possst" src="/images/pixel-portraits/hal.gif" alt="pixel portrait of hal" />
+	<img class="possst" src="/images/pixel-portraits/jason.gif" alt="pixel portrait of jason" />
+	<img class="possst" src="/images/pixel-portraits/jesus.gif" alt="pixel portrait of jesus" />
+	<img class="possst" src="/images/pixel-portraits/jill.gif" alt="pixel portrait of jill" />
+	<img class="possst" src="/images/pixel-portraits/jobs.gif" alt="pixel portrait of jobs" />
+	<img class="possst" src="/images/pixel-portraits/kojima.gif" alt="pixel portrait of kojima" />
 </p>
