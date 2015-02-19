@@ -10,17 +10,35 @@ images:
     title: pixel portraits
 ---
 
-I was commissioned a few years ago to create a slew of pixel portraits based on influential people and characters. 
+I (unfortunately) used to be a heavy deviantArt user and one day decided to create a series of animated avatars for me and my friends.
 
 <p style="text-align:center">
-<img class="possst" src="/images/pixel-portraits/michael137.gif" alt="pixel portrait" />
-<img class="possst" src="/images/pixel-portraits/romanxvx.gif" alt="pixel portrait" />
-<img class="possst" src="/images/pixel-portraits/runkman.gif" alt="pixel portrait" />
-<img class="possst" src="/images/pixel-portraits/l-beej-l.gif" alt="pixel portrait" />
-<img class="possst" src="/images/pixel-portraits/arkoffire.gif" alt="pixel portrait" />
+	<img class="possst" src="/images/pixel-portraits/michael137.gif" alt="pixel portrait of michael137" />
+	<img class="possst" src="/images/pixel-portraits/romanxvx.gif" alt="pixel portrait of romanxvx" />
+	<img class="possst" src="/images/pixel-portraits/runkman.gif" alt="pixel portrait of runkman" />
+	<img class="possst" src="/images/pixel-portraits/l-beej-l.gif" alt="pixel portrait of l-beej-l" />
+	<img class="possst" src="/images/pixel-portraits/arkoffire.gif" alt="pixel portrait of arkoffire" />
 </p>
 
-A similar piece was displayed in the mid-year student art show. For the end-of-year student art show I decided to go even bigger. I illustrated a portrait of myself and followed the same process, except this time the piece ended up being 323 sheets of paper, or 12' x 17.5'. I was on a lift for a full day hanging it up. For comparison, you can see some normal artwork at the bottom of the second photo.
+Not long after, I was commissioned to create a slew of pixel portraits based on influential people and characters. Nothing came of the project, and these portraits have been sitting on my computer unshared ever since.
 
-<img class="aligncenter possst" src="/images/giantportrait1.png" alt="giant portrait" />
-<img class="aligncenter possst" src="/images/giantportrait2.jpg" alt="giant portrait" />
+Until now. Enjoy!
+
+<img class="aligncenter possst" src="/images/pixel-portraits/large-burton.gif" alt="pixel portrait of burton" />
+<img class="aligncenter possst" src="/images/pixel-portraits/large-jobs.gif" alt="pixel portrait of jobs" />
+<img class="aligncenter possst" src="/images/pixel-portraits/large-kubrik.gif" alt="pixel portrait of kubrik" />
+<img class="aligncenter possst" src="/images/pixel-portraits/large-nolan.gif" alt="pixel portrait of nolan" />
+<img class="aligncenter possst" src="/images/pixel-portraits/large-vader.gif" alt="pixel portrait of vader" />
+
+<p style="text-align:center">
+	<img class="possst" src="/images/pixel-portraits/aranofsky.gif" alt="pixel portrait of aranofsky" />
+	<img class="possst" src="/images/pixel-portraits/asimov.gif" alt="pixel portrait of asimov" />
+	<img class="possst" src="/images/pixel-portraits/bird.gif" alt="pixel portrait of bird" />
+	<img class="possst" src="/images/pixel-portraits/burton.gif" alt="pixel portrait of burton" />
+	<img class="possst" src="/images/pixel-portraits/carpenter.gif" alt="pixel portrait of carpenter" />
+	<img class="possst" src="/images/pixel-portraits/chewie.gif" alt="pixel portrait of chewie" />
+	<img class="possst" src="/images/pixel-portraits/cunningham.gif" alt="pixel portrait of cunningham" />
+	<img class="possst" src="/images/pixel-portraits/disney.gif" alt="pixel portrait of disney" />
+	<img class="possst" src="/images/pixel-portraits/gates.gif" alt="pixel portrait of gates" />
+	<img class="possst" src="/images/pixel-portraits/hal.gif" alt="pixel portrait of hal" />
+</p>
