@@ -74,7 +74,7 @@ margin: 0px;
 }
 
 .home {
-	background: #f7f7f7;
+	background: #fff;
 }
 
 ::selection {
@@ -946,9 +946,6 @@ background-position:-160px -64px;
 	background: #ffffff;
 	margin: 16px 1.4% 0px .2%;
 	display: inline-block;
-	-webkit-box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-	-moz-box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
-	box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 	border-radius: 3px;
 	float: left;
 	overflow: hidden;
@@ -960,7 +957,6 @@ background-position:-160px -64px;
 	display: block;
 	width: 100%;
 	height: auto;
-	border-bottom: 1px solid #f1f1f1;
 }
 
 #roots .caption {
