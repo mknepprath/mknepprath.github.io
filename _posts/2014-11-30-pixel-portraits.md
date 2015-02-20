@@ -24,12 +24,6 @@ Not long after, I was commissioned to create a slew of pixel portraits based on 
 
 Until now. Enjoy!
 
-<img class="aligncenter possst" src="/images/pixel-portraits/large-burton.png" alt="pixel portrait of burton" />
-<img class="aligncenter possst" src="/images/pixel-portraits/large-jobs.png" alt="pixel portrait of jobs" />
-<img class="aligncenter possst" src="/images/pixel-portraits/large-kubrik.png" alt="pixel portrait of kubrik" />
-<img class="aligncenter possst" src="/images/pixel-portraits/large-nolan.png" alt="pixel portrait of nolan" />
-<img class="aligncenter possst" src="/images/pixel-portraits/large-vader.png" alt="pixel portrait of vader" />
-
 <p style="text-align:center">
 	<img class="possst" src="/images/pixel-portraits/aronofsky.gif" alt="pixel portrait of aranofsky" />
 	<img class="possst" src="/images/pixel-portraits/asimov.gif" alt="pixel portrait of asimov" />
@@ -58,3 +52,9 @@ Until now. Enjoy!
 	<img class="possst" src="/images/pixel-portraits/they_live.gif" alt="pixel portrait of they live" />
 	<img class="possst" src="/images/pixel-portraits/vader.gif" alt="pixel portrait of vader" />
 </p>
+
+<img class="aligncenter possst" src="/images/pixel-portraits/large-burton.png" alt="pixel portrait of burton" />
+<img class="aligncenter possst" src="/images/pixel-portraits/large-jobs.png" alt="pixel portrait of jobs" />
+<img class="aligncenter possst" src="/images/pixel-portraits/large-kubrik.png" alt="pixel portrait of kubrik" />
+<img class="aligncenter possst" src="/images/pixel-portraits/large-nolan.png" alt="pixel portrait of nolan" />
+<img class="aligncenter possst" src="/images/pixel-portraits/large-vader.png" alt="pixel portrait of vader" />
