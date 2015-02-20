@@ -13,11 +13,11 @@ images:
 I (unfortunately) used to be a heavy deviantArt user and one day decided to create a series of animated avatars for me and my friends.
 
 <p style="text-align:center">
-	<img class="possst" src="/images/pixel-portraits/michael137.gif" alt="pixel portrait of michael137" />
-	<img class="possst" src="/images/pixel-portraits/romanxvx.gif" alt="pixel portrait of romanxvx" />
-	<img class="possst" src="/images/pixel-portraits/runkman.gif" alt="pixel portrait of runkman" />
-	<img class="possst" src="/images/pixel-portraits/l-beej-l.gif" alt="pixel portrait of l-beej-l" />
-	<img class="possst" src="/images/pixel-portraits/arkoffire.gif" alt="pixel portrait of arkoffire" />
+	<img class="possst nm" src="/images/pixel-portraits/michael137.gif" alt="pixel portrait of michael137" />
+	<img class="possst nm" src="/images/pixel-portraits/romanxvx.gif" alt="pixel portrait of romanxvx" />
+	<img class="possst nm" src="/images/pixel-portraits/runkman.gif" alt="pixel portrait of runkman" />
+	<img class="possst nm" src="/images/pixel-portraits/l-beej-l.gif" alt="pixel portrait of l-beej-l" />
+	<img class="possst nm" src="/images/pixel-portraits/arkoffire.gif" alt="pixel portrait of arkoffire" />
 </p>
 
 Not long after, I was commissioned to create a slew of pixel portraits based on influential people and characters. Nothing came of the project, and these portraits have been sitting on my computer unshared ever since.
