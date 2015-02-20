@@ -10,7 +10,7 @@ images:
     title: pixel portraits
 ---
 
-I (unfortunately) used to be a heavy deviantArt user and decided to create a series of animated avatars for me and my friends.
+I (unfortunately) used to be a heavy deviantArt user and decided to create a series of animated avatars for me and my friends with Photoshop.
 
 <p style="text-align:center;line-height:0">
 	<img class="possst nm" src="/images/pixel-portraits/michael137.gif" alt="pixel portrait of michael137" />
@@ -22,7 +22,7 @@ I (unfortunately) used to be a heavy deviantArt user and decided to create a ser
 
 Not long after, I was commissioned to create a slew of pixel portraits based on influential people and characters. Nothing came of the project, and these portraits have been sitting on my computer unshared ever since.
 
-Until now. Enjoy!
+Until now.
 
 <p style="text-align:center">
 	<img class="possst nm" src="/images/pixel-portraits/aronofsky.gif" alt="pixel portrait of aranofsky" />
