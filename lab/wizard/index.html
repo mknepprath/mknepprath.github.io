@@ -9,8 +9,9 @@ browser-sync start --server --files "*.html, css/*.css"
 
 <html>
 <head>
-  <title>Medley Tabs</title>
-  <link rel="stylesheet" type="text/css" href="/css/gracelandv2r1_UM.css">
+  <title>Wizard</title>
+  <link rel="stylesheet" type="text/css" href="http://peartreegreetings.com/assets/ptg/css/gracelandv2r1.css">
+  <link rel="stylesheet" type="text/css" href="css/wizard.css">
   <link rel="stylesheet" href="http://use.typekit.net/c/7a4851/p22-underground-1:n3:n6,proxima-nova-soft-1:n5:n7.P22:N:2,P25:N:2,S2x:N:2,S2z:N:2/d?3bb2a6e53c9684ffdc9a99ff195b2a62c3af7c8cd154b3fad4bafd06b6ebae7938240fad13874e8c7f10f5689586f8baea7cdc0e54c233c2720e186cf78b265aa543fc34d6d7ace7248e85a581172405d3995c44fa33c6c003eed63dc680d10dd901e00da5d2ac81f852b844815af5090f28ea0e2199f5d532adfb50b6765b158c87810d11c3e186024b85f2bc7d6908020e1b01fcb4cbbc3812b794ba267d6d2a24de83b44610493a91cb4bf367ba89d9ae0540e7f01fb47f677d9b5befb5dcb7a3154c6b3c706b41ffe755aea9b84480cb92d35095ef597bfbb700d0325df9bcb67f4a46382ee16f43958353147d684251ed73fb263fc0a2c3f63336b8434ad67409afc8b4525000c6a05958972701ba6bf45eb669658bdf2fa33832648b01b621e9b6ec6f6a87d19b4d330f1944babbb62e4986ec944c2f721365e2e1e9860446173d39260e31a63c004147ea2274a4143bd7ba922d07763b8e65726dbabaa8b390d3dbb22f3a0d913f58519541883037e7a9b9e696174504a831d5c973e7297e4f03ac9a73ef50">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <link rel="shortcut icon" href="/images/lab-favicon.ico">
@@ -19,120 +20,6 @@ browser-sync start --server --files "*.html, css/*.css"
 <body class="home">
 <!--ID="CROWN" REPLACES THE HEADER ACROSS THE WHOLE WEBSITE-->
 <header id="crown">
-  <div class="mould" style="display: none;">
-	    <div class="full-width">
-          <p>Uh, oh. You’re using Internet Explorer 8, a browser we no longer support. Please update to IE9, Firefox or Google Chrome.</p>
-      </div>
-	</div>
-  <div class="medley-menu">
-      <!-- Medley Menu Content Area -->
-      <style>
-        .medley-greeting {
-          float: left;
-          font-size: 70%;
-          text-transform: uppercase;
-          padding: 16px 15px 15px 10px;
-        }
-        .medley-menu {
-          width: 100%;
-          letter-spacing: .1px;
-          background: #fbfbfb;
-          margin: 0;
-          display: block;
-          float: left;
-        }
-        .medley-tabs li {
-          display: inline-block;
-          float: left;
-          padding: 8px 19px 6px;
-          border-left: 1px solid #E8E8E8;
-        }
-        .medley-tabs li div {
-          height: 28px;
-        }
-        .medley-tabs li:hover {
-          background: #fff;
-        }
-        .medley-tab-ptg div {
-          background: url('/assets/ptg/images/global/m-ptg-hover.png');
-        }
-        .medley-tab-ptg-inactive div {
-          background: url('/assets/ptg/images/global/m-ptg.png');
-        }
-        .medley-tab-rs div {
-          background: url('/assets/ptg/images/global/m-rs.png');
-        }
-        .medley-tab-rs:hover div {
-          background: url('/assets/ptg/images/global/m-rs-hover.png');
-        }
-        .medley-tab-ibd div {
-          background: url('/assets/ptg/images/global/m-ibd.png');
-        }
-        .medley-tab-ibd:hover div {
-          background: url('/assets/ptg/images/global/m-ibd-hover.png');
-        }
-        .medley-tab-abb div {
-          background: url('/assets/ptg/images/global/m-abb.png');
-        }
-        .medley-tab-abb:hover div {
-          background: url('/assets/ptg/images/global/m-abb-hover.png');
-        }
-        .medley-tab-ptg {
-          background: url('/assets/ptg/images/global/m-ptg-arrow.png') no-repeat bottom!important;
-        }
-        .medley-tab-ptg-inactive {
-          background: transparent!important;
-        }
-        .medley-tab-rs:hover, .medley-tab-ibd:hover, .medley-tab-abb:hover {
-          background: url('/assets/ptg/images/global/m-ptg-arrow.png') no-repeat bottom!important;
-        }
-        .free-shipping-content {
-          font-size: 85%;
-          float: right;
-          padding: 14px 0 13px;
-        }
-        .free-shipping-content:before {
-          width: 27px;
-          height: 16px;
-          content: "";
-          float: left;
-          margin: -1px 4px 0 0;
-          background: url('/assets/ptg/images/global/shipping-truck.png') right bottom no-repeat;
-        }
-        .free-shipping-content:after {
-          content: "\25b8";
-          margin-left: 3px;
-        }
-      </style>
-      <div class="full-width">
-          <p class="medley-greeting">Meet Our Family</p>
-          <ul class="medley-tabs">
-            <li class="medley-tab-ptg"><a style="cursor:default" alt="Pear Tree - personalized photo cards with award-winning designs." title="Pear Tree - personalized photo cards with award-winning designs."><div style="width:83px" /></div></a></li>
-            <li class="medley-tab-rs"><a href="https://www.redstamp.com/" rel="nofollow" target="_blank" alt="Red Stamp! Fun, stylish digital + paper cards you can send right from your phone or the web." title="Red Stamp! Fun, stylish digital + paper cards you can send right from your phone or the web."><div style="width:57px" /></div></a></li>
-            <li class="medley-tab-ibd"><a href="http://www.invitationsbydawn.com/" rel="nofollow" target="_blank" alt="Invitations by Dawn - Wedding invitations for every style and theme - and every price point!" title="Invitations by Dawn - Wedding invitations for every style and theme - and every price point!"><div style="width:77px" /></div></a></li>
-            <li class="medley-tab-abb"><a href="http://www.annsbridalbargains.com/" rel="nofollow" target="_blank" alt="Ann's Bridal Bargains - The best quality you'll find for discount wedding invitations and more." title="Ann's Bridal Bargains - The best quality you'll find for discount wedding invitations and more."><div style="width:94px" /></div></a></li>
-          </ul>
-          <a href="/content.jsp?pageName=free-shipping" class="free-shipping-content"><span style="font-weight: 600;">FREE SHIPPING</span> <span class="shipping-full">ON ORDERS OVER $115</span></a>
-      </div>
-    <!-- END Medley Menu Content Area -->
-  </div>
-  <div class="bosc">
-    <div class="full-width">
-      <div class="bosc-left">
-        <!-- EDITABLE BLOCK 0 "bosc-left" -->
-        <span class="bosc-left-wrap"><h1 class="bot-bosc">Photo Cards, Announcements, and Invitations</h1></span>
-        <!-- END EDITABLE BLOCK 0 "bosc-left" -->
-      </div>
-      <div class="bosc-right">
-        <ul class="bosc-account">
-  			  <li class="welcome">Welcome</li>
-  			  <li class="myaccount"><a href="javascript:void(0);" class="signIn" onclick="switchToURL('signin');">Sign In</a></li>
-  			  <li class="referral"><a href="/Elvis/referral.jsp">Refer A Friend</a></li>
-  			  <li class="cart"><a href="/Elvis/basket.jsp">Cart (0)</a></li>
-  		  </ul>
-      </div>
-    </div>
-  </div>
   <div class="bartlett">
     <div class="full-width">
       <div class="bartlett-left">
