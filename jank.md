@@ -1,0 +1,95 @@
+---
+layout: page
+title: Jank
+---
+<!--<p style="text-align:center">An assortment of old work, ideas, and projects.</p>-->
+
+<div class="jank-grid masonry-4 stacked">
+	<li><img src="/images/graveyard/aliens.jpg" /></li>
+	<li><img src="/images/graveyard/flower.jpg" /></li>
+	<li><img src="/images/graveyard/bridges.jpg" /></li>
+	<li><img src="/images/graveyard/100percent.jpg" /></li>
+</div>
+
+<style>
+	.jank-grid {
+		margin: 0 8px;
+	}
+	/* Masonry container */
+	.masonry-4.stacked {
+		-moz-column-count: 4;
+		-webkit-column-count: 4;
+		column-count: 4;
+		-moz-column-gap: 1em;
+		-webkit-column-gap: 1em;
+		column-gap: 1em;
+	}
+
+	.masonry-3.stacked {
+		-moz-column-count: 3;
+		-webkit-column-count: 3;
+		column-count: 3;
+		-moz-column-gap: 1em;
+		-webkit-column-gap: 1em;
+		column-gap: 1em;
+	}
+
+	.masonry-2.stacked {
+		-moz-column-count: 2;
+		-webkit-column-count: 2;
+		column-count: 2;
+		-moz-column-gap: 1em;
+		-webkit-column-gap: 1em;
+		column-gap: 1em;
+	}
+
+	/* Masonry bricks or child elements */
+	.masonry-4.stacked li, .masonry-3.stacked li, .masonry-2.stacked li {
+		line-height: 0;
+		background-color: #eee;
+		display: inline-block;
+		margin: 0 0 1em;
+		/*padding: 1em;*/
+		width: 100%;
+	}
+
+	@media only screen and (max-width : 1024px) {
+		.masonry-4.stacked {
+			-moz-column-count: 3;
+			-webkit-column-count: 3;
+			column-count: 3;
+		}
+		
+		.masonry-2.stacked {
+			-moz-column-count: 2;
+			-webkit-column-count: 2;
+			column-count: 2;
+		}
+	}
+
+	@media only screen and (max-device-width : 1024px) and (orientation : portrait) {
+		.masonry-4.stacked, .masonry-3.stacked {
+			-moz-column-count: 2;
+			-webkit-column-count: 2;
+			column-count: 2;
+		}
+	}
+
+	@media only screen and (max-width : 768px) {
+		.masonry-4.stacked, .masonry-3.stacked {
+			-moz-column-count: 2;
+			-webkit-column-count: 2;
+			column-count: 2;
+		}
+	}
+
+	@media only screen and (max-width : 480px) {
+		.masonry-4.stacked, .masonry-3.stacked, .masonry-2.stacked {
+			-moz-column-count: 1;
+			-webkit-column-count: 1;
+			column-count: 1;
+		}
+	}
+
+	/* End Masonry section */
+</style>
