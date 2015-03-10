@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Tools standalone demo</title>
+
+    <!-- include the Tools -->
+  <script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+  
+  <!-- standalone page styling (can be removed) -->
+  <link rel="shortcut icon" href="/media/img/favicon.ico">
+  <link rel="stylesheet" type="text/css"
+        href="http://jquerytools.github.io/media/css/standalone.css"/>
+
+  <style>
+    /* trigger button */
+  #referral {
+    display:block;
+    height:44px;
+    margin: 0 auto;
+    margin-bottom:30px;
+    overflow:hidden;
+    /*text-indent:-999em;*/
+    width:159px;
+    cursor:pointer;
+  }
+
+  /* mouseover state */
+  #referral:hover {
+    background-position:0 -44px;
+  }
+
+  /* clicked state */
+  #referral:focus {
+    background-position:0 -88px;
+  }
+
+  /* tooltip styling */
+  .tooltip {
+    display:none;
+    background:url(i/black_arrow_big.png);
+    height:163px;
+    padding:40px 30px 10px 30px;
+    width:310px;
+    font-size:11px;
+    color:#fff;
+  }
+
+  /* a .label element inside tooltip */
+  .tooltip .label {
+    color:yellow;
+    width:35px;
+  }
+
+  .tooltip a {
+    color:#ad4;
+    font-size:11px;
+    font-weight:bold;
+  }
+  </style>
+</head>
+<body><div style="height:200px"></div>
+<!-- trigger element. a regular workable link -->
+<a id="referral">Refer a Friend</a>
+
+<!-- tooltip element -->
+<div class="tooltip">
+
+<p>This is where stuff about our referral program will live.</p>
+<p>The black arrow background is an image, and position of the tooltip can be changed in the tooltip jquery with position: 'bottom center'</p>
+
+</div>
+
+<script>
+  $(document).ready(function() {
+      $("#referral").tooltip(
+	  { effect: 'fade',delay: '1000',position: 'bottom center',offset:[-30, 0],
+		events: {
+		  def:     "mouseenter,mouseleave",    // default show/hide events for an element
+		  tooltip: "mouseenter,mouseleave"     // the tooltip element
+		  }	  
+	  });
+$("#referral").mouseenter().delay( 10000 ).mouseleave();
+    });
+</script>
+
+</body>
+</html>
