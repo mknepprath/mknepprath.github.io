@@ -15,7 +15,21 @@ browser-sync start --server --files "*.html, css/*.css"
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="/images/lab-favicon.ico">
   <link rel="apple-touch-icon" href="/images/lab-apple-touch-icon.png">
+  <script src="http://cdn.jquerytools.org/1.2.6/full/jquery.tools.min.js"></script>
+  </style>
   <style>
+    .tooltip {
+      display:none;
+      background: url('http://mknepprath.com/lab/pyrus/assets/referral-popout.png');
+      height:163px;
+      padding:40px 30px 10px 30px;
+      width:316px;
+      height: 100px;
+      font-size:11px;
+      color:#fff;
+      left: 0!important;
+      z-index: 999;
+    }
     .nav {
       background: none;
     }
@@ -180,7 +194,10 @@ browser-sync start --server --files "*.html, css/*.css"
         <ul class="bosc-account">
   			  <li class="welcome">Welcome</li>
   			  <li class="myaccount"><a href="javascript:void(0);" class="signIn" onclick="switchToURL('signin');">Sign In</a></li>
-  			  <li class="referral"><a href="/Elvis/referral.jsp">Refer A Friend ($20)</a></li>
+  			  <li class="referral">
+            <a id="referral" href="/Elvis/referral.jsp">Refer A Friend ($20)</a>
+            <div class="tooltip">:)</div>
+          </li>
   			  <li class="cart"><a href="/Elvis/basket.jsp">Cart (0)</a></li>
   		  </ul>
       </div>
@@ -845,5 +862,17 @@ browser-sync start --server --files "*.html, css/*.css"
       <!-- END EDITABLE BLOCK 11 "content-block" -->
     </div>
 </div>
+<script>
+  $(document).ready(function() {
+    $("#referral").tooltip({ 
+      effect: 'fade',delay: '1000',position: 'bottom center',offset:[0, 0],
+      events: {
+        def:     "mouseenter,mouseleave",    // default show/hide events for an element
+        tooltip: "mouseenter,mouseleave"     // the tooltip element
+        }   
+      });
+    $("#referral").mouseenter().delay( 10000 ).mouseleave();
+  });
+</script>
 </body>
 </html>
