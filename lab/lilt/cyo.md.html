@@ -1,0 +1,149 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>cyo.md</title><style></style></head><body>
+<p>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;cyo.css&quot; /&gt;</p>
+<p>&lt;hr id=&quot;cyo_debug&quot;&gt;</p>
+<p>&lt;hr id=&quot;cyo.get_the_code:yes&quot;&gt;</p>
+<h1 id="you-can-find-the-code-">You can find the code...</h1>
+<p>Right now, I&#39;ve put the code in <a href="https://gist.github.com/32bitkid/e890983e929e6335ec65">a gist</a>.</p>
+<p>I&#39;ll probably pull it all into a proper repository soon, but you can also just check out this pen for all the juicy details.</p>
+<p><a href="#cyo.how_does_it_work:q">But how does it work?</a></p>
+<p><a href="#cyo.all_done:yes">Thanks, I&#39;m all done!</a></p>
+<p>&lt;hr id=&quot;cyo.about_buttons:ok&quot;&gt;</p>
+<h1 id="the-buttons">The Buttons</h1>
+<p>The buttons were the funnest thing to work on. Again, with the goal of minimal impact to Markdown syntax, the buttons work by matching <em>parts</em> of the fragment you are trying to navigate to.</p>
+<p>For example</p>
+<pre><code class="lang-md">[<span class="hljs-link_label">This link will be blue</span>](<span class="hljs-link_url">#cyo.this-is-where-i-wanna-go:ok</span>)
+</code></pre>
+<p>The button styles will only apply if the <code>href</code> of the link is prefixed with <code>#cyo</code>, then its icon and color are determined by the suffix.</p>
+<p>Examples:</p>
+<p>(Warning! clicking these will take you back to the start)</p>
+<p><a href="#cyo.nowhere">No Suffix</a>
+<a href="#cyo.nowhere:ok"><code>:ok</code> suffix</a>
+<a href="#cyo.nowhere:yes"><code>:yes</code> suffix</a>
+<a href="#cyo.nowhere:no"><code>:no</code> suffix</a>
+<a href="#cyo.nowhere:warn"><code>:warn</code> suffix</a>
+<a href="#cyo.nowhere:info"><code>:info</code> suffix</a>
+<a href="#cyo.nowhere:retry"><code>:retry</code> suffix</a>
+<a href="#cyo.nowhere:q"><code>:q</code> suffix</a></p>
+<p>A <em>total</em> hack, but a fun one!</p>
+<p>Okay, what now?</p>
+<p><a href="#cyo.about_css:ok">The Core CSS</a>
+<a href="#cyo.about_md:ok">Markdown Hacks</a></p>
+<p><a href="#cyo.all_done:yes">I got it...</a></p>
+<p>&lt;hr id=&quot;cyo.about_md:ok&quot;&gt;</p>
+<h1 id="hacking-markdown">Hacking Markdown</h1>
+<p>This also works by &#39;hacking&#39; in some extensions into the existing markdown format. Namely by specifying links with anchors:</p>
+<pre><code class="lang-md">[<span class="hljs-link_label">Lets go!</span>](<span class="hljs-link_url">#cyo.here</span>)
+</code></pre>
+<p>While, this <em>is</em> a basic feature of Markdown, we leverage almost more like a <code>class</code>, matching parts of the <code>id</code> to reuse functionality. The fragment caries more information than just where to go on the page.</p>
+<p>For Markdown compilers that don&#39;t support adding ID&#39;s to elements, then you have to fall back to HTML for defining sections:</p>
+<pre><code class="lang-md"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">hr</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"cyo.step1"</span>&gt;</span></span>
+<span class="hljs-header"># Part 1</span>
+Welcome to step one. Thats it!
+
+[<span class="hljs-link_label">Start Over!</span>](<span class="hljs-link_url">#cyo.begin</span>)
+
+<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">hr</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"cyo.begin"</span>&gt;</span></span>
+<span class="hljs-header">#Hello there</span>
+Ready to get started?
+
+[<span class="hljs-link_label">Goto Step 1</span>](<span class="hljs-link_url">#cyo.step1</span>)
+</code></pre>
+<p>Other syntaxes of Markdown allow for built-in id creation.</p>
+<p>I origionally started with a more semantic HTML approach using the <code>&lt;section&gt;</code> element, which I liked. However, it became problematic &ndash; and frankly ugly &ndash; when trying to mix that style with the limited grammar of Markdown. I enjoy the <em>speed</em> of writing Markdown too much to sacrifice that. But perhaps I&#39;ll revisit that someday...</p>
+<p>Any more questions?</p>
+<p><a href="#cyo.about_css:ok">How does the CSS work?</a>
+<a href="#cyo.about_buttons:ok">But those buttons?</a></p>
+<p><a href="#cyo.all_done:yes">No thanks, I got it...</a></p>
+<p>&lt;hr id=&quot;cyo.breakdown_css:ok&quot;&gt;</p>
+<h1 id="taking-the-css-rule-by-rule-">Taking the CSS rule-by-rule.</h1>
+<ol>
+<li><p><code>*[id^=&#39;cyo&#39;], *[id^=&#39;cyo&#39;] ~ * { display: none; }</code></p>
+<p> Find any element whose <code>id</code> begins with <code>cyo</code> and all of thier siblings, and hide them.</p>
+</li>
+<li><p><code>*[id^=&#39;cyo&#39;]:last-of-type ~ * { display: block; }</code></p>
+<p> Find the last element with an <code>id</code> that begins with <code>cyo</code> and make all of it&#39;s siblings displayed again.</p>
+<p> This is used to bootstrap a request that has no <code>#fragment</code> in the URL. You place your &#39;first&#39; page, as the last section in the document. This rule gets &#39;overriden&#39; by the next two rules.</p>
+</li>
+<li><p><code>*[id^=&#39;cyo&#39;]:target ~ * { display: block }</code></p>
+<p> If there is a fragment, find all of its siblings and show them.</p>
+<p> But <em>oops</em>, now I&#39;ve shown from the match to the bottom of the page!</p>
+</li>
+<li><p>`<em>[id^=&#39;cyo&#39;]:target ~ </em>[id^=&#39;cyo&#39;],
+   <em>[id^=&#39;cyo&#39;]:target ~ </em>[id^=&#39;cyo&#39;] ~ * {</p>
+<pre><code> display: none;
+</code></pre><p>   }
+   `</p>
+<p> From the target, find the <em>next</em> element that has an id that starts with <code>cyo</code> and then hide it and all it&#39;s siblings. </p>
+</li>
+</ol>
+<p><em>PHEW</em></p>
+<p>What do you want to know about now?</p>
+<p><a href="#cyo.about_md:ok">The Markdown</a>
+<a href="#cyo.about_buttons:ok">Those Custom Buttons</a></p>
+<p><a href="#cyo.all_done:yes">No thanks, I got it...</a></p>
+<p>&lt;hr id=&quot;cyo.about_css:ok&quot;&gt;</p>
+<h1 id="nojs-how-">NoJS? How?</h1>
+<p>The core of display engine requires only 7 lines of css:</p>
+<pre><code class="lang-css">*<span class="hljs-attr_selector">[id^='cyo']</span>, *<span class="hljs-attr_selector">[id^='cyo']</span> ~ * <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> none</span></span>; <span class="hljs-rule">}</span></span>
+*<span class="hljs-attr_selector">[id^='cyo']</span><span class="hljs-pseudo">:last-of-type</span> ~ * <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> block</span></span>; <span class="hljs-rule">}</span></span>
+*<span class="hljs-attr_selector">[id^='cyo']</span><span class="hljs-pseudo">:target</span> ~ * <span class="hljs-rules">{ <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> block </span></span></span>}
+*<span class="hljs-attr_selector">[id^='cyo']</span><span class="hljs-pseudo">:target</span> ~ *<span class="hljs-attr_selector">[id^='cyo']</span>,
+*<span class="hljs-attr_selector">[id^='cyo']</span><span class="hljs-pseudo">:target</span> ~ *<span class="hljs-attr_selector">[id^='cyo']</span> ~ * <span class="hljs-rules">{
+  <span class="hljs-rule"><span class="hljs-attribute">display</span>:<span class="hljs-value"> none</span></span>;
+<span class="hljs-rule">}</span></span>
+</code></pre>
+<p>It uses <code>&lt;hr&gt;</code> elements with a special <code>id</code>, hidden within the document to designate &quot;sections&quot; of the document. Then it uses the document fragment to control the visibility of the section. </p>
+<p>It (ab)uses a few simple css features:</p>
+<ul>
+<li>Attribute begins with <code>[id^=&#39;&#39;]</code></li>
+<li>The general sibling selector <code>~</code></li>
+<li>The <code>:target</code> pseduo-class, which represents the unique element, if any, with an id matching the fragment identifier of the URI of the document. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/:target">source</a></li>
+</ul>
+<p>Maybe a rule by rule breakdown would help?</p>
+<p><a href="#cyo.breakdown_css:ok">Rule By Rule Breakdown</a></p>
+<p>Or we can talk about another topic.</p>
+<p><a href="#cyo.about_md:ok">Markdown Extension</a>
+<a href="#cyo.about_buttons:ok">Custom Buttons</a></p>
+<p><a href="#cyo.all_done:yes">No thanks, I got it...</a></p>
+<p>&lt;hr id=&quot;cyo.how_does_it_work:q&quot;&gt;</p>
+<h1 id="i-m-glad-you-asked-">I&#39;m glad you asked!</h1>
+<p>So, in working on this, I had a couple of interesting constraints. I wanted it to be:</p>
+<ul>
+<li>A CSS only solution &ndash; no-JS.</li>
+<li>Play nicely with Markdown.</li>
+<li>Allow custom links/buttons styles, again without breaking MD</li>
+</ul>
+<p>Which do you want to learn more about?</p>
+<p><a href="#cyo.about_css:ok">The CSS</a>
+<a href="#cyo.about_md:ok">Markdown Hacks</a>
+<a href="#cyo.about_buttons:ok">Custom Buttons</a></p>
+<p><a href="#cyo.all_done:yes">I got it...</a></p>
+<p>&lt;hr id=&quot;cyo.abort:no&quot;&gt;</p>
+<h1 id="well-shucks-">Well, shucks!</h1>
+<p>I&#39;m sorry you feel that way! But thanks for taking the time to check this out anyway!</p>
+<p><a href="#cyo.begin:retry">Start Over</a></p>
+<p>&lt;hr id=&quot;cyo.all_done:yes&quot;&gt;</p>
+<h1 id="thanks-for-checking-out-this-experiment-">Thanks for checking out this experiment.</h1>
+<p>Thanks for trying out my little experiment in storytelling and tutorials. Feel free to hit me up with any questions, comments or improvements anytime!</p>
+<p>Cheers and <em>keep coding!</em></p>
+<p><a href="#cyo.begin:retry">Start Over</a></p>
+<p>Oh wait, did you forget to get the code?</p>
+<p><a href="#cyo.get_the_code:yes">Get the code</a></p>
+<p>&lt;hr id=&quot;cyo.step1:yes&quot;&gt;</p>
+<h1 id="great-so-have-i-">Great, so have I!</h1>
+<p>That&#39;s why I&#39;ve been working on this:</p>
+<p>A <a href="http://en.wikipedia.org/wiki/Choose_Your_Own_Adventure">&quot;Choose Your Own Adventure&quot;</a> style markdown extension that helps simplify the construction and distrubution of branching style stories and tutorials. </p>
+<p>It&#39;s a CSS-only extension &ndash; doesn&#39;t use any JavaScript &ndash; and tries to stay out of your way as much as possible but still add a sliver of interactivity to traditional markdown documents.</p>
+<p>It should also play nice with almost every markdown compiler that supports adding custom CSS, and shouldn&#39;t interfere with existing themes.</p>
+<p><a href="#cyo.get_the_code:yes">Cool, where can I get the code</a>
+<a href="#cyo.how_does_it_work:q">Extension? What do you mean?</a>
+<a href="#cyo.abort:no">That&#39;s lame</a></p>
+<p>&lt;hr id=&quot;cyo_begin&quot;&gt;</p>
+<h1 id="choose-your-own-tutorial-">Choose Your Own Tutorial...</h1>
+<p>I&#39;ve been a developer and a teacher for quite a few years now, and while I love writing tutorials, I sometimes miss the ability of working directly with a co-worker or student and really help them understand a problem.</p>
+<p>Have you ever wanted to write a tutorial, but wanted to customize the learning experience for multiple skill levels?</p>
+<p>Have you ever wanted to explore an idea collaboratively, and didn&#39;t want to feel like you were talking <em>at</em> somebody?</p>
+<p><a href="#cyo.step1:yes">Yes</a>
+<a href="#cyo.abort:no">No</a></p>
+
+</body></html>
