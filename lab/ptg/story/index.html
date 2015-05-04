@@ -80,10 +80,15 @@ browser-sync start --server --files "*.html, css/*.css"
 
   /* STORY GEN STYLES */
   .story-gen {
+    text-align: center;
     background: #9FC4CD;
     width: 100%;
     border-radius: 3px;
     padding: 20px;
+  }
+  .story-gen h4 {
+    color: #fff;
+    margin-bottom: 24px;
   }
   .story-gen form {
     color: #fff;
@@ -110,6 +115,11 @@ browser-sync start --server --files "*.html, css/*.css"
     border-radius: 3px;
     padding: 12px 30px;
     margin-left: 12px;
+  }
+  .story-gen form #submit:hover {
+    color: #3C4A4D;
+    background: #fff;
+    cursor: pointer;
   }
   /* END STORY GEN STYLES */
 </style>
@@ -2284,7 +2294,7 @@ YAHOO.util.History.onReady(function () {
       <div class="story-gen">
         <div id="contact-form">  
          <h1>Get a Head Start</h1>
-         <h2></h2>  
+         <h4>Submit your name and we'll add it to all of your cards. Try it!</h4>  
          <p id="failure"></p>  
          <p id="success"></p>  
          <form action="javascript:void(false);">  
