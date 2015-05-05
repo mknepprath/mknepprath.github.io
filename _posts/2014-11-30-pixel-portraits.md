@@ -13,7 +13,7 @@ images:
 I (unfortunately) used to be a heavy deviantArt user and decided to create a series of animated avatars for me and my friends with Photoshop.
 
 <p style="text-align:center;line-height:0">
-	<img class="possst nm a" src="/images/pixel-portraits/michael137.gif" alt="pixel portrait of michael137" />
+	<img class="possst nm" src="/images/pixel-portraits/michael137.gif" alt="pixel portrait of michael137" />
 	<img class="possst nm" src="/images/pixel-portraits/romanxvx.gif" alt="pixel portrait of romanxvx" />
 	<img class="possst nm" src="/images/pixel-portraits/runkman.gif" alt="pixel portrait of runkman" />
 	<img class="possst nm" src="/images/pixel-portraits/l-beej-l.gif" alt="pixel portrait of l-beej-l" />
