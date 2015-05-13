@@ -14,59 +14,36 @@ browser-sync start --server --files "*.html, css/*.css"
   <link rel="stylesheet" type="text/css" href="http://www.peartreegreetings.com/assets/ptg/css/gracelandv2r1.css">
   <link rel="stylesheet" href="http://use.typekit.net/c/7a4851/p22-underground-1:n3:n6,proxima-nova-soft-1:n5:n7.P22:N:2,P25:N:2,S2x:N:2,S2z:N:2/d?3bb2a6e53c9684ffdc9a99ff195b2a62c3af7c8cd154b3fad4bafd06b6ebae7938240fad13874e8c7f10f5689586f8baea7cdc0e54c233c2720e186cf78b265aa543fc34d6d7ace7248e85a581172405d3995c44fa33c6c003eed63dc680d10dd901e00da5d2ac81f852b844815af5090f28ea0e2199f5d532adfb50b6765b158c87810d11c3e186024b85f2bc7d6908020e1b01fcb4cbbc3812b794ba267d6d2a24de83b44610493a91cb4bf367ba89d9ae0540e7f01fb47f677d9b5befb5dcb7a3154c6b3c706b41ffe755aea9b84480cb92d35095ef597bfbb700d0325df9bcb67f4a46382ee16f43958353147d684251ed73fb263fc0a2c3f63336b8434ad67409afc8b4525000c6a05958972701ba6bf45eb669658bdf2fa33832648b01b621e9b6ec6f6a87d19b4d330f1944babbb62e4986ec944c2f721365e2e1e9860446173d39260e31a63c004147ea2274a4143bd7ba922d07763b8e65726dbabaa8b390d3dbb22f3a0d913f58519541883037e7a9b9e696174504a831d5c973e7297e4f03ac9a73ef50">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="//x2js.googlecode.com/hg/xml2json.js"></script>
   <meta name="viewport" content="width=device-width">
   <link rel="shortcut icon" href="/images/lab-favicon.ico">
   <link rel="apple-touch-icon" href="/images/lab-apple-touch-icon.png">
 </head>
 <style>
-  /* WHITE SSP STYLES */
-  body.siteSectionPage {
-    background: #f7f7f7;
-  }
-  body.siteSectionPage div.ribbonTitle h4 {
-    color: #616161;
-  }
-  body.siteSectionPage #taproot {
-    background: url(/assets/ptg/images/global/footer_background.png) repeat-x #F6F4F0;
-  }
-  /* END WHITE SSP STYLES */
-
-  /* WHITE CAT PAGE STYLES */
-  .category {
+  body {
     background: #f7f7f7;
   }
   .category #rectangle {
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eee;
   }
   #rectangle span, .category #rectangle h1 {
-    color: #616161;
+    color:#616161;
   }
   .category #rectangle h2.catTitle {
-    color: #616161;
-  }
-  .category #square {
-    background: #809EA3;
-    border-bottom: 1px solid #809EA3;
-  }
-  .category #square:after {
-    border-top: 25px solid #809EA3;
+    color:#616161;
   }
   .category #leftBar {
-    padding-top: 43px;
+    padding-top:47px;
   }
   .sortby p {
-    color: #616161;
+    color:#616161;
   }
   .imageSize p {
-    color: #616161;
+    color:#616161;
   }
   .category #navi {
-    background: #BAD9DE;
     border-right: none;
   }
   #refine-row {
-    background: #BAD9DE;
     box-shadow: none;
   }
   .productSquare img {
@@ -81,138 +58,14 @@ browser-sync start --server --files "*.html, css/*.css"
     background-color: #e3e3e3;
   }
   .smallViewDisable, .smallViewEnable a {
-    background:url(http://mknepprath.com/lab/ptg/cat/gracelandSprites.png) -346px -282px no-repeat;
+    background:url(http://mknepprath.com/lab/ptg/cat/gracelandSprites.png) -346px -282px no-repeat
   }
   .middleViewDisable, .middleViewEnable a {
-    background:url(http://mknepprath.com/lab/ptg/cat/gracelandSprites.png) -378px -282px no-repeat;
+    background:url(http://mknepprath.com/lab/ptg/cat/gracelandSprites.png) -378px -282px no-repeat
   }
   .bigViewDisable, .bigViewEnable a {
-    background:url(http://mknepprath.com/lab/ptg/cat/gracelandSprites.png) -410px -282px no-repeat;
+    background:url(http://mknepprath.com/lab/ptg/cat/gracelandSprites.png) -410px -282px no-repeat
   }
-  /* END WHITE CAT PAGE STYLES */
-
-  /* STORY GEN STYLES */
-  .story-gen {
-    text-align: center;
-    background: #9FC4CD;
-    width: 100%;
-    border-radius: 3px;
-    padding: 20px;
-  }
-  .story-gen h4 {
-    color: #fff;
-    margin-bottom: 24px;
-  }
-  .story-gen form {
-    color: #fff;
-    background: #3C4A4D;
-    border-radius: 3px;
-    padding: 20px;
-  }
-  .story-gen form #name {
-    font-family:proxima-nova-soft-1,proxima-nova-soft-2,"Proxima Nova Soft";
-    font-size: 100%;
-    color: #fff;
-    background: none;
-    border: none;
-    border-bottom: 2px solid #fff;
-    padding: 12px 50px;
-  }
-  .story-gen form #submit {
-    font-family:proxima-nova-soft-1,proxima-nova-soft-2,"Proxima Nova Soft";
-    font-size: 100%;
-    text-transform: uppercase;
-    color: #fff;
-    background: none;
-    border: 2px solid #fff;
-    border-radius: 3px;
-    padding: 12px 30px;
-    margin-left: 12px;
-  }
-  .story-gen form #submit:hover {
-    color: #3C4A4D;
-    background: #fff;
-    cursor: pointer;
-  }
-  /* END STORY GEN STYLES */
-
-  /* TOBY STYLES */
-    body {
-       background: #BFD7C1; /* light green */
-       color: #262626;
-       font-family: Arial, san-serif;
-    }
-    #contact-form {  
-       background-color: #87C489; 
-       width: 465px;  
-       padding: 20px;  
-       margin: 50px auto;  
-       border-radius: 15px;    
-       -moz-border-radius: 15px;  
-       -webkit-border-radius: 15px;  
-    } 
-      
-    #contact-form input,   
-    #contact-form select,   
-    #contact-form textarea,   
-    #contact-form label {  
-       font-size: 15px;  
-       margin-bottom: 2px;
-       font-family: Arial, san-serif;
-    }  
-      
-    #contact-form input,   
-    #contact-form select,   
-    #contact-form textarea {  
-       width: 450px;
-       background: #fff;
-       border: 0; 
-       -moz-border-radius: 5px;  
-       -webkit-border-radius: 5px;  
-       border-radius: 5px;
-       margin-bottom: 25px;  
-       padding: 5px;  
-    }  
-      
-    #contact-form input:focus,   
-    #contact-form select:focus,   
-    #contact-form textarea:focus {  
-       background-color: #E5E6E7; 
-    }  
-      
-    #contact-form textarea {  
-       height: 150px;   
-    }  
-
-    #contact-form #submit {  
-       width: 450px;   
-       color: #BFD7C1;  
-       border: none;  
-       background-color: #6EA070;
-    }  
-      
-    #contact-form #submit:hover {  
-       background-color: #BFD7C1;  
-       color: #6EA070; 
-    }
-    input:required, textarea:required {  
-       box-shadow: none;
-       -moz-box-shadow: none;  
-       -webkit-box-shadow: none;  
-       -o-box-shadow: none;  
-    } 
-
-    #contact-form .required {  
-       font-weight:bold;  
-       color: #E5E6E7;      
-    }
-    #failure, #success {
-       color: #6EA070; 
-       display:none;  
-    }
-    #jsonArea {position: absolute; left: 10px; top: 10px;}
-    #xmlArea {position: absolute; left: 10px; top: 250px;}
-  /* END TOBY STYLES */
 </style>
 <body onload="JavaScript:try {Init();} catch(err){}" id="smurf" class="categoryMedium category logged-out" data-pinterest-extension-installed="sa1.35">
 <!-- Bug 739] New: P3 TASK: Add Google Tag Manager code sitewide on prod -->
@@ -2381,210 +2234,6 @@ YAHOO.util.History.onReady(function () {
 
 
       <div class="cat-top-divider"></div>
-
-      <div class="story-gen">
-        <html>
-          <head>
-          <meta charset="utf-8">
-          <title>Story Tags Form</title>
-          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-          <script src="//x2js.googlecode.com/hg/xml2json.js"></script>
-          <style>
-          body {
-             background: #BFD7C1; /* light green */
-             color: #262626;
-             font-family: Arial, san-serif;
-          }
-          #contact-form {  
-             background-color: #87C489; 
-             width: 465px;  
-             padding: 20px;  
-             margin: 50px auto;  
-             border-radius: 15px;    
-             -moz-border-radius: 15px;  
-             -webkit-border-radius: 15px;  
-          } 
-            
-          #contact-form input,   
-          #contact-form select,   
-          #contact-form textarea,   
-          #contact-form label {  
-             font-size: 15px;  
-             margin-bottom: 2px;
-             font-family: Arial, san-serif;
-          }  
-            
-          #contact-form input,   
-          #contact-form select,   
-          #contact-form textarea {  
-             width: 450px;
-             background: #fff;
-             border: 0; 
-             -moz-border-radius: 5px;  
-             -webkit-border-radius: 5px;  
-             border-radius: 5px;
-             margin-bottom: 25px;  
-             padding: 5px;  
-          }  
-            
-          #contact-form input:focus,   
-          #contact-form select:focus,   
-          #contact-form textarea:focus {  
-             background-color: #E5E6E7; 
-          }  
-            
-          #contact-form textarea {  
-             height: 150px;   
-          }  
-
-          #contact-form #submit {  
-             width: 450px;   
-             color: #BFD7C1;  
-             border: none;  
-             background-color: #6EA070;
-          }  
-            
-          #contact-form #submit:hover {  
-             background-color: #BFD7C1;  
-             color: #6EA070; 
-          }
-          input:required, textarea:required {  
-             box-shadow: none;
-             -moz-box-shadow: none;  
-             -webkit-box-shadow: none;  
-             -o-box-shadow: none;  
-          } 
-
-          #contact-form .required {  
-             font-weight:bold;  
-             color: #E5E6E7;      
-          }
-          #failure, #success {
-             color: #6EA070; 
-             display:none;  
-          }
-          #jsonArea {position: absolute; left: 10px; top: 10px;}
-          #xmlArea {position: absolute; left: 10px; top: 250px;}
-          </style>
-          </head>
-          <!-- http://stackoverflow.com/questions/11815985/how-to-call-soap-xml-webservice-in-javascript-or-jquery -->
-          <body>
-          <textarea id="jsonArea" cols="55" rows="15" placeholder="JSON"></textarea>
-          <textarea id="xmlArea" cols="55" rows="15" placeholder="XML"></textarea>
-          <div id="contact-form">  
-             <h1></h1>
-             <h2></h2>  
-             <p id="failure"></p>  
-             <p id="success"></p>  
-             <form action="javascript:void(false);">  
-                <label for="name" id="q1">Name: <span class="required">*</span></label>  
-                <input type="text" id="name" name="Name" value="" placeholder="Your name" required="required" autofocus />  
-                 <span></span><br />   
-                <label for="greeting" id="q2">Your greeting: <span class="required">*</span></label>  
-                <input type="text" id="greeting" name="Greeting" value="" placeholder="Happy Holidays" required="required" />  
-                  <span></span><br />  
-                <label for="website" id="q3">Date of event: </label>  
-                <input type="date" id="date" name="fDate" value="" />  
-                   <span></span><br /> 
-                <label for="message" id="q4">Narration: <span class="required">*</span></label>  
-                <textarea id="message" name="Narration" placeholder="Write your message here, please." required></textarea>
-                <span></span><br />  
-          <input id="other" name="Other" type="hidden" value="" />           
-                <input type="submit" value="GO-BABY-GO!" id="submit" /> 
-             </form>  
-          </div>
-          <script>
-          var qno = 1; // global question variable
-          var root = [{}]; // JSON array to keep answers - placeholder
-          $( document ).ready(function() {
-          // AUTO POPULATE SPANS WITH TYPED VALUES BEFORE SUBMIT
-          $("input").keyup(function(){
-             var newAnswerVal = $(this).val();
-             $(this).nextAll('span').first().text(newAnswerVal);
-             if(newAnswerVal == ""){
-                 $(this).nextAll('span').first().text("");
-             }
-          });
-          $("textarea").keyup(function(){
-             var newAnswerVal = $(this).val();
-             $(this).nextAll('span').first().text(newAnswerVal);
-             if(newAnswerVal == ""){
-                 $(this).nextAll('span').first().text("");
-             }
-          });
-          $("#date").change(function(){
-             var newAnswerVal = $(this).val();
-             $(this).nextAll('span').first().text(newAnswerVal);
-             if(newAnswerVal == ""){
-                 $(this).nextAll('span').first().text("");
-             }
-          }); 
-          // END AUTO POPULATE SPANS WITH TYPED VALUES BEFORE SUBMIT  
-          // BEGIN LOAD QUESTIONS FROM XML  
-          $.ajax({
-          type: "GET",
-          url: "story.xml",
-          dataType: "xml",
-          success: function(xml) {
-          $(xml).find('question').each(function(){
-          var Titles = $(this).find('text').text();
-          var fldName = $(this).find('fldName').text()
-          //var Products = $("#productGrid").html();
-          $("#q"+qno).html(Titles);
-          $("#q"+qno).next('input').attr('name',fldName);
-          qno++;
-
-          });
-          },
-          //other code
-          error: function() {
-          alert("The XML File could not be processed correctly.");
-          }
-          });
-          // END LOAD QUESTIONS FROM XML  
-            
-          $.fn.serializeObject = function()
-          {
-              var o = {};
-              var a = this.serializeArray();
-              $.each(a, function() {
-                  if (o[this.name] !== undefined) {
-                      if (!o[this.name].push) {
-                  // need to add the other parameters required here. _type, _rank and __text
-                          o[this.name] = [o[this.name]];
-                  o[this.type] = [o[this.type]];
-                      }
-                      o[this.name].push(this.value || '');
-                  } else {
-                      o[this.name] = this.value || '';
-                  }
-              });
-              return o;
-          };
-
-          $(function() {
-              $('form').submit(function() {
-                  $('#jsonArea').text(JSON.stringify($('form').serializeObject()));
-              var string = $('#jsonArea').val(); // GRAB string FROM jsonArea
-              var root = JSON.parse(string); // assign string to JSON array
-
-              var key = Object.keys(root); // set-up and grab keys
-              // ASSIGN XML MANUALLY TO THE 5 VARIABLES (THIS CAN BE INCREASED)
-          var xml = '<?xml version="1.0"?><root><story><content>';
-          xml += '<storytag name="'+key[0]+'" type="text" rank="1">'+root.Name+'</storytag>';
-          xml += '<storytag name="'+key[1]+'" type="text" rank="2">'+root.Greeting+'</storytag>';
-          xml += '<storytag name="'+key[2]+'" type="text" rank="3">'+root.fDate+'</storytag>';
-          xml += '<storytag name="'+key[3]+'" type="text" rank="4">'+root.Narration+'</storytag>';
-          xml += '<storytag name="'+key[4]+'" type="text" rank="5">'+root.Other+'</storytag>';
-          xml += '</content></story></root>';
-
-          $('#xmlArea').val(xml); // PUT IT IN IT'S SPOT (EVENTUALLY A VARIABLE TO AJAX TO LJ)
-          });});});
-          </script>
-          </body>
-          </html>
-      </div> 
-
 <div id="floatmenu"></div>  <div id="outLineInsideBase">
   <div id="category_wrapper-top"></div>
   <div id="category_wrapper" class="clearfix clear">
