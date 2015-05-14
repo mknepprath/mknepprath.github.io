@@ -2323,11 +2323,12 @@ YAHOO.util.History.onReady(function () {
       <div class="story-gen" id="accordion">
         <div id="contact-form">  
          <h1>Get a Head Start</h1>
-         <h4>Submit your name and we'll add it to all of your cards. Try it!</h4> 
+         <h4>Submit your name and we'll add it to your cards. Try it!</h4> 
          <a href="javascript:void(0)" class="btn_std btn_blue expand-one">Start</a> 
          <p id="failure"></p>  
          <p id="success"></p>  
-         <form action="javascript:void(false);" class="wow slideInLeft content-one">  
+         <form action="javascript:void(false);" class="wow slideInLeft content-one">
+            <a href="javascript:void(0)" class="close-sg" style="float:right;color:#f7f7f7;font-weight:bold">X</a>  
             <label for="name" id="q1">Name:<span class="required">*</span></label>  
             <input type="text" id="name" name="Name" value="" placeholder="Petunia Cottontail" required="required" autofocus />
             <span></span><br />   
@@ -2347,15 +2348,18 @@ YAHOO.util.History.onReady(function () {
           .content-one {
             display: none;
           }
+          .required {
+            padding: 0 10px 0 5px;
+          }
          </style>
-         <script src="js/wow.js"></script>
-         <script>
-          new WOW().init();
-         </script>
          <script>
           $('.expand-one').click(function(){
             $('.content-one').slideToggle('slow');
             $('.expand-one').hide();
+          });
+          $('.close-sg').click(function(){
+            $('.content-one').hide();
+            $('.expand-one').show();
           });
          </script>
         </div>
