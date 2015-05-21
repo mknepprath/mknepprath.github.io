@@ -1,0 +1,26 @@
+
+//
+// VARIABLES
+//
+
+// Colors
+$accentColor: #26d8d2;
+
+// Grays
+$black: #000;
+$darkerGray: #222;
+$darkGray: #333;
+$gray: #666;
+$lightGray: #eee;
+$white: #fff;
+
+// Font stacks
+$primaryfont: proxima-nova-soft-1,proxima-nova-soft-2,"Proxima Nova Soft","Trebuchet MS","Gill Sans","Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+$bodyfont: "Muli", Helvetica, Arial, sans-serif;
+
+// Mobile breakpoints
+@mixin mobile {
+  @media screen and (max-width: 640px) {
+    @content;
+  }
+}
