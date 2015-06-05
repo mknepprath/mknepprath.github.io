@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<!--cd Documents/Github/mknepprath.github.io/lab/ptg/header && browser-sync start --server --files "*.html, css/*.css"-->
+<html>
+<head>
+  <base href="http://www.peartreegreetings.com/">
+  <title>Pyrus</title>
+  <link rel="stylesheet" type="text/css" href="/assets/ptg/css/gracelandv2r1.css">
+  <link rel="stylesheet" href="http://use.typekit.net/c/7a4851/p22-underground-1:n3:n6,proxima-nova-soft-1:n5:n7.P22:N:2,P25:N:2,S2x:N:2,S2z:N:2/d?3bb2a6e53c9684ffdc9a99ff195b2a62c3af7c8cd154b3fad4bafd06b6ebae7938240fad13874e8c7f10f5689586f8baea7cdc0e54c233c2720e186cf78b265aa543fc34d6d7ace7248e85a581172405d3995c44fa33c6c003eed63dc680d10dd901e00da5d2ac81f852b844815af5090f28ea0e2199f5d532adfb50b6765b158c87810d11c3e186024b85f2bc7d6908020e1b01fcb4cbbc3812b794ba267d6d2a24de83b44610493a91cb4bf367ba89d9ae0540e7f01fb47f677d9b5befb5dcb7a3154c6b3c706b41ffe755aea9b84480cb92d35095ef597bfbb700d0325df9bcb67f4a46382ee16f43958353147d684251ed73fb263fc0a2c3f63336b8434ad67409afc8b4525000c6a05958972701ba6bf45eb669658bdf2fa33832648b01b621e9b6ec6f6a87d19b4d330f1944babbb62e4986ec944c2f721365e2e1e9860446173d39260e31a63c004147ea2274a4143bd7ba922d07763b8e65726dbabaa8b390d3dbb22f3a0d913f58519541883037e7a9b9e696174504a831d5c973e7297e4f03ac9a73ef50">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <link rel="shortcut icon" href="/images/lab-favicon.ico">
+  <link rel="apple-touch-icon" href="/images/lab-apple-touch-icon.png">
+</head>
+<body onload="JavaScript:try {Init();} catch(err){}" class="home logged-out">
+  <!-- Bug 739] New: P3 TASK: Add Google Tag Manager code sitewide on prod -->
+  <!-- Google Tag Manager -->
+  <noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-TJKH4F"
+    height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;
+  </noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TJKH4F');
+  </script>
+  <!-- End Google Tag Manager -->
+  <script>
+    window.optimizely = window.optimizely || [];
+    window.optimizely.push("activateUniversalAnalytics");
+  </script>
+  <script src="/js/s_code.jsp" language="JavaScript" type="text/javascript"></script>
+  <header id="crown">
+    <div id="showSigningUpContents" style="display:none">
+      <div class="Fallr_closeBtn"><a href="javascript:void(0)" onclick="$.fallr('hide');"><img src="/assets/ptg/images/global/icon_fallr-close.png" onmouseover="this.src='/assets/ptg/images/global/icon_fallr-close-hover.png'" onmouseout="this.src='/assets/ptg/images/global/icon_fallr-close.png'"></a></div>
+      <div class="fallR_alertTan">
+        <div id="fallR_header">
+          <div id="fallR_caption">
+            <h3><span></span></h3>
+          </div>
+        </div>
+        <div id="fallR_content">
+          <div id="priviewTitle"></div>
+          <div id="priviewContents">
+            <p>Thanks for signing up. You're ready to start shopping! Look for your $20 referral discount at checkout. (Merchandise must total $40 before discount can be applied.)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="AShelpContents" style="display:none">
+      <div class="Fallr_closeBtn"><a href="javascript:void(0)" onclick="$.fallr('hide');"><img src="/assets/ptg/images/global/icon_fallr-close.png" onmouseover="this.src='/assets/ptg/images/global/icon_fallr-close-hover.png'" onmouseout="this.src='/assets/ptg/images/global/icon_fallr-close.png'"></a></div>
+      <div id="fallR_centeredTan">
+        <div id="fallR_header">
+          <div id="fallR_caption">
+            <p class="fallrTitle"><span>Save Time with Assembly Service</span></p>
+          </div>
+        </div>
+        <div id="fallR_content">
+          <div class="viewport fallR assembly last">
+            <p>Ribbons or bows, in the color shown, are included separately with your order. You can string, tie or attach them yourself (depending on the card), or save time and let us assemble them for you!</p>
+            <p>Assembly Services require 1 extra day for processing, but will save you time when addressing and mailing. The fee for this service varies by card.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="overlay" class="email" style="display:none;">
+      <div id="connectEmailSignup">
+        <span class="closeOut"><a onclick="closeModal();" href="javascript:void(0);">X</a></span>
+        <h3 class="motto">Sign up for our emails</h3>
+        <p> Get 10% off + Free Shipping on your first order<br>
+          Be the first to hear about special offers, discounts &amp; freebies
+        </p>
+        <div class="tbox" id="box2">
+          <div id="form_box">
+            <!--Email Signup-->
+            <form onsubmit="submitOverlayForm(); return false;" name="subscribeForm" id="emailSignup" action="" method="post">
+              <input type="hidden" name="form_state" value="subscribeForm">
+              <input type="hidden" name="source" value="Subscribe">
+              <input type="hidden" name="optIn" value="true">
+              <input type="hidden" name="siteCd" value="PTG">
+              <table width="100%" cellspacing="0" cellpadding="0" class="overlay">
+                <tbody>
+                  <tr>
+                    <td><input type="text" name="emailAddress" id="emailAddress" class="txtbox" placeholder="name@email.com" value=""></td>
+                    <td>
+                      <div id="productSpecsBtn" class="productSpecsBtn"> <a id="personalizeBtn" onclick="submitOverlayForm();" class="btn_std btn_blue" href="javascript:void(0);">submit</a> </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div id="errorMessageOverLay">&nbsp;</div>
+                    </td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </div>
+        </div>
+        <span class="overlayDisclaim" style="display:none;">Good on first order only. You will receive an email within 24 hours with promo code and details. Cannot be combined with other discounts or promo codes.</span>
+      </div>
+    </div>
+    <!-- /overlay -->
+    <script type="text/javascript">
+      function submitOverlayForm(){
+      	var form = document.getElementById('emailSignup');
+      	var emailAddress = document.getElementById('emailAddress').value;
+      	var emailcheck = checkEmail(emailAddress);
+      	if(emailcheck){
+      		addCookie("emailOverlayCookiePermanent","emailOverlayCookiePermanent",72000);
+      		overlaySubmit();
+      	} else {
+      		alert("Please enter a valid email address.");
+      	}
+      }
+
+      function overlaySubmit(){
+      	var params = $("#emailSignup").formSerialize();
+      	var url = "/user/subscribeAjax.cmd";
+
+      	try {
+      		$.ajax( {
+      			url : url,
+      			type : "POST",
+      			data: params,
+      			dataType : "html",
+      			timeout : 150000,
+      			beforeSend : function(XMLHttpRequest) {
+      				$("#errorMessageOverLay").html("<span style=\"font-size:10px;text-align:left;color:red;\">processing, please wait...</span>");
+      				$("#productSpecsBtn").hide();
+      			},
+      			success : function(data) {
+      				//if(data=="error"){
+      				 if (data.indexOf('error') != -1){
+      					$("#errorMessageOverLay").html("<span style=\"font-size:10px;text-align:left;color:red;\">Failed to sign up, please try again!</span>");
+      					$("#productSpecsBtn").show();
+      				} else {
+      					$("#connectEmailSignup").html(data);
+      				}
+      			},
+      			complete : function(res, status) {
+
+      			},
+      			error : function(XMLHttpRequest, textStatus, errorThrown) {
+      			}
+      		});
+      	} catch (e) {
+      		alert("Error in submit ajax: " + e);
+      	}
+      }
+    </script>
+    <div id="promptDiv" style="display:none;">
+      <div class="Fallr_closeBtn"><a href="javascript:void(0)" onclick="$.fallr('hide');"><img src="/assets/ptg/images/global/icon_fallr-close.png" onmouseover="this.src='/assets/ptg/images/global/icon_fallr-close-hover.png'" onmouseout="this.src='/assets/ptg/images/global/icon_fallr-close.png'"></a></div>
+      <div id="promptTitle">LOG IN</div>
+      <div id="promptImg"></div>
+      <div id="promptContents"></div>
+    </div>
+    <script>
+      function switchToURL(type){
+      	if (type == "cart"){
+      		window.location = "http://www.peartreegreetings.com/basket.jsp";
+      	}
+      	if (type == "items"){
+      		window.location = "http://www.peartreegreetings.com/user/saved_items.jsp";
+      	}
+      	if (type == "account"){
+      		window.location = "https://www.peartreegreetings.com/checkout/main.jsp";
+      	}
+      	if (type == "order"){
+      		window.location = "http://www.peartreegreetings.com/Elvis/order_status.jsp";
+      	}
+      	if (type == "signin"){
+      		window.location = "http://www.peartreegreetings.com/checkout/login.jsp?beforeUrl=%2Fhome.jsp";
+      	}
+      	if(type == "customerservice"){
+      		window.location = "http://www.peartreegreetings.com/custserv/custserv.jsp";
+      	}
+      	if(type == "spark"){
+      		window.location = "http://www.peartreegreetings.com/checkout/login.jsp?beforeUrl=%2Fhome.jsp" + "?beforeUrl=/personalize/customerClickAddPhotoCommand.cmd?isClickCancel=false&dest=/personalize/customerClickAddPhotoCommand.cmd?isClickCancel=false";
+      	}
+      }
+    </script>
+    <!--INCLUDE-->
+    <!--Promo Box reveal and hide -->
+    <script type="text/javascript">
+      $(document).ready(function() {
+      	headerPromoSetup();
+       });
+    </script>
+    <script>
+      function headerPromoSetup() {
+      	jQuery('.promotionsDD ul li:nth-child(n+2)').hide();
+      	jQuery('.morePromo').click(function() {
+      		jQuery('.promotionsDD ul li:nth-child(n+2)').toggle();
+      		if (jQuery('.promotionsDD ul li:nth-child(n+2)').css('display') == 'none') {
+      			jQuery('.morePromo').html('See All Offers &#9660');
+      			jQuery('x.promotionsDD ul li p').css("display", "none");
+      		}
+      		else {
+      			jQuery('.morePromo').html('Hide Offers &#9650');
+      			jQuery('x.promotionsDD ul li p').css("display", "block");
+      		}
+      	});
+      }
+
+    </script>
+    <div id="tAlert">
+      <!--empty-->
+    </div>
+    <div id="t0Responsive"></div>
+    <!--[if lte IE 8]>
+    <div class="mould">
+      <div class="full-width">
+        <p>Uh, oh. You’re using Internet Explorer 8, a browser we no longer support. Please update to IE9, Firefox or Google Chrome.</p>
+      </div>
+    </div>
+    <![endif]-->
+    <div class="medley-menu">
+      <!--NOTE: Doesn't work on Stage for some reason. So don't sweat it when it doesn't.-->
+      <div class="full-width">
+        <p class="medley-greeting"><a href="/content.jsp?pageName=meet-our-family-of-brands">Meet Our Family</a></p>
+        <ul class="medley-tabs">
+          <li class="medley-tab-ptg">
+            <a title="Pear Tree - personalized photo cards with award-winning designs." alt="Pear Tree - personalized photo cards with award-winning designs." style="cursor:default;width:83px"></a>
+          </li>
+          <li class="medley-tab-ibd">
+            <a title="Invitations by Dawn - Wedding invitations for every style and theme - and every price point!" alt="Invitations by Dawn - Wedding invitations for every style and theme - and every price point!" target="_blank" rel="nofollow" href="http://www.invitationsbydawn.com/" style="width:77px"></a>
+          </li>
+          <li class="medley-tab-abb">
+            <a title="Ann's Bridal Bargains - The best quality you'll find for discount wedding invitations and more." alt="Ann's Bridal Bargains - The best quality you'll find for discount wedding invitations and more." target="_blank" rel="nofollow" href="http://www.annsbridalbargains.com/" style="width:94px"></a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        $(document).ready(function(){
+          $(".medley-tab-rs, .medley-tab-ibd, .medley-tab-abb").mouseover(function(){
+            $(".medley-tab-ptg").addClass('medley-tab-ptg-inactive');
+          });
+          $(".medley-tab-rs, .medley-tab-ibd, .medley-tab-abb").mouseout(function(){
+            $(".medley-tab-ptg").removeClass('medley-tab-ptg-inactive');
+          });
+        });
+      </script>
+    </div>
+    <div class="bosc">
+      <div class="full-width">
+        <div class="bosc-left">
+          <span class="bosc-left-wrap">
+            <h1 class="bot-bosc">Photo Cards, Announcements, and Invitations</h1>
+          </span>
+        </div>
+        <div class="bosc-right">
+          <ul class="bosc-account">
+            <li class="welcome">Welcome</li>
+            <li class="myaccount"><a href="javascript:void(0);" class="signIn" onclick="switchToURL('signin');">Sign In</a></li>
+            <li class="referral">
+              <a href="/Elvis/referral.jsp">Refer A Friend ($0)</a>
+              <div style="position: absolute; top: 66px; left: 948.734375px; opacity: 1;"></div>
+            </li>
+            <li class="cart"><a href="/basket.jsp">Cart (0)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bartlett">
+      <div class="full-width">
+        <div class="bartlett-left">
+          <a href="/">
+          <img class="logo" src="/assets/ptg/images/global/peartree-logo.png" alt="Graduation Announcements, Birth Announcements, Christmas Cards &amp; More from Pear Tree Greetings.">
+          </a>
+        </div>
+        <div class="bartlett-right">
+          <ul class="help-center">
+            <li class="help"><a href="javascript:void(0);" class="toggleHelp" onclick="showHelp();">Help</a></li>
+            <li class="chat">
+              <a href="javascript:void(0);" class="toggleChat" onclick="window.open('http://livechat.boldchat.com/aid/4921734055461953341/bc.chat?cwdid=3915407528609807430&amp;wdid=3737544271687691432&amp;rdid=3512382809832048748&amp;url=' + escape(document.location.href), 'Chat8177341011713460159', 'toolbar=0,scrollbars=1,location=0,statusbar=0,menubar=0,resizable=1,width=640,height=480');">Live Chat</a>
+            </li>
+            <li class="search-mobile"><a href="javascript:void(0);" class="toggleSearch">Search</a></li>
+            <li class="search">
+              <form name="searchForm" method="get" action="/catalog/search.cmd">
+                <input type="text" class="searchInput" name="keyword" tabindex="0" size="28" value="" placeholder="SEARCH">
+              </form>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="nav">
+      <ul id="navBarMain">
+        <!--INCLUDE-->
+        <!--Imported Main Navigation-->
+        <li class="nb1 rounded">
+          <a href="/Holiday-Cards/index.cat" class="doubletap">Holidays</a>
+          <div class="multi">
+            <span>
+              <h3><a title="Holiday Cards" href="/Holiday-Cards/index.cat">Holiday Cards</a></h3>
+              <ul>
+                <li><a title="Christmas Cards" href="/Holiday-Cards/Christmas-Cards/index.cat">Christmas Cards</a></li>
+              </ul>
+              <h3><a title="New Years Cards" href="/Happy-New-Years-Cards/index.cat">New Years Cards</a></h3>
+              <h3><a title="Hanukkah" href="/Jewish-Holiday-Cards/Hanukkah-Cards/index.cat">Hanukkah</a></h3>
+              <h3><a title="Rosh Hashanah" href="/Jewish-Holiday-Cards/Rosh-Hashanah-Cards/index.cat">Rosh Hashanah</a></h3>
+              <h3 style="padding-top: 10px;"><a title="Gifts &amp; Decor" href="/Gifts--Decor/index.cat">Gifts &amp; Decor</a></h3>
+            </span>
+            <span class="leftDivider">
+              <h3 style="padding-top: 10px;"><a title="Valentines Day Cards" href="/Valentines-Day-Cards/index.cat">Valentine’s Day Cards</a></h3>
+              <h3><a title="Easter Cards" href="/Easter-Photo-Cards--Spring-Cards/index.cat">Easter Cards</a></h3>
+              <h3><a title="Halloween Cards" href="/Halloween-Cards/index.cat">Halloween Cards</a></h3>
+              <h3><a title="Thanksgiving Cards" href="/Thanksgiving-Cards/index.cat">Thanksgiving Cards</a></h3>
+            </span>
+            <!--/nb4-->
+          </div>
+        </li>
+        <li class="nb2 rounded">
+          <!--<div class="new-item-badge">New</div>-->
+          <a href="/Gifts--Decor/index.cat" class="doubletap">Gifts &amp; Decor</a>
+          <div class="multi">
+            <span>
+              <h3><a title="Wall Art" href="/Gifts--Decor/Wall-Art/index.cat">Wall Art</a></h3>
+              <h3><a title="Metal Wall Art" href="/Gifts--Decor/Metal-Wall-Art/index.cat">Metal Wall Art</a></h3>
+              <h3><a title="Easel Art" href="/Gifts--Decor/Easel-Art/index.cat">Easel Art</a></h3>
+              <h3><a title="Wall Decals" href="/Gifts--Decor/Wall-Decals/index.cat">Wall Decals</a></h3>
+              <h3><a title="Custom Posters" href="/Gifts--Decor/Custom-Posters/index.cat">Custom Posters</a></h3>
+              <h3>
+                <a title="Wall Art" href="/Gifts--Decor/Wall-Art/2775-34115VWAFC-Frame-Worthy-Vertical--Wall-Art.pro">
+                  <img class="navFeatured" style="width: 170px; height: 170px; display: inline-block;" alt="gifts" nopin="nopin" src="http://s7d3.scene7.com/is/image/TOP/2775_34115VWAFCmn?hei=400&amp;wid=400">
+                  <p class="navCaption" style="top:0;left:-5px;">Wall Art</p>
+                </a>
+              </h3>
+            </span>
+            <span class="leftDivider">
+              <h3><a title="Custom Phone Cases" href="/Gifts--Decor/Custom-Phone-Cases/index.cat">Custom Phone Cases</a></h3>
+              <h3><a title="Personalized Ornaments" href="/Gifts--Decor/Personalized-Ornaments/index.cat">Personalized Ornaments</a></h3>
+              <h3><a title="Custom Notepads" href="/Gifts--Decor/Custom-Notepads/index.cat">Custom Notepads</a></h3>
+              <h3 style="padding-top: 10px;">Party Decorations</h3>
+              <ul>
+                <li><a title="Graduation Party Decorations" href="/Graduation/Graduation-Party-Decorations/index.cat">Graduation Party Decorations</a></li>
+                <li><a title="Baby Shower Decorations" href="/Baby-Announcements/Baby-Shower-Decorations/index.cat">Baby Shower Decorations</a></li>
+                <li><a title="Kids Party Decorations" href="/Kids-Cards--Kids-Invitations/Kids-Party-Decorations/index.cat">Kids Party Decorations</a></li>
+                <li><a title="Wedding Decorations" href="/Wedding/Wedding-Decorations/index.cat">Wedding Decorations</a></li>
+                <li><a title="Bridal Shower Decorations" href="/Wedding/Bridal-Shower-Decorations/index.cat">Bridal Shower Decorations</a></li>
+                <li><a title="Holiday Party Decorations" href="/Holiday-Cards/Holiday-Party-Decorations/index.cat">Holiday Party Decorations</a></li>
+              </ul>
+            </span>
+            <span class="leftDivider">
+              <h3>
+                <a title="Personalized Children's Books" href="/Gifts--Decor/Personalized-Childrens-Books/index.cat">
+                  <img class="navFeatured" style="width: 170px; height: 170px; display: inline-block;" alt="gifts" nopin="nopin" src="http://s7d3.scene7.com/is/image/TOP/2775_ISMBK120mn?wid=300&amp;webst=ptg">
+                  <p class="navCaption" style="top:-15px;">Personalized Children's Books</p>
+                </a>
+              </h3>
+              <h3>Kids Gifts</h3>
+              <ul>
+                <li><a title="Personalized Children's Books" href="/Gifts--Decor/Personalized-Childrens-Books/index.cat">Personalized Children's Books</a></li>
+                <li><a title="Kids Coloring Books" href="/Gifts--Decor/Kids-Coloring-Books/index.cat">Kids Coloring Books</a></li>
+              </ul>
+              <h3><a title="Graduation Gifts" href="/Gifts--Decor/Graduation-Gifts/index.cat">Graduation Gifts</a><a></a></h3>
+              <a>
+              </a>
+              <h3><a></a><a title="Teacher Gifts" href="/Gifts/Teacher-Gifts/index.cat">Teacher Gifts</a></h3>
+              <h3><a title="Gift Guide" href="/content.jsp?pageName=great-gift-ideas">Gift Guide</a></h3>
+            </span>
+            <!--/nb8-->
+          </div>
+        </li>
+        <li class="nb3 rounded">
+          <a href="/Baby-Announcements/index.cat" class="doubletap">Baby &amp; Kids</a>
+          <div class="multi">
+            <span>
+              <h3><a title="Birth Announcements" href="/Baby-Announcements/index.cat">Birth Announcements</a></h3>
+              <ul>
+                <li><a title="Girl Birth Announcements" href="/Baby-Announcements/Baby-Girl-Announcements/index.cat">Girl Birth Announcements</a></li>
+                <li><a title="Boy Birth Announcements" href="/Baby-Announcements/Baby-Boy-Announcements/index.cat">Boy Birth Announcements</a></li>
+                <li><a title="Twin/Multiples Birth Announcements" href="/Baby-Announcements/Triplet--Twin-Birth-Announcements/index.cat">Twin/Multiples Birth Announcements</a></li>
+              </ul>
+              <h3><a title="Baby Thank You Cards" href="/Baby-Announcements/Baby-Thank-You-Cards/index.cat">Baby Thank You Cards</a></h3>
+            </span>
+            <span class="leftDivider">
+              <h3><a title="Baby Shower" href="/Baby-Announcements/Baby-Shower-Invitations/index.cat">Baby Shower</a></h3>
+              <ul>
+                <li><a title="Baby Shower Invitations" href="/Baby-Announcements/Baby-Shower-Invitations/index.cat">Baby Shower Invitations</a></li>
+                <li><a title="Baby Shower Thank You Cards" href="/Baby-Announcements/Baby-Shower-Thank-You-Cards/index.cat">Baby Shower Thank You Cards</a></li>
+                <li><a title="Baby Shower Decorations" href="/Baby-Announcements/Baby-Shower-Decorations/index.cat">Baby Shower Decorations</a></li>
+              </ul>
+              <h3>
+                <a title="Baby &amp; Kids Feature" href="/Baby-Announcements/Baby-Girl-Announcements/2775-PTG27500PK-Wave-The-Flags-Ribbon-Booklet--Baby-Girl-Announcements.pro">
+                  <img class="navFeatured" style="width: 170px; height: 170px; display: inline-block;" alt="babykids" nopin="nopin" src="http://s7d3.scene7.com/is/image/TOP/2775_PTG27500PKzm?&amp;wid=300">
+                  <p class="navCaption">Wave the Flags Ribbon Booklet</p>
+                </a>
+              </h3>
+            </span>
+            <span class="leftDivider">
+              <h3><a title="Kids Birthday" href="/Kids-Cards--Kids-Invitations/index.cat">Kids Birthday</a></h3>
+              <ul>
+                <li><a title="Kids Birthday Invitations" href="/Kids-Cards--Kids-Invitations/Kids-Birthday-Invitations/index.cat">Kids Birthday Invitations</a></li>
+                <li><a title="1st Birthday Invitations" href="/Kids-Cards--Kids-Invitations/1st-Birthday-Invitations/index.cat">1st Birthday Invitations</a></li>
+                <li><a title="Kids Thank You Cards" href="/Kids-Cards--Kids-Invitations/Kids-Thank-You-Cards/index.cat">Kids Thank You Cards</a></li>
+                <li><a title="Kids Party Decorations" href="/Kids-Cards--Kids-Invitations/Kids-Party-Decorations/index.cat">Kids Party Decorations</a></li>
+                <li><a title="Personalized Children's Books" href="/Gifts/Personalized-Childrens-Books/index.cat">Personalized Children’s Books</a></li>
+              </ul>
+              <h3><a href="/Stationery/DIY-Cards/index.cat">DIY Cards</a></h3>
+              <h3><a title="Gifts &amp; Decor" href="/Gifts--Decor/index.cat">Gifts &amp; Decor</a></h3>
+            </span>
+            <!--/nb2-->
+          </div>
+        </li>
+        <li class="nb4 rounded">
+          <a href="/Wedding/index.cat" class="doubletap">Wedding</a>
+          <div class="multi">
+            <span>
+              <h3><a title="Save The Dates" href="/Save-the-Date/index.cat">Save The Dates</a></h3>
+              <ul>
+                <li><a title="Save The Date Cards" href="/Save-the-Date/Save-the-Date-Cards/index.cat">Save The Date Cards</a></li>
+                <li><a title="Save The Date Postcards" href="/Save-the-Date/Save-the-Date-Postcards/index.cat">Save The Date Postcards</a></li>
+                <li><a title="Save The Date Magnets" href="/Save-the-Date/Save-the-Date-Magnets/index.cat">Save The Date Magnets</a></li>
+              </ul>
+              <h3><a title="DIY Cards" href="/Stationery/DIY-Cards/index.cat">DIY Cards</a></h3>
+              <h3><a title="Gifts &amp; Decor" href="/Gifts--Decor/index.cat">Gifts &amp; Decor</a></h3>
+            </span>
+            <span class="leftDivider">
+              <h3><a title="Invitations" href="/Wedding/index.cat">Wedding Invitations &amp; Decorations</a></h3>
+              <ul>
+                <li><a title="Wedding Invitations" href="/Wedding/Wedding-Invitations/index.cat">Wedding Invitations</a></li>
+                <li><a title="Response Cards" href="/Wedding/Response-Cards/index.cat">Response Cards</a></li>
+                <li><a title="Reception Cards" href="/Wedding/Reception-Cards/index.cat">Reception Cards</a></li>
+                <li><a title="Wedding Thank You Cards" href="/Wedding/Wedding-Thank-You-Cards/index.cat">Wedding Thank You Cards</a></li>
+                <li><a title="Wedding Address Labels" href="/Wedding/Wedding-Address-Labels/index.cat">Wedding Address Labels</a></li>
+                <li><a title="Napkins" href="/Wedding/Wedding-Napkins/index.cat">Napkins</a></li>
+                <li><a title="Wedding Decorations" href="/Wedding/Wedding-Decorations/index.cat">Wedding Decorations</a></li>
+              </ul>
+            </span>
+            <span class="leftDivider">
+              <h3><a title="Shower &amp; Party Invitations" href="/Wedding/index.cat">Party Invitations &amp; Decorations</a></h3>
+              <ul>
+                <li><a title="Bridal Shower Invitations" href="/Wedding/Bridal-Shower-Invitations/index.cat">Bridal Shower Invitations</a></li>
+                <li><a title="Bridal Shower Decorations" href="/Wedding/Bridal-Shower-Decorations/index.cat">Bridal Shower Decorations</a></li>
+                <li><a title="Bachelorette Party Invitations" href="/Wedding/Bachelorette-Party-Invitations/index.cat">Bachelorette Party Invitations</a></li>
+                <li><a title="Rehearsal Dinner Invitations" href="/Wedding/Rehearsal-Dinner-Invitations/index.cat">Rehearsal Dinner Invitations</a></li>
+                <li><a title="Napkins" href="/Wedding/Wedding-Napkins/index.cat">Napkins</a></li>
+                <li><a title="Wedding Decorations" href="/Wedding/Wedding-Decorations/index.cat">Wedding Decorations</a></li>
+              </ul>
+            </span>
+            <span class="leftDivider">
+              <h3>
+                <a title="Wedding Feature" href="http://www.invitationsbydawn.com/Wedding-Invitations/View-All-Wedding-Invitations/index.cat?&amp;utm_source=weddingnav&amp;utm_medium=pt-banner&amp;utm_content=nocode&amp;utm_campaign=cl-wedding-march">
+                <img class="navFeatured" style="width: 170px; height: auto; display: inline-block;" alt="wedding" nopin="nopin" src="/assets/ptg/images/home/150309_nav_dawn.jpg">
+                </a>
+              </h3>
+            </span>
+            <!--/nb3-->
+          </div>
+        </li>
+        <li class="nb5 rounded">
+          <a href="/Graduation/index.cat" class="doubletap">Graduation</a>
+          <div class="multi">
+            <span>
+              <h3><a title="Announcements" href="/Graduation/Graduation-Announcements--Invitations/index.cat">Announcements</a></h3>
+              <ul>
+                <li><a title="High School Graduation Announcements" href="/Graduation/Graduation-Announcements--Invitations/index.cat">High School Graduation Announcements</a></li>
+                <li><a title="College Graduation Announcements" href="/Graduation/College-Graduation-Announcements/index.cat">College Graduation Announcements</a></li>
+                <li><a title="Mini Graduation Announcements" href="/Graduation/Mini-Graduation-Announcements/index.cat">Mini Graduation Announcements</a></li>
+              </ul>
+              <h3><a title="Address Labels" href="/Graduation/Graduation-Address-Labels/index.cat">Address Labels</a></h3>
+              <h3>
+                <a title="Graduation Feature" href="/Graduation/Graduation-Announcements--Invitations/index.cat#state=graceland/category_personal_body.jsp%3FcategoryId%3D1231%26parentCategoryId%3D1228%26refIds%3D330000135%26ajaxCall%3Dtrue">
+                  <img class="navFeatured" style="width: 170px; height: auto; display: inline-block;" alt="graduation1" nopin="nopin" src="/assets/ptg/images/home/150309_navgrad2.jpg">
+                  <p class="navCaption">Foil Graduation Announcements</p>
+                </a>
+              </h3>
+            </span>
+            <span class="leftDivider">
+              <h3><a title="Invitations" href="/Graduation/Graduation-Announcements--Invitations/index.cat">Invitations</a></h3>
+              <ul>
+                <li><a title="High School Graduation Invitations" href="/Graduation/Graduation-Announcements--Invitations/index.cat">High School Graduation Invitations</a></li>
+                <li><a title="College Graduation Invitations" href="/Graduation/College-Graduation-Announcements/index.cat">College Graduation Invitations</a></li>
+              </ul>
+              <h3><a title="Thank You Cards" href="/Graduation/Graduation-Thank-You-Cards/index.cat">Thank You Cards</a></h3>
+              <h3><a title="Graduation Gifts" href="/Gifts--Decor/Graduation-Gifts/index.cat">Graduation Gifts</a></h3>
+              <h3>
+                <a title="Graduation Feature" href="/content.jsp?pageName=graduation-gift-ideas">
+                <img class="navFeatured" style="width:170px;height:auto;display:inline-block;" alt="graduation1" nopin="nopin" src="/assets/ptg/images/home/150309_nav_giftideas.jpg">
+                </a>
+              </h3>
+            </span>
+            <span class="leftDivider">
+              <h3><a title="Party Decorations" href="/Graduation/Graduation-Party-Decorations/index.cat">Party Decorations</a></h3>
+              <ul>
+                <li><a title="Bunting Banners" href="/catalog/category.jsp?categoryId=1824&amp;parentCategoryId=1228&amp;refIds=340000135&amp;ajaxCall=false">Bunting Banners</a></li>
+                <li><a title="Cupcake Flags" href="/catalog/category.jsp?categoryId=1824&amp;parentCategoryId=1228&amp;refIds=340000136&amp;ajaxCall=false">Cupcake Flags</a></li>
+                <li><a title="Custom Posters" href="/catalog/category.jsp?categoryId=1824&amp;parentCategoryId=1228&amp;refIds=340000080&amp;ajaxCall=false">Custom Posters</a></li>
+                <li><a title="Yard Signs" href="/catalog/category.jsp?categoryId=1824&amp;parentCategoryId=1228&amp;refIds=340000047&amp;ajaxCall=false">Yard Signs</a></li>
+                <li><a title="Graduation Napkins" href="/Graduation/Graduation-Napkins/index.cat">Graduation Napkins</a></li>
+              </ul>
+              <h3><a title="Top Trends" href="/content.jsp?pageName=best-graduation-card-ideas">Top Trends</a></h3>
+              <h3>
+                <a title="Graduation Feature" href="/content.jsp?pageName=graduation-announcement-ideas">
+                <img class="navFeatured" style="width:170px;height:89px;display:inline-block;" alt="graduation1" nopin="nopin" src="/assets/ptg/images/home/150309_nav_lookbook.png">
+                </a>
+              </h3>
+            </span>
+          </div>
+        </li>
+        <li class="nb6 rounded">
+          <a class="doubletap">Invitations</a>
+          <div class="multi">
+            <span>
+              <h3><a title="Kids" href="/Kids-Cards--Kids-Invitations/index.cat">Kids</a></h3>
+              <ul>
+                <li><a title="Kids Birthday Invitations" href="/Kids-Cards--Kids-Invitations/Kids-Birthday-Invitations/index.cat">Kids Birthday Invitations</a></li>
+                <li><a title="1st Birthday Party Invitation" href="/Kids-Cards--Kids-Invitations/1st-Birthday-Invitations/index.cat">1st Birthday Party Invitations</a></li>
+                <li><a title="First Communion Invitations" href="/Kids-Cards--Kids-Invitations/First-Communion-Invitations/index.cat">First Communion Invitations</a></li>
+                <li><a title="Bar &amp; Bat Mitzvah Invitations" href="/Bar--Bat-Mitzvah/index.cat">Bar &amp; Bat Mitzvah Invitations</a></li>
+              </ul>
+              <h3><a title="Party Invitations" href="/Stationery/Party-Invitations/index.cat">Party Invitations</a></h3>
+              <h3><a title="DIY Invitations" href="/Stationery/DIY-Cards/index.cat">DIY Invitations</a></h3>
+              <h3><a title="Graduation Invitations" href="/Graduation/Graduation-Announcements--Invitations/index.cat">Graduation Invitations</a></h3>
+            </span>
+            <span class="leftDivider">
+              <h3><a title="Baby" href="/Baby-Announcements/index.cat">Baby</a></h3>
+              <ul>
+                <li><a title="Baby Shower Invitations" href="/Baby-Announcements/Baby-Shower-Invitations/index.cat">Baby Shower Invitations</a></li>
+                <li><a title="Baptism Invitations" href="/Baby-Announcements/Baptism-Invitations--Christening-Invitations/index.cat">Baptism Invitations</a></li>
+              </ul>
+              <h3>
+                <a title="Invitations Feature" href="/Baby-Announcements/Baby-Shower-Invitations/2775-33901FC-Burst-Of-Blooms--Baby-Shower-Invitations.pro">
+                  <img class="navFeatured" style="width: 170px; height: 170px; display: inline-block;" alt="invitations" nopin="nopin" src="http://s7d3.scene7.com/is/image/TOP/2775_33901FCmn?&amp;wid=300">
+                  <p class="navCaption">Baby Shower Invitations -- Burst of Blooms</p>
+                </a>
+              </h3>
+            </span>
+            <span class="leftDivider">
+              <h3><a title="Wedding" href="/Wedding/Wedding-Invitations/index.cat">Wedding</a></h3>
+              <ul>
+                <li><a title="Wedding Invitations" href="/Wedding/Wedding-Invitations/index.cat">Wedding Invitations</a></li>
+                <li><a title="Rehearsal Dinner Invitations" href="/Wedding/Rehearsal-Dinner-Invitations/index.cat">Rehearsal Dinner Invitations</a></li>
+                <li><a title="Bridal Shower Invitations" href="/Wedding/Bridal-Shower-Invitations/index.cat">Bridal Shower Invitations</a></li>
+                <li><a title="Bachelorette Party Invitations" href="/Wedding/Bachelorette-Party-Invitations/index.cat">Bachelorette Party Invitations</a></li>
+              </ul>
+              <h3><a title="Holiday" href="/Holiday-Cards/index.cat">Holiday</a></h3>
+              <ul>
+                <li><a title="Halloween Party Invitations" href="/Halloween-Cards/Halloween-Invitations/index.cat">Halloween Party Invitations</a></li>
+                <li><a title="Thanksgiving Invitations" href="/Thanksgiving-Cards/Thanksgiving-Invitations/index.cat">Thanksgiving Invitations</a></li>
+                <li><a title="Christmas Party Invitations" href="/Holiday-Cards/Christmas-Party-Invitations/index.cat">Christmas Party Invitations</a></li>
+              </ul>
+              <h3><a title="Gifts &amp; Decor" href="/Gifts--Decor/index.cat">Gifts &amp; Decor</a></h3>
+            </span>
+            <!--/nb5-->
+          </div>
+        </li>
+        <li class="nb7 rounded">
+          <a class="doubletap">Announcements</a>
+          <div class="multi">
+            <span>
+              <h3><a title="Baby" href="/Baby-Announcements/Birth-Announcements/index.cat">Baby</a></h3>
+              <ul>
+                <li><a title="Girl Birth Announcements" href="/Baby-Announcements/Baby-Girl-Announcements/index.cat">Girl Birth Announcements</a></li>
+                <li><a title="Boy Birth Announcements" href="/Baby-Announcements/Baby-Boy-Announcements/index.cat">Boy Birth Announcements</a></li>
+                <li><a title="Birth Announcement Magnets" href="/Baby-Announcements/Birth-Announcement-Magnets/index.cat">Birth Announcement Magnets</a></li>
+                <li><a title="Twin/Multiples Birth Announcements" href="/Baby-Announcements/Triplet--Twin-Birth-Announcements/index.cat">Twin/Multiples Birth Announcements</a></li>
+                <li><a title="Adoption Announcement" href="/Baby-Announcements/Adoption-Announcements/index.cat">Adoption Announcements</a></li>
+              </ul>
+            </span>
+            <span class="leftDivider">
+              <h3>
+                <a title="Announcements Feature" href="/catalog/search.cmd?keyword=27514BHFC">
+                  <img class="navFeatured" style="width: 170px; height: 170px; display: inline-block;" alt="announcements" nopin="nopin" src="http://s7d3.scene7.com/is/image/TOP/2775_27514BHFCmn">
+                  <p class="navCaption">Baby Boy Announcements -- Hello World</p>
+                </a>
+              </h3>
+            </span>
+            <span class="leftDivider">
+              <h3><a title="Save The Date" href="/Save-the-Date/index.cat">Save The Date</a></h3>
+              <ul>
+                <li><a title="Save The Date Cards" href="/Save-the-Date/Save-the-Date-Cards/index.cat">Save The Date Cards</a></li>
+                <li><a title="Save The Date Magnets" href="/Save-the-Date/Save-the-Date-Magnets/index.cat">Save The Date Magnets</a></li>
+              </ul>
+              <h3><a title="Wedding Announcements" href="/Wedding/Wedding-Invitations/index.cat">Wedding Announcements</a></h3>
+              <h3><a title="Moving Announcements" href="/Stationery/Moving-Announcements/index.cat">Moving Announcements</a></h3>
+              <h3><a title="Graduation" href="/Graduation/Graduation-Announcements--Invitations/index.cat">Graduation</a></h3>
+              <h3><a title="Memorial Cards" href="/Stationery/Memorial-Cards/index.cat">Memorial Cards</a></h3>
+            </span>
+            <!--/nb6-->
+          </div>
+        </li>
+        <li class="nb8 rounded">
+          <a href="/Stationery/index.cat" class="doubletap">Stationery</a>
+          <div class="multi">
+            <span>
+              <h3><a title="Thank You Cards" href="/Stationery/Thank-You-Cards--Personalized-Note-Cards/index.cat">Thank You Cards</a></h3>
+              <ul>
+                <li><a title="Baby Thank You Cards" href="/Baby-Announcements/Baby-Thank-You-Cards/index.cat">Baby Thank You Cards</a></li>
+                <li><a title="Baby Shower Thank You Cards" href="/Baby-Announcements/Baby-Shower-Thank-You-Cards/index.cat">Baby Shower Thank You Cards</a></li>
+                <li><a title="Kids Thank You Card" href="/Kids-Cards--Kids-Invitations/Kids-Thank-You-Cards/index.cat">Kids Thank You Cards</a></li>
+                <li><a title="Graduation Thank You Card" href="/Graduation/Graduation-Thank-You-Cards/index.cat">Graduation Thank You Cards</a></li>
+                <li><a title="Wedding Thank You Cards" href="/Wedding/Wedding-Thank-You-Cards/index.cat">Wedding Thank You Cards</a></li>
+                <li><a title="Bridal Shower Thank You Cards" href="/Wedding/Bridal-Shower-Thank-You-Cards/index.cat">Bridal Shower Thank You Cards</a></li>
+              </ul>
+            </span>
+            <span class="leftDivider">
+              <h3>
+                <a title="Stationery Feature" href="/Stationery/Notepads/index.cat">
+                  <img class="navFeatured" style="width: 170px; height: 170px; display: inline-block;" alt="stationery" nopin="nopin" src="/assets/ptg/images/header/stationery1.png">
+                  <p class="navCaption">Custom Notepads</p>
+                </a>
+              </h3>
+            </span>
+            <span class="leftDivider">
+              <h3><a title="Note Cards" href="/Stationery/Thank-You-Cards--Personalized-Note-Cards/index.cat">Note Cards</a></h3>
+              <h3><a title="Mini Note Cards" href="/Stationery/Mini-Note-Cards/index.cat">Mini Note Cards</a></h3>
+              <h3><a title="Teacher Stationery" href="/Stationery/Teacher-Stationery/index.cat">Teacher Stationery</a></h3>
+              <h3><a title="Notepads" href="/Stationery/Notepads/index.cat">Notepads</a></h3>
+              <h3><a title="Address Labels" href="/Stationery/Address-Labels/index.cat">Address Labels</a></h3>
+              <h3><a title="Gift Tags" href="/Stationery/Personalized-Gift-Tags/index.cat">Gift Tags</a></h3>
+              <h3><a title="DIY Cards" href="/Stationery/DIY-Cards/index.cat">DIY Cards</a></h3>
+            </span>
+            <!--/nb7-->
+          </div>
+        </li>
+        <li class="nb9 rounded last"><a href="/blog/" target="_blank">Blog</a></li>
+        <li class="nb10 rounded less footer">
+          <a href="/custserv/custserv.jsp?pageName=custServ">Customer Service</a>
+          <ul>
+            <li><a href="/custserv/custserv.jsp?pageName=helpFaq">FAQ</a></li>
+            <li><a href="/custserv/custserv.jsp?pageName=custServ">Contact Us</a></li>
+            <li><a href="/custserv/custserv.jsp?pageName=aboutUs">About Us</a></li>
+            <li><a href="/custserv/custserv.jsp?pageName=shippingPolicy">Shipping Time</a></li>
+            <li><a href="/custserv/custserv.jsp?pageName=beAffiliate">Become an Affiliate</a></li>
+            <li><a href="/custserv/custserv.jsp?pageName=pressRoom">Press Room</a></li>
+            <li><a href="/custserv/custserv.jsp?pageName=termsOfUse">Terms and Conditions</a></li>
+            <li><a href="/custserv/custserv.jsp?pageName=priPolicy">Privacy and Security</a></li>
+            <li><a href="/custserv/sitemap.jsp">Site Map</a></li>
+            <li class="topAnchor"><a onclick="window.location.href = 'javascript: window.scrollTo(0, 0); void(0)';" style="">Scroll to Top</a></li>
+          </ul>
+        </li>
+        <li class="nb11 rounded less anchor"><a href="/Holiday-Cards/index.cat">Holidays</a></li>
+        <li class="nb12 rounded less anchor"><a href="/Baby-Announcements/index.cat">Baby</a></li>
+        <li class="nb13 rounded less anchor"><a href="/Wedding/index.cat">Wedding</a></li>
+        <li class="nb14 rounded less anchor"><a href="/Storybooks/Personalized-Childrens-Books/index.cat">Storybooks</a></li>
+        <li class="nb15 rounded less anchor more"><a class="more" onclick="return window.location.hash = 'responsiveNav';" style="cursor:pointer">More</a></li>
+        <li class="nb16 rounded less anchor nav"><a class="nav" onclick="return window.location.hash = 'responsiveNav';" style="cursor:pointer">Menu</a></li>
+      </ul>
+    </div>
+    <div class="anjou">
+      <p><a href="/Gifts--Decor/Wall-Art/index.cat">Wall Art Sale</a> - only $10 each! <span style="color: rgba(98, 134, 140, 1);">|</span> <span class="anjou-small-text">code:</span> <span class="anjou-code">ART10</span> <span class="anjou-small-text">&nbsp;ends Sunday &nbsp;</span><span style="color: rgba(98, 134, 140, 1);">|</span><a href="/Gifts--Decor/Wall-Art/index.cat" class="anjou-small-text anjou-see-details">&nbsp;shop now</a></p>
+    </div>
+    <!-- date: 2013 - 06 -05 author: zhang, shu jun -->
+  </header>
+  <div id="trunk">
+    <div class="hero">
+      <!-- EDITABLE BLOCK "hero" -->
+      <div class="hero-bg" style="height:488px;background: url('/assets/ptg/images/home/150320_home_gradTargetedContent2.jpg') 50% 0% no-repeat;">
+        <div class="full-width">
+          <div class="hero-full">
+            <img style="max-width:550px;width:100%;padding-bottom:10px" src="/assets/ptg/images/home/150320_home_gradTargetedContent_txt2.png" alt="">
+            <p style="font-size:16px;font-weight:400;text-transform:uppercase">           <a style="padding-right:8px" class="arrow-after" href="/user/link_clicked.cmd?type_=CONTENT_CLICKED&amp;id_=19714&amp;url_=%2FGraduation%2FGraduation-Announcements--Invitations%2Findex.cat%3Futm_source%3DHomepage%26amp%3Butm_medium%3Dbanner%26amp%3Butm_term%3DHigh_School_Graduation_Announcements%26amp%3Butm_content%3DGraduation_Hero%26amp%3Butm_campaign%3DGrad_Homepage_Experience_Category_Page&amp;ref_=%2Fhome.jsp">Graduation Announcements</a>           <a style="padding-right:8px" class="arrow-after" href="/user/link_clicked.cmd?type_=CONTENT_CLICKED&amp;id_=19714&amp;url_=%2FGraduation%2FGraduation-Party-Decorations%2Findex.cat%3Futm_source%3DHomepage%26amp%3Butm_medium%3Dbanner%26amp%3Butm_term%3DGraduation_Decorations%26amp%3Butm_content%3DGraduation_Hero%26amp%3Butm_campaign%3DGrad_Homepage_Experience_Grad_Decorations&amp;ref_=%2Fhome.jsp">Graduation Party Decor</a>         </p>
+          </div>
+          <a href="/user/link_clicked.cmd?type_=CONTENT_CLICKED&amp;id_=19714&amp;url_=%2FGraduation%2Findex.cat%3Futm_source%3DHomepage%26amp%3Butm_medium%3Dbanner%26amp%3Butm_term%3DGraduation_SSP%26amp%3Butm_content%3DGraduation_Hero%26amp%3Butm_campaign%3DGrad_Homepage_Experience_Grad_SSP&amp;ref_=%2Fhome.jsp">       <img alt="" class="hero-mobile" style="width: 100%; max-width: 1090px;" src="/assets/ptg/images/home/150320_homepageHeroMobile2.jpg">     </a>
+        </div>
+      </div>
+      <style type="text/css">
+        .hero {
+        background: #FDFDFD;
+        }
+        @media only screen and (max-width:450px){
+        .hero-bg, .hero-texture {
+        background: transparent!important;
+        height:auto!important;
+        }
+        }
+      </style>
+</body>
+</html>
