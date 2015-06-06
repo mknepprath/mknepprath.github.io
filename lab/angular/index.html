@@ -14,20 +14,20 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-5 col-sm-offset-7">
-            <h1>{{ fiveDay.name }}</h1>
+            <h1>{{ fiveDay.city_name }}</h1>
             <h2>5-day forecast</h2>
             <div class="forecast" ng-repeat="day in fiveDay.days">
               <div class="day row">
 
                 <!-- datetime -->
                 <div class="weekday col-xs-4">
-								{{ day.url }}
+								{{ day.datetime }}
                 </div>
 
 
                 <!-- icon -->
                 <div class="weather col-xs-3">
-								<img ng-src="{{ day.img }}"/>
+								<img ng-src="{{ day.icon }}"/>
                 </div>
 
                 <div class="col-xs-1"></div>
@@ -35,14 +35,14 @@
 
                 <!-- high -->
                 <div class="high col-xs-2">
-								{{ day.id }}
+								{{ day.high }}
 
                 </div>
 
 
                 <!-- low -->
                 <div class="low col-xs-2">
-								{{ day.style }}
+								{{ day.low }}
                 </div>
               </div>
             </div>

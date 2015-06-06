@@ -3,39 +3,34 @@
   "country": "US",
   "days": [
     {
-      "id":53716,
-      "style":"33980VFC",
-      "name":"Joy Wreath Vertical -- Christmas Cards",
-      "img":"http://s7d3.scene7.com/is/image/TOP/2775_33980VFC?hei=125&wid=125",
-      "url":"/Holiday-Cards/Christmas-Cards/2775-33980VFC-Joy-Wreath-Vertical--Christmas-Cards.pro"
+      "datetime":53716,
+      "high":"33980VFC",
+      "low":"Joy Wreath Vertical -- Christmas Cards",
+      "icon":"http://s7d3.scene7.com/is/image/TOP/2775_33980VFC?hei=125&wid=125"
     },
     {
-      "id":53631,
-      "style":"33980HFC",
-      "name":"Joy Wreath -- Christmas Cards",
-      "img":"http://s7d3.scene7.com/is/image/TOP/2775_33980HFC?hei=125&wid=125",
-      "url":"/Holiday-Cards/Christmas-Cards/2775-33980HFC-Joy-Wreath--Christmas-Cards.pro"
+      "datetime":53631,
+      "high":"33980HFC",
+      "low":"Joy Wreath -- Christmas Cards",
+      "icon":"http://s7d3.scene7.com/is/image/TOP/2775_33980HFC?hei=125&wid=125"
     },
     {
-      "id":53837,
-      "style":"PTG34055F",
-      "name":"Let It Shine Trifold -- Christmas Cards",
-      "img":"http://s7d3.scene7.com/is/image/TOP/2775_PTG34055F?hei=125&wid=125",
-      "url":"/Holiday-Cards/Christmas-Cards/2775-PTG34055F-Let-It-Shine-Trifold--Christmas-Cards.pro"
+      "datetime":53837,
+      "high":"PTG34055F",
+      "low":"Let It Shine Trifold -- Christmas Cards",
+      "icon":"http://s7d3.scene7.com/is/image/TOP/2775_PTG34055F?hei=125&wid=125"
     },
     {
-      "id":53559,
-      "style":"PTG34019",
-      "name":"String Of Sequins Ornament -- Christmas Cards",
-      "img":"http://s7d3.scene7.com/is/image/TOP/2775_PTG34019?hei=125&wid=125",
-      "url":"/Holiday-Cards/Christmas-Cards/2775-PTG34019-String-Of-Sequins-Ornament--Christmas-Cards.pro"
+      "datetime":53559,
+      "high":"PTG34019",
+      "low":"String Of Sequins Ornament -- Christmas Cards",
+      "icon":"http://s7d3.scene7.com/is/image/TOP/2775_PTG34019?hei=125&wid=125"
     },
     {
-      "id":53626,
-      "style":"PTG34019K",
-      "name":"String Of Sequins Kraft Ornament -- Christmas Cards",
-      "img":"http://s7d3.scene7.com/is/image/TOP/2775_PTG34019K?hei=125&wid=125",
-      "url":"/Holiday-Cards/Christmas-Cards/2775-PTG34019K-String-Of-Sequins-Kraft-Ornament--Christmas-Cards.pro"
+      "datetime":53626,
+      "high":"PTG34019K",
+      "low":"String Of Sequins Kraft Ornament -- Christmas Cards",
+      "icon":"http://s7d3.scene7.com/is/image/TOP/2775_PTG34019K?hei=125&wid=125"
     }
   ]
 }
