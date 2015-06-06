@@ -6,7 +6,7 @@ body {
 
 body {
  color: #211f1e ;
- background: url(/img/bg.jpg) no-repeat center center fixed;
+ background: url(/lab/angular/img/bg.jpg) no-repeat center center fixed;
  background-size: cover;
  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
