@@ -1,5 +1,5 @@
 app.factory('forecast', ['$http', function($http) {
-  return $http.get('http://jjjaspersen.com/forecast.json')
+  return $http.get('http://www.mknepprath.com/lab/angular/forecast.json')
             .success(function(data) {
               return data;
             })
