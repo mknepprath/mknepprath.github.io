@@ -1,5 +1,5 @@
 app.factory('forecast', ['$http', function($http) {
-  return $http.get('https://api.myjson.com/bins/2cyfg')
+  return $http.get('http://api.openweathermap.org/data/2.5/forecast?q=Mankato,MN')
             .success(function(data) {
               return data;
             })
