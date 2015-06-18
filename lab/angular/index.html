@@ -16,12 +16,12 @@
           <div class="col-sm-5 col-sm-offset-7">
             <h1>{{ fiveDay.city.name }}</h1>
             <h2>5-day forecast</h2>
-            <div class="forecast" ng-repeat="day in fiveDay.days">
+            <div class="forecast" ng-repeat="day in fiveDay.list">
               <div class="day row">
 
                 <!-- datetime -->
                 <div class="weekday col-xs-4">
-								{{ day.list.dt | date }}
+								{{ day.dt | date }}
                 </div>
 
 
@@ -35,14 +35,14 @@
 
                 <!-- high -->
                 <div class="high col-xs-2">
-								{{ day.list.temp_min }}
+								{{ day.temp_min }}
 
                 </div>
 
 
                 <!-- low -->
                 <div class="low col-xs-2">
-								{{ day.list.temp_max }}
+								{{ day.temp_max }}
                 </div>
               </div>
             </div>
