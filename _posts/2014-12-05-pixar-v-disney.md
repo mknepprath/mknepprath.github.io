@@ -12,7 +12,7 @@ images:
 
 I've had a long-standing theory that when Disney acquired Pixar, they began to suck the talent out of Pixar into their own animation studio - culminating in the critical flop that was Cars 2. My theory doesn't hold up, considering Cars, Ratatouille, Wall-E, Up, and Toy Story 3 were all released after the acquisition in 2006, but I thought it'd be interesting to chart these films in a variety of ways regardless. Turns out, Disney Animation Studios had been turning out fairly well-reviewed movies long before Cars 2 - and even the likes of Wreck-It Ralph and Frozen didn't fair much better than their previous releases.
 
-On the other hand, Frozen was the first Disney film to surpass Pixar's counterpart that year - Monsters University. So... we'll see what happens!
+On the other hand, Frozen was the first Disney film to surpass Pixar's counterpart that year, Monsters University, in the box office. So... we'll see what happens!
 
 <img class="aligncenter" src="/images/pixarvdisney-01.jpg" alt="pixar vs disney by critic ratings" />
 
