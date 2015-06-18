@@ -27,7 +27,8 @@
 
                 <!-- icon -->
                 <div class="weather col-xs-3">
-								<img ng-src="{{ day.icon }}"/>
+                  {{ day.weather.main }}
+                  <img ng-src="{{ day.weather.icon }}"/>
                 </div>
 
                 <div class="col-xs-1"></div>
