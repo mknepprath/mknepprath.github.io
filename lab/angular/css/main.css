@@ -34,8 +34,9 @@ h2 {
 }
 
 .day > div {
-    font-weight: bold;
- line-height: 48px;
+ font-weight: bold;
+ line-height: 18px;
+ margin-bottom: 24px;
 }
 
 .weekday span {
