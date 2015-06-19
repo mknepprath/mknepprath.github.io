@@ -21,13 +21,14 @@
 
                 <!-- datetime -->
                 <div class="weekday col-xs-4">
-								{{ day.dt_txt | date:'medium' }}
+								{{ day.dt_txt | date }}
                 </div>
 
 
                 <!-- icon -->
                 <div class="weather col-xs-3">
-                  {{ day.humidity }}
+                  {{ day.weather.description }}
+                  <img ng-src="{{ day.weather.icon }}"/>
                 </div>
 
                 <div class="col-xs-1"></div>
