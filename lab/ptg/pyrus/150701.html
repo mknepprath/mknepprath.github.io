@@ -481,18 +481,29 @@
     <div class="content-block">
       <!-- EDITABLE BLOCK 3 "content-block" -->
       <div class="full-width divided">
-        <a href="" class="square-root square-root-50" style="background:url('/assets/ptg/images/home/150701_xmas.jpg');background-size:100%;background-position:0!important">
+        <a href="" class="square-root square-root-50 rwd-desktop" style="background:url('/assets/ptg/images/home/150701_xmas.jpg');background-size:100%;margin-right:0.5%">
         </a>
-        <a href="" class="square-root square-root-50" style="background:url('/assets/ptg/images/home/150701_louie.jpg');background-size:100%;">
+        <a href="" class="square-root square-root-50 rwd-desktop" style="background:url('/assets/ptg/images/home/150701_louie.jpg');background-size:100%;margin-left:0.5%">
+        </a>
+        <a href="" class="square-root square-root-50 rwd-mobile" style="background:url('/assets/ptg/images/home/150701_xmasMobile.jpg');background-size:100%;margin-right:0.5%">
+        </a>
+        <a href="" class="square-root square-root-50 rwd-mobile" style="background:url('/assets/ptg/images/home/150701_louieMobile.jpg');background-size:100%;margin-left:0.5%">
         </a>
       </div>
       <style>
         .square-root-50 {
-          width: 50%;
+          width: 49.5%;
           height: 0;
-          padding-bottom: 50%;
+          padding-bottom: 45%;
           float: left;
           position: relative;
+        }
+        @media only screen and (max-width:450px) {
+          .square-root-50 {
+            width: 100%;
+            padding-bottom: 100%;
+            margin-bottom:10px;
+          }
         }
       </style>
       <!-- END EDITABLE 3 BLOCK "content-block" -->
