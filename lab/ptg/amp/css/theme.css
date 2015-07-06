@@ -3,6 +3,14 @@ body, h1, h2, h3, h4, h5 {
   font-family: proxima-nova-soft-1, proxima-nova-soft-2, "Proxima Nova Soft", "Trebuchet MS", "Gill Sans", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
 }
 
+a {
+  color: #92B7BD;
+} /* updated a color to PT blue - MK */
+
+.logo {
+  padding: 30px 0 0;
+} /* added padding to logo - MK */
+
 /* line 5, ../scss/theme.scss */
 .product-list h5 {
   color: #2196f3;
@@ -47,9 +55,9 @@ body, h1, h2, h3, h4, h5 {
 }
 
 /* line 32, ../scss/theme.scss */
-.main-nav-wrap {
-  background: #eeeeee;
-}
+#nav.main-nav-wrap {
+  background: #f7f7f7;
+} /* updated main-nav-wrap bg color - MK */
 
 /* line 35, ../scss/theme.scss */
 .site-tools {
@@ -59,11 +67,6 @@ body, h1, h2, h3, h4, h5 {
 /* line 38, ../scss/theme.scss */
 #floating-cart {
   border: 4px solid #2196f3;
-}
-
-/* line 41, ../scss/theme.scss */
-.main-nav-wrap {
-  background: #eee;
 }
 
 /* line 44, ../scss/theme.scss */
@@ -153,8 +156,9 @@ footer {
 
   /* line 97, ../scss/theme.scss */
   .main-nav li a {
-    color: #2196f3;
-  }
+    color: #616161;
+    text-transform: uppercase;
+  } /* updated nav to correct color & uppercase - MK */
 }
 /* MEDIUM (md) devices (desktops, 992px and up) */
 /* LARGE (lg) devices (large desktops, 1200px and up) */
