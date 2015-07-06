@@ -170,12 +170,11 @@ footer {
 /* line 106, ../scss/theme.scss */
 .btn-primary {
   color: #ffffff;
-  background-color: #2196f3;
-  border-color: #0960a5;
-  background-repeat: repeat-x;
-  background-image: -webkit-linear-gradient(45deg, #2196f3, #0960a5);
-  background-image: -o-linear-gradient(45deg, #2196f3, #0960a5);
-  background-image: linear-gradient(45deg, #2196f3, #0960a5);
+  font-size: 1.1em;
+  text-transform: uppercase;
+  background-color: #93B8BE;
+  border-color: transparent;
+  border-radius: 3px;
 }
 
 /* line 120, ../scss/theme.scss */
@@ -186,8 +185,7 @@ footer {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #0c7cd5;
-  border-color: #063e6b;
+  background-color: #93B8BE;
 }
 
 /* line 127, ../scss/theme.scss */
@@ -217,7 +215,6 @@ fieldset[disabled] .btn-primary:active,
 .btn-primary[disabled].active,
 fieldset[disabled] .btn-primary.active {
   background-color: #2196f3;
-  border-color: #0960a5;
 }
 
 /* line 151, ../scss/theme.scss */
