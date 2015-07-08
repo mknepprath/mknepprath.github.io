@@ -4,8 +4,12 @@ body, h1, h2, h3, h4, h5 {
 }
 
 a {
-  color: #92B7BD;
+  color: #616161;
 } /* updated a color to PT blue - MK */
+
+a:hover {
+  color: #647D81;
+}
 
 .logo {
   padding: 30px 0 0;
@@ -170,7 +174,7 @@ footer {
 /* line 106, ../scss/theme.scss */
 .btn-primary {
   color: #ffffff;
-  font-size: 1.1em;
+  font-size: 1.1em; /* updated btn properties here and below - MK */
   text-transform: uppercase;
   background-color: #93B8BE;
   border-color: transparent;
