@@ -427,50 +427,43 @@
 <div id="trunk">
   <div class="hero">
     <!-- EDITABLE BLOCK 1 "hero" -->
-    <div style="height:390px;background: url('/assets/ptg/images/home/150701_targetedHomepage_wedding.jpg') 0% 0% no-repeat;" class="hero-bg">
+    <div>
       <div class="full-width">
         <a href="/Graduation/index.cat">
-          <img src="/assets/ptg/images/home/150701_weddingMobile.jpg" style="width: 100%; max-width: 1090px;" class="hero-mobile" alt="">
+          <img src="/assets/ptg/images/home/150701_targetedHomepage_wedding.jpg" style="width: 100%; max-width: 1090px;" class="rwd-desktop" alt="">
+        </a>
+        <a href="/Graduation/index.cat">
+          <img src="/assets/ptg/images/home/150701_weddingMobile.jpg" style="width: 100%; max-width: 450px;" class="rwd-mobile" alt="">
         </a>
       </div>
     </div>
-    <style type="text/css">
-      .hero {
-        background: #FDFDFD;
-      }
-      @media only screen and (max-width:450px){
-        .hero-bg, .hero-texture {
-          background: transparent!important;
-          height:auto!important;
-        }
-      }
-      </style>
     <!-- END EDITABLE BLOCK 1 "hero" -->
   </div>
 </div>
 <div id="roots">
     <div class="radicle"> <!-- EDITABLE BLOCK 2 "content-block" -->
-      <style type="text/css">
-          .rwd-mobile {
-            display: none;
-          }
-          @media only screen and (max-width:450px) {
-            .rwd-desktop {
-              display: none;
-            }
-            .rwd-mobile {
-              display: block;
-            }
-          }
-      </style>
-      <div class="indent-width divided red-stamp-banner" style="text-align:center;padding-top:15px">
+      <div class="indent-width divided" style="text-align:center;padding-top:15px">
         <a href="/content.jsp?pageName=Coupon-codes--promotions">
-          <div alt="Coupon codes" style="color:#fff;font-size:120%;width: 100%;max-width:999px;padding:10px 0;background:url('/assets/ptg/images/home/150401_specialOffersDesktop.jpg') 50% 50% no-repeat" class="rwd-desktop arrow-after">DON'T MISS ANY OF OUR CURRENT OFFERS—GET
-            <h2 style="font-size:1em;display:inline">COUPON CODES</h2>
+          <div class="coupon-codes rwd-desktop arrow-after">DON'T MISS ANY OF OUR CURRENT OFFERS—GET
+            <h2>COUPON CODES</h2>
           </div>
-          <img alt="Coupon codes" src="/assets/ptg/images/home/150401_specialOffersMobile.jpg" style="width: 100%;max-width:999px" class="rwd-mobile">
+          <img class="coupon-codes rwd-mobile" alt="coupon codes" src="/assets/ptg/images/home/150401_specialOffersMobile.jpg">
         </a>
       </div>
+      <style>
+        .coupon-codes {
+          color: #fff;
+          font-size: 120%;
+          width: 100%;
+          max-width: 999px;
+          padding: 10px 0;
+          background: url('/assets/ptg/images/home/150401_specialOffersDesktop.jpg') 50% 50% no-repeat;
+        }
+        .coupon-codes h2 {
+          font-size: 1em;
+          display: inline;
+        }
+      </style>
     </div>
     <div class="content-block">
       <!-- EDITABLE BLOCK 3 "content-block" -->
