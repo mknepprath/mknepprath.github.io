@@ -1,1 +1,68 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+.strap-line {
+  color: #fff;
+  font-weight: 300;
+  padding: 50px 0 150px;
+  h1 {
+    margin-bottom: 40px;
+  }
+}
+
+nav .logo {
+  background-image: url(../../dist/images/ja-logo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 200px;
+  height: 100px;
+  padding: 20px 0;
+  float: left;
+  text-align: center;
+  background-size: 100%;
+  text-indent: -99999em;
+}
+
+h3 {
+  padding-bottom: 
+}
+
+h3, h4 {
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.cta-link {
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  margin-right: 30px;
+  display: inline-block;
+  &.on-white {
+    color: #000;
+  }
+  &:before {
+    content: " ";
+    height: 26px;
+    width: 12px;
+    background: url('../../dist/images/link.png') right bottom no-repeat;
+    background-size: 100%;
+    margin: -4px 4px 0 0;
+    float: left;
+  }
+}
+
+.updates h3 {
+  margin-left: -20px;
+}
+
+.updates .our-campaigns, .updates .latest-articles {
+  padding: 100px;
+}
+
+.our-campaigns p {
+  color: #fff;
+}
+
+.latest-articles {
+  color: #fff;
+}
