@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Pixar vs Disney
-subtitle: A prompt a day, every day
+subtitle: Side Project
+published: false
 
 images:
 

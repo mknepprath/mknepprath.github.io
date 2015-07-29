@@ -10,7 +10,7 @@ images:
     title: Design Prompts plus Dribbble Series
 ---
 
-I've started a new series where I combine the style of a popular shot with a prompt from [@designprompts](http://twitter.com/designprompts). I've included some of my favorites here, but visit the [Dribbble bucket](https://dribbble.com/mknepprath/buckets/257652-Design-Prompts-Series) to view the full series.
+I did a new series where I combined the style of a popular shot with a prompt from [@designprompts](http://twitter.com/designprompts). I've included some of my favorites here, but visit the [Dribbble bucket](https://dribbble.com/mknepprath/buckets/257652-Design-Prompts-Series) to view the full series.
 
 <a href="https://dribbble.com/shots/1879570-Hot-Sticky"><img class="aligncenter possst" src="/images/dpd-cinnamonroll.png" alt="cinnamon roll" /></a>
 <a href="https://dribbble.com/shots/1884360-Hi"><img class="aligncenter possst" src="/images/dpd-hi.png" alt="hi" /></a>
