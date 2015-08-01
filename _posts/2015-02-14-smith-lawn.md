@@ -12,7 +12,7 @@ images:
 
 <img class="aligncenter" src="/images/smithlawn/smithlawn.png" alt="smith lawn" />
 
-[Smith Lawn and Landscape](http://smithlawn.net/) is a local full-service residential and commercial landscaping, lawn care and snow removal company. The owner approached me a couple years ago about redesigning his site which had become [a bit long in the tooth](/images/smithlawn-old.png). We decided that this would be a great opportunity to solve some problems - lack of mobile support, inability to display work well, lack of contact form, and more.
+[Smith Lawn and Landscape](http://smithlawn.net/) is a local full-service residential and commercial landscaping, lawn care and snow removal company. The owner approached me a couple years ago about redesigning his site which had become [a bit long in the tooth](/images/smithlawn/smithlawn-old.png). We decided that this would be a great opportunity to solve some problems - lack of mobile support, inability to display work well, lack of contact form, and more.
 
 <img class="aligncenter possst" src="/images/smithlawn/smithlawn-branding.png" alt="smith lawn" />
 
