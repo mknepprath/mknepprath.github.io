@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<!-- browser-sync start --server --files "*.html, css/*.css, js/*.js" -->
+
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lilt</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="styles/index.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <form style="margin-top: 40px">
+        <div class="form-group">
+          <input type="text" class="form-control" name="query" id="move" />
+        </div>
+      </form>
+
+      <button class="btn btn-primary" id="tweet">Tweet</button>
+      <button class="btn btn-danger" id="reset">Reset</button>
+
+      <ul class="list-group command" style="margin-top: 40px"></ul>
+
+    </div>
+
+    <script src="/js/game.js"></script>
+
+  </body>
+
+</html>
