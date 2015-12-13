@@ -3,7 +3,7 @@ layout: page
 title: About
 ---
 
-Husband. Father. Almost Canadian. Front-End Designer/Developer at [Pear Tree Greetings](http://www.peartreegreetings.com/). I love the point at which technology and art converge: technology, design, film, video games, etc.
+Husband. Father. Almost Canadian. Front-End Developer at [WHCC](http://www.whcc.com/). I love the point at which technology and art converge: technology, design, film, video games, etc.
 
 ### Side Projects
 
