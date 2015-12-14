@@ -10,7 +10,7 @@
     <title>Lilt</title>
 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="http://mknepprath.com/lab/lilt/styles/index.css" />
+    <link rel="stylesheet" href="http://www.mknepprath.com/lab/lilt/styles/index.css" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 
@@ -19,23 +19,28 @@
   <body>
 
     <div class="container">
+      <div class="row">
 
-      <form style="margin-top: 40px">
-        <div class="form-group">
-          <input type="text" class="form-control" id="move" />
+        <div class="col-xs-12 col-md-6">
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="move" />
+            </div>
+          </form>
+
+          <button class="btn btn-primary" id="tweet">Tweet</button>
+          <button class="btn btn-danger" id="reset">Reset</button>
         </div>
-      </form>
 
-      <button class="btn btn-primary" id="tweet">Tweet</button>
-      <button class="btn btn-danger" id="reset">Reset</button>
+        <div class="col-xs-12 col-md-6">
+          <ul class="list-group command"></ul>
+        </div>
 
-      <ul class="list-group command" style="margin-top: 40px">
-      </ul>
-
+      </div>
     </div>
 
-    <script src="http://mknepprath.com/lab/lilt/js/js.cookie.js"></script>
-    <script src="http://mknepprath.com/lab/lilt/js/game.js"></script>
+    <script src="http://www.mknepprath.com/lab/lilt/js/js.cookie.js"></script>
+    <script src="http://www.mknepprath.com/lab/lilt/js/game.js"></script>
 
   </body>
 
