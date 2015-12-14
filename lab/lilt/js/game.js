@@ -1,4 +1,6 @@
-var position = "start";
+if (!(Cookies.get('position'))) {
+  Cookies.set('position', 'start');
+}
 var response = "";
 
 $( "#tweet" ).click(function() {
@@ -6,10 +8,10 @@ $( "#tweet" ).click(function() {
   var tweet = $('#move').val();
   var move = $('#move').val().toLowerCase().replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"");
 
-  if (position === "start") {
+  if (Cookies.get('position') === "start") {
 
     if (move === "start") {
-      position = "cell";
+      Cookies.set('position', 'cell');
       response = "You wake up in an unfamiliar room.";
     }
     else {
@@ -18,7 +20,7 @@ $( "#tweet" ).click(function() {
 
   }
 
-  else if (position === "cell") {
+  else if (Cookies.get('position') === "cell") {
 
     if (move === "look at room") {
       response = "Typical room, four walls, one is made of bars."
@@ -38,7 +40,7 @@ $( "#tweet" ).click(function() {
     else if (move === "open door" || move === "open the door") {
       response = "Surprise, no can do."
     }
-    else if (move === "pick up ants" || move === "pick up ant" || "pick up an ant") {
+    else if (move === "pick up ants" || move === "pick up ant" || move === "pick up an ant") {
       response = "They bite you. You drop it."
     }
     else if (move === "go through window") {
@@ -54,12 +56,13 @@ $( "#tweet" ).click(function() {
     response = "You should not be here."
   };
 
-  $( ".command" ).prepend( "<li class='list-group-item' data-position='" + position + "'>@mknepprath " + tweet + "</li>" );
+  $( ".command" ).prepend( "<li class='list-group-item' data-position='" + Cookies.get('position') + "'>@mknepprath " + tweet + "</li>" );
   $( ".command" ).prepend( "<li class='list-group-item list-group-item-info'>@familiarlilt " + response + "</li>" );
   $('#move').val('');
 
 });
 
 $( "#reset" ).click(function() {
+  Cookies.remove('position');
   location.reload();
 });
