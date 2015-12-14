@@ -1,6 +1,10 @@
 if (!(Cookies.get('position'))) {
   Cookies.set('position', 'start');
+  $( ".command" ).prepend( "<li class='list-group-item list-group-item-warning'>&quot;Start&quot; to play.</li>" );
 }
+else {
+  $( ".command" ).prepend( "<li class='list-group-item list-group-item-warning'>Continue your game or &quot;Reset&quot;. Current position: " + Cookies.get('position') + "</li>" );
+};
 var response = "";
 
 $( "#tweet" ).click(function() {
