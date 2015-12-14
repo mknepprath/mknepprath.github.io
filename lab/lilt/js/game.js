@@ -39,6 +39,9 @@ $( "#tweet" ).click(function() {
     else if (move === "look at blue bird" || move === "look at bird" || move === "look at the bird") {
       response = "It’s song gives you hope."
     }
+    else if (move === "look at left wall") {
+      response = "You see a chest and bucket."
+    }
     else if (move === "look at front wall") {
       response = "There’s a door, and through the bars you see a trail of large ants and a key on the floor out of reach."
     }
@@ -52,7 +55,7 @@ $( "#tweet" ).click(function() {
       response = "There’s a front wall with bars, back, left, and right wall. That front wall looks pretty interesting."
     }
     else if (move === "look at window" || move === "look through window" || move === "look out window") {
-      response = "There's a dense forest. You can see a blue bird tweeting."
+      response = "There's a dense forest. You can see a <a href='http://twitter.com/lilt_bird' target='_blank'>@lilt_bird</a> tweeting."
     }
     // open options
     else if (move === "open door" || move === "open the door") {
