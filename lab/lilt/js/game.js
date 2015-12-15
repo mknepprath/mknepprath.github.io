@@ -270,6 +270,13 @@ $( "#tweet" ).click(function() {
 
 });
 
+$("#move").keyup(function(e){
+    if(e.keyCode == 13)
+    {
+        $("#tweet").click()
+    }
+});
+
 // reset button, deletes cookie & refreshes page
 $( "#reset" ).click(function() {
   Cookies.remove('position');
