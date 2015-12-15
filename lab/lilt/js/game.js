@@ -100,24 +100,44 @@ $( "#tweet" ).click(function() {
     // go to
     else if (
       move.match("^go to") ||
-      move.match("^move to")) {
+      move.match("^move to") ||
+      move.match("^run to") ||
+      move === "run") {
       response = "Not a lot of space to move around in here. I better look around."
     }
     // look options
     else if (
       move === "look at ants" ||
-      move === "look at the ants") {
+      move === "look at the ants" ||
+      move === "inspect ants" ||
+      move === "inspect the ants") {
+      response = "They're carrying food to a drain in the middle of the room."
+    }
+    else if (
+      move === "look at apple paste" ||
+      move === "look at the apple paste" ||
+      move === "inspect apple paste" ||
+      move === "inspect the apple paste" ||
+      move === "look at paste" ||
+      move === "look at the paste" ||
+      move === "inspect paste" ||
+      move === "inspect the paste") {
       response = "They're carrying food to a drain in the middle of the room."
     }
     else if (
       move === "look at back wall" ||
-      move === "look at the back wall") {
+      move === "look at the back wall" ||
+      move === "inspect back wall" ||
+      move === "inspect the back wall") {
       response = "Your comfy bed is there, with pillow and blanket. A bowl of old(ish) apple paste sits next to it."
     }
     else if (
       move === "look at blue bird" ||
       move === "look at bird" ||
-      move === "look at the bird") {
+      move === "look at the bird" ||
+      move === "inspect blue bird" ||
+      move === "inspect bird" ||
+      move === "inspect the bird") {
       response = "It’s song gives you hope."
     }
     else if (
@@ -129,12 +149,18 @@ $( "#tweet" ).click(function() {
       move === "look at front wall" ||
       move === "look at the front wall" ||
       move === "look at wall" ||
-      move === "look at the wall") {
+      move === "look at the wall" ||
+      move === "inspect front wall" ||
+      move === "inspect the front wall" ||
+      move === "inspect wall" ||
+      move === "inspect the wall") {
       response = "The front wall has a door, and through the bars you see a trail of large ants and a key on the floor out of reach."
     }
     else if (
       move === "look at right wall" ||
-      move === "look at the right wall") {
+      move === "look at the right wall" ||
+      move === "inspect right wall" ||
+      move === "inspect the right wall") {
       response = "There’s a window with a floor on the sill."
     }
     else if (
@@ -145,7 +171,11 @@ $( "#tweet" ).click(function() {
       move === "look around the room" ||
       move === "look at walls" ||
       move === "look at the walls" ||
-      move === "where am I") {
+      move === "where am I" ||
+      move === "inspect room" ||
+      move === "inspect the room" ||
+      move === "inspect walls" ||
+      move === "inspect the walls") {
       response = "There’s a front wall with bars, back, left, and right wall. That front wall looks pretty interesting."
     }
     else if (
@@ -154,7 +184,9 @@ $( "#tweet" ).click(function() {
       move === "look through window" ||
       move === "look through the window" ||
       move === "look out window" ||
-      move === "look out the window") {
+      move === "look out the window" ||
+      move === "inspect window" ||
+      move === "inspect the window") {
       response = "There's a dense forest. You can see a <a href='http://twitter.com/lilt_bird' target='_blank'>@lilt_bird</a> tweeting."
     }
     // open options
@@ -166,7 +198,11 @@ $( "#tweet" ).click(function() {
     }
     else if (
       move === "open door" ||
-      move === "open the door") {
+      move === "open the door" ||
+      move === "use key on door" ||
+      move === "use key with door" ||
+      move === "use the key on the door" ||
+      move === "use the key with the door") {
       if (key_acquired === true) {
         response = "You open the door and step outside. To be continued..."
       }
@@ -179,6 +215,9 @@ $( "#tweet" ).click(function() {
       move === "pick up ants" ||
       move === "pick up ant" ||
       move === "pick up an ant" ||
+      move === "take ants" ||
+      move === "take ant" ||
+      move === "take an ant" ||
       move === "grab ants" ||
       move === "grab ant" ||
       move === "grab an ant") {
@@ -186,7 +225,11 @@ $( "#tweet" ).click(function() {
     }
     else if (
       move === "pick up bucket" ||
-      move === "pick up the bucket") {
+      move === "pick up the bucket" ||
+      move === "take bucket" ||
+      move === "take the bucket" ||
+      move === "grab bucket" ||
+      move === "grab the bucket") {
       response = "The stench is overwhelming, you drop it."
     }
     else if (
@@ -303,7 +346,8 @@ $( "#tweet" ).click(function() {
       move === "use paste on back wall" ||
       move === "use paste on wall" ||
       move === "use the paste on a wall" ||
-      move === "use the paste on the walls") {
+      move === "use the paste on the walls" ||
+      move === "throw apple paste") {
       response = "That was definitely an improvement to the wall."
     }
     // use options for coin
