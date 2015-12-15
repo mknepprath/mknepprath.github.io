@@ -12,6 +12,28 @@ else {
 var response = "";
 // init alterable cell objects
 // coin bent
+if (!(Cookies.get('chestopen'))) {
+  var chest_open = false;
+  Cookies.set('chestopen', false)
+}
+else {
+  var chest_open = JSON.parse(Cookies.get('chestopen'));
+  if (chest_open === true) {
+    $( ".command" ).prepend( "<li class='list-group-item list-group-item-warning'>The chest is open.</li>" )
+  };
+};
+// coin acquired
+if (!(Cookies.get('coinacquired'))) {
+  var coin_acquired = false;
+  Cookies.set('coinacquired', false)
+}
+else {
+  var coin_acquired = JSON.parse(Cookies.get('coinacquired'));
+  if (coin_acquired === true) {
+    $( ".command" ).prepend( "<li class='list-group-item list-group-item-warning'>You have a coin.</li>" )
+  };
+};
+// coin bent
 if (!(Cookies.get('coinbent'))) {
   var coin_bent = false;
   Cookies.set('coinbent', false)
@@ -75,6 +97,12 @@ $( "#tweet" ).click(function() {
       move === "help") {
       response = "Tweet at me to do things."
     }
+    // go to
+    else if (
+      move.match("^go to") ||
+      move.match("^move to")) {
+      response = "Not a lot of space to move around in here. I better look around."
+    }
     // look options
     else if (
       move === "look at ants" ||
@@ -131,10 +159,16 @@ $( "#tweet" ).click(function() {
     }
     // open options
     else if (
+      move === "open chest" ||
+      move === "open the chest") {
+      chest_open = true;
+      response = "There's a coin in it."
+    }
+    else if (
       move === "open door" ||
       move === "open the door") {
       if (key_acquired === true) {
-        response = "You open the door and step outside."
+        response = "You open the door and step outside. To be continued..."
       }
       else {
         response = "Surprise, no can do."
@@ -144,7 +178,10 @@ $( "#tweet" ).click(function() {
     else if (
       move === "pick up ants" ||
       move === "pick up ant" ||
-      move === "pick up an ant") {
+      move === "pick up an ant" ||
+      move === "grab ants" ||
+      move === "grab ant" ||
+      move === "grab an ant") {
       response = "They bite you. You drop it."
     }
     else if (
@@ -156,16 +193,26 @@ $( "#tweet" ).click(function() {
       move === "pick up coin" ||
       move === "pick up the coin" ||
       move === "take coin" ||
-      move === "take the coin") {
-      response = "Nice."
+      move === "take the coin" ||
+      move === "grab coin" ||
+      move === "grab the coin") {
+      if (chest_open === true) {
+        coin_acquired = true; // only if you pick up the coin after chest is open
+        response = "Nice."
+      }
+      else {
+        response = "You can't do that."
+      }
     }
     else if (
       move === "pick up key" ||
       move === "pick up the key" ||
       move === "take key" ||
-      move === "take the key") {
+      move === "take the key" ||
+      move === "grab key" ||
+      move === "grab the key") {
       if (key_pasted === true) {
-        key_acquired = true;
+        key_acquired = true; // only if you pick up the key after it's been pasted
         response = "You grab the key right before it gets carried down the drain."
       }
       else {
@@ -188,7 +235,10 @@ $( "#tweet" ).click(function() {
     else if (
       move === "eat apple paste" ||
       move === "eat the apple paste" ||
-      move === "eat some apple paste") {
+      move === "eat some apple paste" ||
+      move === "eat paste" ||
+      move === "eat the paste" ||
+      move === "eat some paste") {
       response = "You eat it, but it’s so bad you spit it out. A few ants are attracted to the smell."
     }
     else if (
@@ -202,7 +252,11 @@ $( "#tweet" ).click(function() {
       move === "use apple paste on ants" ||
       move === "use apple paste with ants" ||
       move === "use the apple paste on the ants" ||
-      move === "use the apple paste with the ants") {
+      move === "use the apple paste with the ants" ||
+      move === "use paste on ants" ||
+      move === "use paste with ants" ||
+      move === "use the paste on the ants" ||
+      move === "use the paste with the ants") {
       response = "They like it. They carry it down the drain. They’re basically having an ant party."
     }
     // use on drain
@@ -210,7 +264,11 @@ $( "#tweet" ).click(function() {
       move === "use apple paste on drain" ||
       move === "put apple paste in drain" ||
       move === "use the apple paste on the drain" ||
-      move === "use the apple paste with the drain") {
+      move === "use the apple paste with the drain" ||
+      move === "use paste on drain" ||
+      move === "put paste in drain" ||
+      move === "use the paste on the drain" ||
+      move === "use the paste with the drain") {
       response = "Don’t be wasteful."
     }
     // use on key
@@ -221,7 +279,14 @@ $( "#tweet" ).click(function() {
       move === "use the apple paste on the key" ||
       move === "use the apple paste with the key" ||
       move === "throw apple paste at key" ||
-      move === "throw the apple paste at the key") {
+      move === "throw the apple paste at the key" ||
+      move === "use paste on key" ||
+      move === "put paste on key" ||
+      move === "use paste with key" ||
+      move === "use the paste on the key" ||
+      move === "use the paste with the key" ||
+      move === "throw paste at key" ||
+      move === "throw the paste at the key") {
       key_pasted = true;
       response = "The paste you lobbed at the key covers it. The ants grab it and start carrying over to the drain with their food."
     }
@@ -232,7 +297,13 @@ $( "#tweet" ).click(function() {
       move === "use apple paste on back wall" ||
       move === "use apple paste on wall" ||
       move === "use the apple paste on a wall" ||
-      move === "use the apple paste on the walls") {
+      move === "use the apple paste on the walls" ||
+      move === "use paste on right wall" ||
+      move === "use paste on left wall" ||
+      move === "use paste on back wall" ||
+      move === "use paste on wall" ||
+      move === "use the paste on a wall" ||
+      move === "use the paste on the walls") {
       response = "That was definitely an improvement to the wall."
     }
     // use options for coin
@@ -242,8 +313,13 @@ $( "#tweet" ).click(function() {
       move === "use coin with door" ||
       move === "use the coin on the door" ||
       move === "use the coin with the door") {
-      coin_bent = true;
-      response = "The coin is now bent coin."
+      if (coin_acquired === true) {
+        coin_bent = true;
+        response = "The coin is now bent coin."
+      }
+      else {
+        response = "You don't have a coin."
+      }
     }
     else {
       response = "You can't do that."
@@ -264,6 +340,8 @@ $( "#tweet" ).click(function() {
 
   // update cookies
   Cookies.set('position', position);
+  Cookies.set('chestopen', chest_open);
+  Cookies.set('coinacquired', coin_acquired);
   Cookies.set('coinbent', coin_bent);
   Cookies.set('keypasted', key_pasted);
   Cookies.set('keyacquired', key_acquired);
@@ -280,6 +358,8 @@ $("#move").keyup(function(e){
 // reset button, deletes cookie & refreshes page
 $( "#reset" ).click(function() {
   Cookies.remove('position');
+  Cookies.remove('chestopen');
+  Cookies.remove('coinacquired');
   Cookies.remove('coinbent');
   Cookies.remove('keypasted');
   Cookies.remove('keyacquired');
