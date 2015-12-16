@@ -122,7 +122,7 @@ $( "#tweet" ).click(function() {
       move === "look at the paste" ||
       move === "inspect paste" ||
       move === "inspect the paste") {
-      response = "They're carrying food to a drain in the middle of the room."
+      response = "It's definitely old."
     }
     else if (
       move === "look at back wall" ||
@@ -139,6 +139,13 @@ $( "#tweet" ).click(function() {
       move === "inspect bird" ||
       move === "inspect the bird") {
       response = "It’s song gives you hope."
+    }
+    else if (
+      move === "look at chest" ||
+      move === "look at the chest" ||
+      move === "inspect chest" ||
+      move === "inspect the chest") {
+      response = "It's a small chest. It doesn't appear to be locked."
     }
     else if (
       move === "look at left wall" ||
@@ -187,7 +194,7 @@ $( "#tweet" ).click(function() {
       move === "look out the window" ||
       move === "inspect window" ||
       move === "inspect the window") {
-      response = "There's a dense forest. You can see a <a href='http://twitter.com/lilt_bird' target='_blank'>@lilt_bird</a> tweeting."
+      response = "There's a dense forest. You can see a blue bird (<a href='http://twitter.com/lilt_bird' target='_blank'>@lilt_bird</a>) tweeting."
     }
     // open options
     else if (
@@ -262,6 +269,15 @@ $( "#tweet" ).click(function() {
         response = "It’s just out of reach."
       }
     }
+    // use
+    else if (
+      move === "use bed" ||
+      move === "use the bed" ||
+      move === "sleep" ||
+      move === "sleep in bed" ||
+      move === "sleep in the bed") {
+      response = "You don’t feel tired. You just woke up."
+    }
     // go through options
     else if (
       move === "go through window" ||
@@ -283,11 +299,6 @@ $( "#tweet" ).click(function() {
       move === "eat the paste" ||
       move === "eat some paste") {
       response = "You eat it, but it’s so bad you spit it out. A few ants are attracted to the smell."
-    }
-    else if (
-      move === "eat key" ||
-      move === "eat the key") {
-      response = "You are stuck in the cell for a day. You acquire the key about 30 hours later."
     }
     // use options for apple paste
     // use on ants
@@ -331,7 +342,7 @@ $( "#tweet" ).click(function() {
       move === "throw paste at key" ||
       move === "throw the paste at the key") {
       key_pasted = true;
-      response = "The paste you lobbed at the key covers it. The ants grab it and start carrying over to the drain with their food."
+      response = "The paste you lobbed at the key covers it. The ants grab it and start carrying it over to the drain with their food."
     }
     // use on right wall
     else if (
