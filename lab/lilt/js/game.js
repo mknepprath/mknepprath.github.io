@@ -22,6 +22,16 @@ var items = [
     message: 'You have the key.'
   }
 ];
+// get paste, or create if it doesn't exist
+var paste_options = ['apple', 'meat', 'mustard', 'shrimp', 'tomato', 'bean', 'grape', 'purple'];
+var paste = paste_options[(Math.floor(Math.random() * paste_options.length))];
+if (!(Cookies.get('paste'))) {
+  var paste = paste_options[(Math.floor(Math.random() * paste_options.length))];
+  Cookies.set('paste', paste);
+}
+else {
+  var paste = Cookies.get('paste');
+};
 // if no cookie, create it and set position, else get the position
 if (!(Cookies.get('position'))) {
   var position = "start";
@@ -84,10 +94,10 @@ $( "#tweet" ).click(function() {
       response = "They're carrying food to a drain in the middle of the room."
     }
     else if (
-      move === "look at apple paste" ||
-      move === "look at the apple paste" ||
-      move === "inspect apple paste" ||
-      move === "inspect the apple paste" ||
+      move === "look at " + paste + " paste" ||
+      move === "look at the " + paste + " paste" ||
+      move === "inspect " + paste + " paste" ||
+      move === "inspect the " + paste + " paste" ||
       move === "look at paste" ||
       move === "look at the paste" ||
       move === "inspect paste" ||
@@ -99,7 +109,7 @@ $( "#tweet" ).click(function() {
       move === "look at the back wall" ||
       move === "inspect back wall" ||
       move === "inspect the back wall") {
-      response = "Your comfy bed is there, with pillow and blanket. A bowl of old(ish) apple paste sits next to it."
+      response = "Your comfy bed is there, with pillow and blanket. A bowl of old(ish) " + paste + " paste sits next to it."
     }
     else if (
       move === "look at blue bird" ||
@@ -262,21 +272,21 @@ $( "#tweet" ).click(function() {
     }
     // eat options
     else if (
-      move === "eat apple paste" ||
-      move === "eat the apple paste" ||
-      move === "eat some apple paste" ||
+      move === "eat " + paste + " paste" ||
+      move === "eat the " + paste + " paste" ||
+      move === "eat some " + paste + " paste" ||
       move === "eat paste" ||
       move === "eat the paste" ||
       move === "eat some paste") {
       response = "You eat it, but it’s so bad you spit it out. A few ants are attracted to the smell."
     }
-    // use options for apple paste
+    // use options for paste
     // use on ants
     else if (
-      move === "use apple paste on ants" ||
-      move === "use apple paste with ants" ||
-      move === "use the apple paste on the ants" ||
-      move === "use the apple paste with the ants" ||
+      move === "use " + paste + " paste on ants" ||
+      move === "use " + paste + " paste with ants" ||
+      move === "use the " + paste + " paste on the ants" ||
+      move === "use the " + paste + " paste with the ants" ||
       move === "use paste on ants" ||
       move === "use paste with ants" ||
       move === "use the paste on the ants" ||
@@ -285,10 +295,10 @@ $( "#tweet" ).click(function() {
     }
     // use on drain
     else if (
-      move === "use apple paste on drain" ||
-      move === "put apple paste in drain" ||
-      move === "use the apple paste on the drain" ||
-      move === "use the apple paste with the drain" ||
+      move === "use " + paste + " paste on drain" ||
+      move === "put " + paste + " paste in drain" ||
+      move === "use the " + paste + " paste on the drain" ||
+      move === "use the " + paste + " paste with the drain" ||
       move === "use paste on drain" ||
       move === "put paste in drain" ||
       move === "use the paste on the drain" ||
@@ -297,13 +307,13 @@ $( "#tweet" ).click(function() {
     }
     // use on key
     else if (
-      move === "use apple paste on key" ||
-      move === "put apple paste on key" ||
-      move === "use apple paste with key" ||
-      move === "use the apple paste on the key" ||
-      move === "use the apple paste with the key" ||
-      move === "throw apple paste at key" ||
-      move === "throw the apple paste at the key" ||
+      move === "use " + paste + " paste on key" ||
+      move === "put " + paste + " paste on key" ||
+      move === "use " + paste + " paste with key" ||
+      move === "use the " + paste + " paste on the key" ||
+      move === "use the " + paste + " paste with the key" ||
+      move === "throw " + paste + " paste at key" ||
+      move === "throw the " + paste + " paste at the key" ||
       move === "use paste on key" ||
       move === "put paste on key" ||
       move === "use paste with key" ||
@@ -316,19 +326,19 @@ $( "#tweet" ).click(function() {
     }
     // use on right wall
     else if (
-      move === "use apple paste on right wall" ||
-      move === "use apple paste on left wall" ||
-      move === "use apple paste on back wall" ||
-      move === "use apple paste on wall" ||
-      move === "use the apple paste on a wall" ||
-      move === "use the apple paste on the walls" ||
+      move === "use " + paste + " paste on right wall" ||
+      move === "use " + paste + " paste on left wall" ||
+      move === "use " + paste + " paste on back wall" ||
+      move === "use " + paste + " paste on wall" ||
+      move === "use the " + paste + " paste on a wall" ||
+      move === "use the " + paste + " paste on the walls" ||
       move === "use paste on right wall" ||
       move === "use paste on left wall" ||
       move === "use paste on back wall" ||
       move === "use paste on wall" ||
       move === "use the paste on a wall" ||
       move === "use the paste on the walls" ||
-      move === "throw apple paste") {
+      move === "throw " + paste + " paste") {
       response = "That was definitely an improvement to the wall."
     }
     // use options for coin
@@ -368,6 +378,7 @@ $( "#tweet" ).click(function() {
     Cookies.set(items[i].action, items[i].status)
   }
   Cookies.set('position', position);
+  Cookies.set('paste', paste);
 });
 
 // runs click function when "enter" key is pressed
@@ -378,10 +389,11 @@ $("#move").keyup(function(e){
 });
 
 // reset button, deletes cookie & refreshes page
-$( "#reset" ).click(function() {
+$("#reset").click(function() {
   for (var i in items) {
     Cookies.remove(items[i].action)
   };
   Cookies.remove('position');
+  Cookies.remove('paste');
   location.reload()
 });
