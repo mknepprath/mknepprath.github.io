@@ -24,7 +24,6 @@ var items = [
 ];
 // get paste, or create if it doesn't exist
 var paste_options = ['apple', 'meat', 'mustard', 'shrimp', 'tomato', 'bean', 'grape', 'purple'];
-var paste = paste_options[(Math.floor(Math.random() * paste_options.length))];
 if (!(Cookies.get('paste'))) {
   var paste = paste_options[(Math.floor(Math.random() * paste_options.length))];
   Cookies.set('paste', paste);
