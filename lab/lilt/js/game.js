@@ -1,70 +1,40 @@
-// init cookie on first visit
+// sets up interactions
+var items = [
+  {
+    action: 'chestopen',
+    type: 'warning',
+    message: 'The chest is open.'
+  }, {
+    action: 'coinacquired',
+    type: 'warning',
+    message: 'You have a coin.'
+  }, {
+    action: 'coinbent',
+    type: 'warning',
+    message: 'You have a bent coin.'
+  }, {
+    action: 'keypasted',
+    type: 'warning',
+    message: 'You have covered the key in paste.'
+  }, {
+    action: 'keyacquired',
+    type: 'warning',
+    message: 'You have the key.'
+  }
+];
+// if no cookie, create it and set position, else get the position
 if (!(Cookies.get('position'))) {
   var position = "start";
   Cookies.set('position', 'start');
-  $( ".command" ).prepend( "<li class='list-group-item list-group-item-warning'>&quot;Start&quot; to play.</li>" );
+  reply('warning', '&quot;Start&quot; to play.')
 }
 else {
   var position = Cookies.get('position');
-  $( ".command" ).prepend( "<li class='list-group-item list-group-item-warning'>Continue your game or &quot;Reset&quot;. Current position: " + Cookies.get('position') + "</li>" );
+  reply('warning', 'Continue your game or &quot;Reset&quot;. Current position: ' + Cookies.get('position'))
 };
-// init response
-var response = "";
-// init alterable cell objects
-// coin bent
-if (!(Cookies.get('chestopen'))) {
-  var chest_open = false;
-  Cookies.set('chestopen', false)
-}
-else {
-  var chest_open = JSON.parse(Cookies.get('chestopen'));
-  if (chest_open === true) {
-    $( ".command" ).prepend( "<li class='list-group-item list-group-item-warning'>The chest is open.</li>" )
-  };
-};
-// coin acquired
-if (!(Cookies.get('coinacquired'))) {
-  var coin_acquired = false;
-  Cookies.set('coinacquired', false)
-}
-else {
-  var coin_acquired = JSON.parse(Cookies.get('coinacquired'));
-  if (coin_acquired === true) {
-    $( ".command" ).prepend( "<li class='list-group-item list-group-item-warning'>You have a coin.</li>" )
-  };
-};
-// coin bent
-if (!(Cookies.get('coinbent'))) {
-  var coin_bent = false;
-  Cookies.set('coinbent', false)
-}
-else {
-  var coin_bent = JSON.parse(Cookies.get('coinbent'));
-  if (coin_bent === true) {
-    $( ".command" ).prepend( "<li class='list-group-item list-group-item-warning'>You have a bent coin.</li>" )
-  };
-};
-// apple paste key
-if (!(Cookies.get('keypasted'))) {
-  var key_pasted = false;
-  Cookies.set('keypasted', false)
-}
-else {
-  var key_pasted = JSON.parse(Cookies.get('keypasted'));
-  if (key_pasted === true) {
-    $( ".command" ).prepend( "<li class='list-group-item list-group-item-warning'>You have covered the key in apple paste.</li>" )
-  };
-};
-// key acquired
-if (!(Cookies.get('keyacquired'))) {
-  var key_acquired = false;
-  Cookies.set('keyacquired', false)
-}
-else {
-  var key_acquired = JSON.parse(Cookies.get('keyacquired'));
-  if (key_acquired === true) {
-    $( ".command" ).prepend( "<li class='list-group-item list-group-item-warning'>You have the key.</li>" )
-  };
+// get statuses from cookie, set rest to default
+for (var i in items) {
+  items[i].status = checkcookies(items[i].action, items[i].type, items[i].message)
 };
 
 // when Tweet button is clicked...
@@ -200,7 +170,7 @@ $( "#tweet" ).click(function() {
     else if (
       move === "open chest" ||
       move === "open the chest") {
-      chest_open = true;
+      items[0].status = true; //chestopen
       response = "There's a coin in it."
     }
     else if (
@@ -210,7 +180,7 @@ $( "#tweet" ).click(function() {
       move === "use key with door" ||
       move === "use the key on the door" ||
       move === "use the key with the door") {
-      if (key_acquired === true) {
+      if (items[4].status === true) { //keyacquired
         response = "You open the door and step outside. To be continued..."
       }
       else {
@@ -246,8 +216,8 @@ $( "#tweet" ).click(function() {
       move === "take the coin" ||
       move === "grab coin" ||
       move === "grab the coin") {
-      if (chest_open === true) {
-        coin_acquired = true; // only if you pick up the coin after chest is open
+      if (items[0].status === true) { //chestopen
+        items[1].status = true; //coinacquired - only if you pick up the coin after chest is open
         response = "Nice."
       }
       else {
@@ -261,8 +231,8 @@ $( "#tweet" ).click(function() {
       move === "take the key" ||
       move === "grab key" ||
       move === "grab the key") {
-      if (key_pasted === true) {
-        key_acquired = true; // only if you pick up the key after it's been pasted
+      if (items[3].status === true) { //keypasted
+        items[4].status = true; //keyacquired - only if you pick up the key after it's been pasted
         response = "You grab the key right before it gets carried down the drain."
       }
       else {
@@ -341,7 +311,7 @@ $( "#tweet" ).click(function() {
       move === "use the paste with the key" ||
       move === "throw paste at key" ||
       move === "throw the paste at the key") {
-      key_pasted = true;
+      items[3].status = true; //keypasted
       response = "The paste you lobbed at the key covers it. The ants grab it and start carrying it over to the drain with their food."
     }
     // use on right wall
@@ -368,8 +338,8 @@ $( "#tweet" ).click(function() {
       move === "use coin with door" ||
       move === "use the coin on the door" ||
       move === "use the coin with the door") {
-      if (coin_acquired === true) {
-        coin_bent = true;
+      if (items[1].status === true) { //coinacquired
+        items[2].status = true; //coinbent
         response = "The coin is now bent coin."
       }
       else {
@@ -387,36 +357,31 @@ $( "#tweet" ).click(function() {
   };
 
   // logs tweet
-  $( ".command" ).prepend( "<li class='list-group-item' data-position='" + position + "'>@mknepprath " + tweet + "</li>" );
+  reply('', '@user ' + tweet)
   // logs response
-  $( ".command" ).prepend( "<li class='list-group-item list-group-item-info'>@familiarlilt " + response + "</li>" );
+  reply('info', '@familiarlilt ' + response);
   // clears tweet
   $('#move').val('');
 
   // update cookies
+  for (var i in items) {
+    Cookies.set(items[i].action, items[i].status)
+  }
   Cookies.set('position', position);
-  Cookies.set('chestopen', chest_open);
-  Cookies.set('coinacquired', coin_acquired);
-  Cookies.set('coinbent', coin_bent);
-  Cookies.set('keypasted', key_pasted);
-  Cookies.set('keyacquired', key_acquired);
-
 });
 
+// runs click function when "enter" key is pressed
 $("#move").keyup(function(e){
-    if(e.keyCode == 13)
-    {
-        $("#tweet").click()
-    }
+  if(e.keyCode == 13) {
+    $("#tweet").click()
+  }
 });
 
 // reset button, deletes cookie & refreshes page
 $( "#reset" ).click(function() {
+  for (var i in items) {
+    Cookies.remove(items[i].action)
+  };
   Cookies.remove('position');
-  Cookies.remove('chestopen');
-  Cookies.remove('coinacquired');
-  Cookies.remove('coinbent');
-  Cookies.remove('keypasted');
-  Cookies.remove('keyacquired');
-  location.reload();
+  location.reload()
 });
