@@ -1,5 +1,5 @@
 // sets up interactions
-var items = [
+var interactions = [
   {
     action: 'chestopen',
     type: 'warning',
@@ -42,8 +42,8 @@ else {
   reply('warning', 'Continue your game or &quot;Reset&quot;. Current position: ' + Cookies.get('position'))
 };
 // get statuses from cookie, set rest to default
-for (var i in items) {
-  items[i].status = checkcookies(items[i].action, items[i].type, items[i].message)
+for (var i in interactions) {
+  interactions[i].status = checkcookies(interactions[i].action, interactions[i].type, interactions[i].message)
 };
 
 // when Tweet button is clicked...
@@ -179,7 +179,7 @@ $( "#tweet" ).click(function() {
     else if (
       move === "open chest" ||
       move === "open the chest") {
-      items[0].status = true; //chestopen
+      interactions[0].status = true; //chestopen
       response = "There's a coin in it."
     }
     else if (
@@ -189,7 +189,7 @@ $( "#tweet" ).click(function() {
       move === "use key with door" ||
       move === "use the key on the door" ||
       move === "use the key with the door") {
-      if (items[4].status === true) { //keyacquired
+      if (interactions[4].status === true) { //keyacquired
         response = "You open the door and step outside. To be continued..."
       }
       else {
@@ -225,8 +225,8 @@ $( "#tweet" ).click(function() {
       move === "take the coin" ||
       move === "grab coin" ||
       move === "grab the coin") {
-      if (items[0].status === true) { //chestopen
-        items[1].status = true; //coinacquired - only if you pick up the coin after chest is open
+      if (interactions[0].status === true) { //chestopen
+        interactions[1].status = true; //coinacquired - only if you pick up the coin after chest is open
         response = "Nice."
       }
       else {
@@ -240,8 +240,8 @@ $( "#tweet" ).click(function() {
       move === "take the key" ||
       move === "grab key" ||
       move === "grab the key") {
-      if (items[3].status === true) { //keypasted
-        items[4].status = true; //keyacquired - only if you pick up the key after it's been pasted
+      if (interactions[3].status === true) { //keypasted
+        interactions[4].status = true; //keyacquired - only if you pick up the key after it's been pasted
         response = "You grab the key right before it gets carried down the drain."
       }
       else {
@@ -320,7 +320,7 @@ $( "#tweet" ).click(function() {
       move === "use the paste with the key" ||
       move === "throw paste at key" ||
       move === "throw the paste at the key") {
-      items[3].status = true; //keypasted
+      interactions[3].status = true; //keypasted
       response = "The paste you lobbed at the key covers it. The ants grab it and start carrying it over to the drain with their food."
     }
     // use on right wall
@@ -347,16 +347,17 @@ $( "#tweet" ).click(function() {
       move === "use coin with door" ||
       move === "use the coin on the door" ||
       move === "use the coin with the door") {
-      if (items[1].status === true) { //coinacquired
-        items[2].status = true; //coinbent
-        response = "The coin is now bent coin."
+      if (interactions[1].status === true) { //coinacquired
+        interactions[2].status = true; //coinbent
+        response = "The coin is now bent."
       }
       else {
         response = "You don't have a coin."
       }
     }
     else {
-      response = "You can't do that."
+      var response_options = ["You can't do that.", "That can't be done.", "Didn't work.", "Oops, can't do that.", "Sorry, you can't do that.", "That didn't work.", "Try something else.", "Sorry, you'll have to try something else.", "Oops, didn't work.", "Oops, try something else.", "Nice try, but you can't do that.", "Nice try, but that didn't work."];
+      response = response_options[(Math.floor(Math.random() * response_options.length))];
     }
 
   }
@@ -373,8 +374,8 @@ $( "#tweet" ).click(function() {
   $('#move').val('');
 
   // update cookies
-  for (var i in items) {
-    Cookies.set(items[i].action, items[i].status)
+  for (var i in interactions) {
+    Cookies.set(interactions[i].action, interactions[i].status)
   }
   Cookies.set('position', position);
   Cookies.set('paste', paste);
@@ -389,8 +390,8 @@ $("#move").keyup(function(e){
 
 // reset button, deletes cookie & refreshes page
 $("#reset").click(function() {
-  for (var i in items) {
-    Cookies.remove(items[i].action)
+  for (var i in interactions) {
+    Cookies.remove(interactions[i].action)
   };
   Cookies.remove('position');
   Cookies.remove('paste');
