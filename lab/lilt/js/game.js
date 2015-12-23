@@ -1,27 +1,28 @@
-// sets up interactions
-var interactions = [
-  {
-    action: 'chestopen',
-    type: 'warning',
-    message: 'The chest is open.'
-  }, {
-    action: 'coinacquired',
-    type: 'warning',
-    message: 'You have a coin.'
-  }, {
-    action: 'coinbent',
-    type: 'warning',
-    message: 'You have a bent coin.'
-  }, {
-    action: 'keypasted',
-    type: 'warning',
-    message: 'You have covered the key in paste.'
-  }, {
-    action: 'keyacquired',
-    type: 'warning',
-    message: 'You have the key.'
+// PARSE
+Parse.initialize("Beyi6l08p3QphWjpryXqnF66UN41wU7SFBwhFvQX", "FZmRAeAj3PRXFWiTY4C5KEWBwQgRLFchWX4uhACZ");
+// sets up toggle
+var toggle = [];
+var Interactions = Parse.Object.extend("Interactions");
+var query = new Parse.Query(Interactions);
+query.find({
+  success: function(interactions) {
+    console.log("Successfully retrieved " + interactions.length + " interactions.");
+    // Do something with the returned Parse.Object values
+    for (var i in interactions) {
+      interaction = interactions[i];
+      toggle[i] = {};
+      toggle[i].action = interaction.get('action');
+      toggle[i].type = interaction.get('type');
+      toggle[i].message = interaction.get('message');
+      // get statuses from cookie, set rest to default
+      toggle[i].status = checkcookies(toggle[i].action, toggle[i].type, toggle[i].message)
+    }
+  },
+  error: function(error) {
+    console.log("Error: " + error.code + " " + error.message);
   }
-];
+});
+
 // get paste, or create if it doesn't exist
 var paste_options = ['apple', 'meat', 'mustard', 'shrimp', 'tomato', 'bean', 'grape', 'purple'];
 if (!(Cookies.get('paste'))) {
@@ -40,10 +41,6 @@ if (!(Cookies.get('position'))) {
 else {
   var position = Cookies.get('position');
   reply('warning', 'Continue your game or &quot;Reset&quot;. Current position: ' + Cookies.get('position'))
-};
-// get statuses from cookie, set rest to default
-for (var i in interactions) {
-  interactions[i].status = checkcookies(interactions[i].action, interactions[i].type, interactions[i].message)
 };
 
 // when Tweet button is clicked...
@@ -179,7 +176,7 @@ $( "#tweet" ).click(function() {
     else if (
       move === "open chest" ||
       move === "open the chest") {
-      interactions[0].status = true; //chestopen
+      toggle[0].status = true; //chestopen
       response = "There's a coin in it."
     }
     else if (
@@ -189,7 +186,7 @@ $( "#tweet" ).click(function() {
       move === "use key with door" ||
       move === "use the key on the door" ||
       move === "use the key with the door") {
-      if (interactions[4].status === true) { //keyacquired
+      if (toggle[4].status === true) { //keyacquired
         response = "You open the door and step outside. To be continued..."
       }
       else {
@@ -225,8 +222,8 @@ $( "#tweet" ).click(function() {
       move === "take the coin" ||
       move === "grab coin" ||
       move === "grab the coin") {
-      if (interactions[0].status === true) { //chestopen
-        interactions[1].status = true; //coinacquired - only if you pick up the coin after chest is open
+      if (toggle[0].status === true) { //chestopen
+        toggle[1].status = true; //coinacquired - only if you pick up the coin after chest is open
         response = "Nice."
       }
       else {
@@ -240,8 +237,8 @@ $( "#tweet" ).click(function() {
       move === "take the key" ||
       move === "grab key" ||
       move === "grab the key") {
-      if (interactions[3].status === true) { //keypasted
-        interactions[4].status = true; //keyacquired - only if you pick up the key after it's been pasted
+      if (toggle[3].status === true) { //keypasted
+        toggle[4].status = true; //keyacquired - only if you pick up the key after it's been pasted
         response = "You grab the key right before it gets carried down the drain."
       }
       else {
@@ -320,7 +317,7 @@ $( "#tweet" ).click(function() {
       move === "use the paste with the key" ||
       move === "throw paste at key" ||
       move === "throw the paste at the key") {
-      interactions[3].status = true; //keypasted
+      toggle[3].status = true; //keypasted
       response = "The paste you lobbed at the key covers it. The ants grab it and start carrying it over to the drain with their food."
     }
     // use on right wall
@@ -347,8 +344,8 @@ $( "#tweet" ).click(function() {
       move === "use coin with door" ||
       move === "use the coin on the door" ||
       move === "use the coin with the door") {
-      if (interactions[1].status === true) { //coinacquired
-        interactions[2].status = true; //coinbent
+      if (toggle[1].status === true) { //coinacquired
+        toggle[2].status = true; //coinbent
         response = "The coin is now bent."
       }
       else {
@@ -366,6 +363,14 @@ $( "#tweet" ).click(function() {
     response = "You should not be here."
   };
 
+  // stores tweet
+  var dimensions = {
+    // Define ranges to bucket data points into meaningful segments
+    tweet: tweet,
+  };
+  // Send the dimensions to Parse along with the 'search' event
+  Parse.Analytics.track('tweets', dimensions);
+
   // logs tweet
   reply('', '@user ' + tweet)
   // logs response
@@ -374,8 +379,8 @@ $( "#tweet" ).click(function() {
   $('#move').val('');
 
   // update cookies
-  for (var i in interactions) {
-    Cookies.set(interactions[i].action, interactions[i].status)
+  for (var i in toggle) {
+    Cookies.set(toggle[i].action, toggle[i].status)
   }
   Cookies.set('position', position);
   Cookies.set('paste', paste);
@@ -390,8 +395,8 @@ $("#move").keyup(function(e){
 
 // reset button, deletes cookie & refreshes page
 $("#reset").click(function() {
-  for (var i in interactions) {
-    Cookies.remove(interactions[i].action)
+  for (var i in toggle) {
+    Cookies.remove(toggle[i].action)
   };
   Cookies.remove('position');
   Cookies.remove('paste');
