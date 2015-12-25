@@ -1,367 +1,92 @@
 // PARSE
 Parse.initialize("Beyi6l08p3QphWjpryXqnF66UN41wU7SFBwhFvQX", "FZmRAeAj3PRXFWiTY4C5KEWBwQgRLFchWX4uhACZ");
-// sets up toggle
-var toggle = [];
+// sets up interactions
+var interactions = [];
 var Interactions = Parse.Object.extend("Interactions");
-var query = new Parse.Query(Interactions);
+var query = new Parse.Query(Interactions).limit(1000);
 query.find({
-  success: function(interactions) {
-    console.log("Successfully retrieved " + interactions.length + " interactions.");
-    // Do something with the returned Parse.Object values
-    for (var i in interactions) {
-      interaction = interactions[i];
-      toggle[i] = {};
-      toggle[i].action = interaction.get('action');
-      toggle[i].type = interaction.get('type');
-      toggle[i].message = interaction.get('message');
+  success: function(ints) {
+    console.log("Successfully retrieved " + ints.length + " interactions.");
+    // create interactions array from Interactions in Parse
+    for (var i in ints) {
+      int = ints[i];
+      interactions[i] = {};
+      interactions[i].action = int.get('action');
+      interactions[i].type = int.get('type');
+      interactions[i].message = int.get('message');
       // get statuses from cookie, set rest to default
-      toggle[i].status = checkcookies(toggle[i].action, toggle[i].type, toggle[i].message)
+      interactions[i].status = checkcookies(interactions[i].action, interactions[i].type, interactions[i].message)
     }
   },
   error: function(error) {
     console.log("Error: " + error.code + " " + error.message);
   }
 });
-
-// get paste, or create if it doesn't exist
-var paste_options = ['apple', 'meat', 'mustard', 'shrimp', 'tomato', 'bean', 'grape', 'purple'];
-if (!(Cookies.get('paste'))) {
-  var paste = paste_options[(Math.floor(Math.random() * paste_options.length))];
-  Cookies.set('paste', paste);
-}
-else {
-  var paste = Cookies.get('paste');
-};
 // if no cookie, create it and set position, else get the position
 if (!(Cookies.get('position'))) {
   var position = "start";
   Cookies.set('position', 'start');
-  reply('warning', '&quot;Start&quot; to play.')
+  reply('warning', 'Tweet &quot;Start&quot; to play.')
 }
 else {
   var position = Cookies.get('position');
-  reply('warning', 'Continue your game or &quot;Reset&quot;. Current position: ' + Cookies.get('position'))
+  if (Cookies.get('position') === 'start') {
+    reply('warning', 'Tweet &quot;Start&quot; to play.')
+  }
+  else {
+    reply('warning', 'Current position: ' + Cookies.get('position'))
+  }
 };
 
 // when Tweet button is clicked...
 $( "#tweet" ).click(function() {
 
+  // playing lilt
+  interactions[0].status = true; //playinglilt
   // grab tweet
   var tweet = $('#move').val();
   // sanitize tweet
   var move = tweet.toLowerCase().replace(/[.,-\/#!$%\^&\*;:{}=\-_`~()]/g,"");
 
-  // start
-  if (position === "start") {
-
-    if (
-      move === "start") {
-      position = "cell";
-      response = "You wake up in an unfamiliar room."
-    }
-    else {
-      response = "You can't do that."
-    }
-
-  }
-
-  // cell
-  else if (position === "cell") {
-
-    // help options
-    if (
-      move === "help") {
-      response = "Tweet at me to do things."
-    }
-    // go to
-    else if (
-      move.match("^go to") ||
-      move.match("^move to") ||
-      move.match("^run to") ||
-      move === "run") {
-      response = "Not a lot of space to move around in here. I better look around."
-    }
-    // look options
-    else if (
-      move === "look at ants" ||
-      move === "look at the ants" ||
-      move === "inspect ants" ||
-      move === "inspect the ants") {
-      response = "They're carrying food to a drain in the middle of the room."
-    }
-    else if (
-      move === "look at " + paste + " paste" ||
-      move === "look at the " + paste + " paste" ||
-      move === "inspect " + paste + " paste" ||
-      move === "inspect the " + paste + " paste" ||
-      move === "look at paste" ||
-      move === "look at the paste" ||
-      move === "inspect paste" ||
-      move === "inspect the paste") {
-      response = "It's definitely old."
-    }
-    else if (
-      move === "look at back wall" ||
-      move === "look at the back wall" ||
-      move === "inspect back wall" ||
-      move === "inspect the back wall") {
-      response = "Your comfy bed is there, with pillow and blanket. A bowl of old(ish) " + paste + " paste sits next to it."
-    }
-    else if (
-      move === "look at blue bird" ||
-      move === "look at bird" ||
-      move === "look at the bird" ||
-      move === "inspect blue bird" ||
-      move === "inspect bird" ||
-      move === "inspect the bird") {
-      response = "It’s song gives you hope."
-    }
-    else if (
-      move === "look at chest" ||
-      move === "look at the chest" ||
-      move === "inspect chest" ||
-      move === "inspect the chest") {
-      response = "It's a small chest. It doesn't appear to be locked."
-    }
-    else if (
-      move === "look at left wall" ||
-      move === "look at the left wall") {
-      response = "You see a chest and bucket."
-    }
-    else if (
-      move === "look at front wall" ||
-      move === "look at the front wall" ||
-      move === "look at wall" ||
-      move === "look at the wall" ||
-      move === "inspect front wall" ||
-      move === "inspect the front wall" ||
-      move === "inspect wall" ||
-      move === "inspect the wall") {
-      response = "The front wall has a door, and through the bars you see a trail of large ants and a key on the floor out of reach."
-    }
-    else if (
-      move === "look at right wall" ||
-      move === "look at the right wall" ||
-      move === "inspect right wall" ||
-      move === "inspect the right wall") {
-      response = "There’s a window with a floor on the sill."
-    }
-    else if (
-      move === "look at room" ||
-      move === "look at the room" ||
-      move === "look around" ||
-      move === "look around room" ||
-      move === "look around the room" ||
-      move === "look at walls" ||
-      move === "look at the walls" ||
-      move === "where am I" ||
-      move === "inspect room" ||
-      move === "inspect the room" ||
-      move === "inspect walls" ||
-      move === "inspect the walls") {
-      response = "There’s a front wall with bars, back, left, and right wall. That front wall looks pretty interesting."
-    }
-    else if (
-      move === "look at window" ||
-      move === "look at the window" ||
-      move === "look through window" ||
-      move === "look through the window" ||
-      move === "look out window" ||
-      move === "look out the window" ||
-      move === "inspect window" ||
-      move === "inspect the window") {
-      response = "There's a dense forest. You can see a blue bird (<a href='http://twitter.com/lilt_bird' target='_blank'>@lilt_bird</a>) tweeting."
-    }
-    // open options
-    else if (
-      move === "open chest" ||
-      move === "open the chest") {
-      toggle[0].status = true; //chestopen
-      response = "There's a coin in it."
-    }
-    else if (
-      move === "open door" ||
-      move === "open the door" ||
-      move === "use key on door" ||
-      move === "use key with door" ||
-      move === "use the key on the door" ||
-      move === "use the key with the door") {
-      if (toggle[4].status === true) { //keyacquired
-        response = "You open the door and step outside. To be continued..."
+  // init moves
+  var moves = [];
+  // init replied
+  var replied = false;
+  // get moves from Parse
+  var Moves = Parse.Object.extend("Moves");
+  var query = new Parse.Query(Moves).limit(1000);
+  query.find({
+    success: function(ms) {
+      console.log("Successfully retrieved " + ms.length + " moves.");
+      // loop through moves
+      for (var i in ms) {
+        // assign current move to m
+        m = ms[i];
+        // if user entry matches move AND current position matches required position AND condition is true (like playinglilt or chestopen), continue - otherwise try next move
+        if (move === m.get('move') && position === m.get('position') && interactions[m.get('condition')].status === true) {
+          // reply and set replied to true
+          reply('info', '@familiarlilt ' + m.get('response'));
+          replied = true;
+          // if this move triggers an interaction, trigger it
+          if (m.get('trigger') !== undefined) {
+            interactions[m.get('trigger')].status = true;
+          }
+          // if they enter 'start' at start, change position - janky right now, probably should become a column in Moves similar to trigger
+          if (move === "start" && position === "start") {
+            position = "cell";
+          }
+        }
       }
-      else {
-        response = "Surprise, no can do."
+      if (replied === false) {
+        // if no move was valid, reply with one of these error messages
+        var response_options = ["You can't do that.", "That can't be done.", "Didn't work.", "Oops, can't do that.", "Sorry, you can't do that.", "That didn't work.", "Try something else.", "Sorry, you'll have to try something else.", "Oops, didn't work.", "Oops, try something else.", "Nice try, but you can't do that.", "Nice try, but that didn't work."];
+        reply('info', '@familiarlilt ' + response_options[(Math.floor(Math.random() * response_options.length))]);
       }
+    },
+    error: function(error) {
+      console.log("Error: " + error.code + " " + error.message);
     }
-    // pick up options
-    else if (
-      move === "pick up ants" ||
-      move === "pick up ant" ||
-      move === "pick up an ant" ||
-      move === "take ants" ||
-      move === "take ant" ||
-      move === "take an ant" ||
-      move === "grab ants" ||
-      move === "grab ant" ||
-      move === "grab an ant") {
-      response = "They bite you. You drop it."
-    }
-    else if (
-      move === "pick up bucket" ||
-      move === "pick up the bucket" ||
-      move === "take bucket" ||
-      move === "take the bucket" ||
-      move === "grab bucket" ||
-      move === "grab the bucket") {
-      response = "The stench is overwhelming, you drop it."
-    }
-    else if (
-      move === "pick up coin" ||
-      move === "pick up the coin" ||
-      move === "take coin" ||
-      move === "take the coin" ||
-      move === "grab coin" ||
-      move === "grab the coin") {
-      if (toggle[0].status === true) { //chestopen
-        toggle[1].status = true; //coinacquired - only if you pick up the coin after chest is open
-        response = "Nice."
-      }
-      else {
-        response = "You can't do that."
-      }
-    }
-    else if (
-      move === "pick up key" ||
-      move === "pick up the key" ||
-      move === "take key" ||
-      move === "take the key" ||
-      move === "grab key" ||
-      move === "grab the key") {
-      if (toggle[3].status === true) { //keypasted
-        toggle[4].status = true; //keyacquired - only if you pick up the key after it's been pasted
-        response = "You grab the key right before it gets carried down the drain."
-      }
-      else {
-        response = "It’s just out of reach."
-      }
-    }
-    // use
-    else if (
-      move === "use bed" ||
-      move === "use the bed" ||
-      move === "sleep" ||
-      move === "sleep in bed" ||
-      move === "sleep in the bed") {
-      response = "You don’t feel tired. You just woke up."
-    }
-    // go through options
-    else if (
-      move === "go through window" ||
-      move === "go through the window") {
-      response = "You are much larger than the window."
-    }
-    // talk to options
-    else if (
-      move === "talk to ants" ||
-      move === "talk to the ants") {
-      response = "...You are lonely."
-    }
-    // eat options
-    else if (
-      move === "eat " + paste + " paste" ||
-      move === "eat the " + paste + " paste" ||
-      move === "eat some " + paste + " paste" ||
-      move === "eat paste" ||
-      move === "eat the paste" ||
-      move === "eat some paste") {
-      response = "You eat it, but it’s so bad you spit it out. A few ants are attracted to the smell."
-    }
-    // use options for paste
-    // use on ants
-    else if (
-      move === "use " + paste + " paste on ants" ||
-      move === "use " + paste + " paste with ants" ||
-      move === "use the " + paste + " paste on the ants" ||
-      move === "use the " + paste + " paste with the ants" ||
-      move === "use paste on ants" ||
-      move === "use paste with ants" ||
-      move === "use the paste on the ants" ||
-      move === "use the paste with the ants") {
-      response = "They like it. They carry it down the drain. They’re basically having an ant party."
-    }
-    // use on drain
-    else if (
-      move === "use " + paste + " paste on drain" ||
-      move === "put " + paste + " paste in drain" ||
-      move === "use the " + paste + " paste on the drain" ||
-      move === "use the " + paste + " paste with the drain" ||
-      move === "use paste on drain" ||
-      move === "put paste in drain" ||
-      move === "use the paste on the drain" ||
-      move === "use the paste with the drain") {
-      response = "Don’t be wasteful."
-    }
-    // use on key
-    else if (
-      move === "use " + paste + " paste on key" ||
-      move === "put " + paste + " paste on key" ||
-      move === "use " + paste + " paste with key" ||
-      move === "use the " + paste + " paste on the key" ||
-      move === "use the " + paste + " paste with the key" ||
-      move === "throw " + paste + " paste at key" ||
-      move === "throw the " + paste + " paste at the key" ||
-      move === "use paste on key" ||
-      move === "put paste on key" ||
-      move === "use paste with key" ||
-      move === "use the paste on the key" ||
-      move === "use the paste with the key" ||
-      move === "throw paste at key" ||
-      move === "throw the paste at the key") {
-      toggle[3].status = true; //keypasted
-      response = "The paste you lobbed at the key covers it. The ants grab it and start carrying it over to the drain with their food."
-    }
-    // use on right wall
-    else if (
-      move === "use " + paste + " paste on right wall" ||
-      move === "use " + paste + " paste on left wall" ||
-      move === "use " + paste + " paste on back wall" ||
-      move === "use " + paste + " paste on wall" ||
-      move === "use the " + paste + " paste on a wall" ||
-      move === "use the " + paste + " paste on the walls" ||
-      move === "use paste on right wall" ||
-      move === "use paste on left wall" ||
-      move === "use paste on back wall" ||
-      move === "use paste on wall" ||
-      move === "use the paste on a wall" ||
-      move === "use the paste on the walls" ||
-      move === "throw " + paste + " paste") {
-      response = "That was definitely an improvement to the wall."
-    }
-    // use options for coin
-    // use on door
-    else if (
-      move === "use coin on door" ||
-      move === "use coin with door" ||
-      move === "use the coin on the door" ||
-      move === "use the coin with the door") {
-      if (toggle[1].status === true) { //coinacquired
-        toggle[2].status = true; //coinbent
-        response = "The coin is now bent."
-      }
-      else {
-        response = "You don't have a coin."
-      }
-    }
-    else {
-      var response_options = ["You can't do that.", "That can't be done.", "Didn't work.", "Oops, can't do that.", "Sorry, you can't do that.", "That didn't work.", "Try something else.", "Sorry, you'll have to try something else.", "Oops, didn't work.", "Oops, try something else.", "Nice try, but you can't do that.", "Nice try, but that didn't work."];
-      response = response_options[(Math.floor(Math.random() * response_options.length))];
-    }
-
-  }
-
-  else {
-    response = "You should not be here."
-  };
+  });
 
   // stores tweet
   var dimensions = {
@@ -373,17 +98,14 @@ $( "#tweet" ).click(function() {
 
   // logs tweet
   reply('', '@user ' + tweet)
-  // logs response
-  reply('info', '@familiarlilt ' + response);
   // clears tweet
   $('#move').val('');
 
   // update cookies
-  for (var i in toggle) {
-    Cookies.set(toggle[i].action, toggle[i].status)
+  for (var i in interactions) {
+    Cookies.set(interactions[i].action, interactions[i].status)
   }
   Cookies.set('position', position);
-  Cookies.set('paste', paste);
 });
 
 // runs click function when "enter" key is pressed
@@ -395,10 +117,9 @@ $("#move").keyup(function(e){
 
 // reset button, deletes cookie & refreshes page
 $("#reset").click(function() {
-  for (var i in toggle) {
-    Cookies.remove(toggle[i].action)
+  for (var i in interactions) {
+    Cookies.remove(interactions[i].action)
   };
   Cookies.remove('position');
-  Cookies.remove('paste');
   location.reload()
 });
