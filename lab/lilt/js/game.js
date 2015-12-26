@@ -71,18 +71,34 @@ $( "#tweet" ).click(function() {
   query.find({
     success: function(ms) {
       console.log("Successfully retrieved " + ms.length + " moves.");
+      var condition = 0;
       // loop through moves
       for (var i in ms) {
         // assign current move to m
         m = ms[i];
+        // if user entry matches move AND current position matches required position AND condition is true (like playinglilt or chestopen), replace condition with new highest level condition - otherwise try next move
+        if (move === m.get('move') && position === m.get('position') && interactions[m.get('condition')].status === true) {
+          if (m.get('condition') > condition) {
+            condition = m.get('condition')
+          }
+        }
+      }
+      for (var i in ms) {
+        // assign current move to m
+        m = ms[i];
         // if user entry matches move AND current position matches required position AND condition is true (like playinglilt or chestopen), continue - otherwise try next move
-        if (move === m.get('move') && position === m.get('position') && interactions[m.get('condition')].status === true) { // THIS NEEDS FIXING: if a move has two possible conditions (playinglilt/chestopen), game will reply both - maybe need an off state for objects? like chestclosed. or add "priority" row - display response with highest priority
-          console.log(move + ", " + position + ", " + interactions[m.get('condition')].status);
+        if (move === m.get('move') && position === m.get('position') && condition === m.get('condition')) {
           // reply and set replied to true
           reply('info', '@familiarlilt ' + m.get('response'));
           replied = true;
           // if this move triggers an interaction, trigger it
-          interactions[m.get('trigger')].status = true;
+          if (m.get('trigger') !== undefined) {
+            interactions[m.get('trigger')].status = true;
+          }
+          // if this move halts an interaction, halt it
+          if (m.get('halt') !== undefined) {
+            interactions[m.get('halt')].status = false;
+          }
           // if they enter 'start' at start, change position - janky right now, probably should become a column in Moves similar to trigger
           if (move === "start" && position === "start") {
             position = "cell";
