@@ -1,10 +1,14 @@
 // PARSE
 Parse.initialize("Beyi6l08p3QphWjpryXqnF66UN41wU7SFBwhFvQX", "FZmRAeAj3PRXFWiTY4C5KEWBwQgRLFchWX4uhACZ");
+// get data from Parse
+var Interactions = Parse.Object.extend("Interactions");
+var intsquery = new Parse.Query(Interactions).limit(1000);
+var Moves = Parse.Object.extend("Moves");
+var movesquery = new Parse.Query(Moves).limit(1000);
+
 // sets up interactions
 var interactions = [];
-var Interactions = Parse.Object.extend("Interactions");
-var query = new Parse.Query(Interactions).limit(1000);
-query.find({
+intsquery.find({
   success: function(ints) {
     console.log("Successfully retrieved " + ints.length + " interactions.");
     // create interactions array from Interactions in Parse
@@ -22,6 +26,7 @@ query.find({
     console.log("Error: " + error.code + " " + error.message);
   }
 });
+
 // if no cookie, create it and set position, else get the position
 if (!(Cookies.get('position'))) {
   var position = "start";
@@ -63,50 +68,44 @@ $( "#tweet" ).click(function() {
 
   // init moves
   var moves = [];
-  // init replied
-  var replied = false;
   // get moves from Parse
-  var Moves = Parse.Object.extend("Moves");
-  var query = new Parse.Query(Moves).limit(1000);
-  query.find({
+  movesquery.find({
     success: function(ms) {
       console.log("Successfully retrieved " + ms.length + " moves.");
       var condition = 0;
+      var response = "";
       // loop through moves
       for (var i in ms) {
         // assign current move to m
         m = ms[i];
-        // if user entry matches move AND current position matches required position AND condition is true (like playinglilt or chestopen), replace condition with new highest level condition - otherwise try next move
+        // if user entry matches move AND current position matches required position AND condition is true (like playinglilt or chestopen), get all info for move with highest condition. not sure if this makes sense, but it works so far
         if (move === m.get('move') && position === m.get('position') && interactions[m.get('condition')].status === true) {
-          if (m.get('condition') > condition) {
-            condition = m.get('condition')
+          if (m.get('condition') >= condition) {
+            condition = m.get('condition');
+            response = m.get('response');
+            var trigger = m.get('trigger');
+            var halt = m.get('halt')
           }
         }
       }
-      for (var i in ms) {
-        // assign current move to m
-        m = ms[i];
-        // if user entry matches move AND current position matches required position AND condition is true (like playinglilt or chestopen), continue - otherwise try next move
-        if (move === m.get('move') && position === m.get('position') && condition === m.get('condition')) {
-          // reply and set replied to true
-          reply('info', '@familiarlilt ' + m.get('response'));
-          replied = true;
-          // if this move triggers an interaction, trigger it
-          if (m.get('trigger') !== undefined) {
-            interactions[m.get('trigger')].status = true;
-          }
-          // if this move halts an interaction, halt it
-          if (m.get('halt') !== undefined) {
-            interactions[m.get('halt')].status = false;
-          }
-          // if they enter 'start' at start, change position - janky right now, probably should become a column in Moves similar to trigger
-          if (move === "start" && position === "start") {
-            position = "cell";
-          }
+      // if there is a response for their move, reply
+      if (response !== "") {
+        reply('info', '@familiarlilt ' + response);
+        // if this move triggers an interaction, trigger it
+        if (trigger !== undefined) {
+          interactions[trigger].status = true;
+        }
+        // if this move halts an interaction, halt it
+        if (halt !== undefined) {
+          interactions[halt].status = false;
+        }
+        // if they enter 'start' at start, change position - janky right now, probably should become a column in Moves similar to trigger
+        if (move === "start" && position === "start") {
+          position = "cell";
         }
       }
-      if (replied === false) {
-        // if no move was valid, reply with one of these error messages
+      // if no move was valid, reply with one of these error messages
+      else {
         var response_options = ["You can't do that.", "That can't be done.", "Didn't work.", "Oops, can't do that.", "Sorry, you can't do that.", "That didn't work.", "Try something else.", "Sorry, you'll have to try something else.", "Oops, didn't work.", "Oops, try something else.", "Nice try, but you can't do that.", "Nice try, but that didn't work."];
         reply('info', '@familiarlilt ' + response_options[(Math.floor(Math.random() * response_options.length))]);
       }
