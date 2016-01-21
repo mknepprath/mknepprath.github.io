@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<!-- browser-sync start --server --files "*.html, css/*.css, js/*.js" -->
+
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Lilt Admin</title>
+
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/index.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//www.parsecdn.com/js/parse-1.6.12.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-xs-12 col-md-4">
+          <div class="form-group">
+            <select class="form-control" name="action" id="action">
+              <option value="custom">custom</option>
+              <option value="look at">look at</option>
+              <option value="pick up">pick up</option>
+              <option value="use">use</option>
+              <option value="open">open</option>
+              <option value="close">close</option>
+              <option value="talk to">talk to</option>
+              <option value="push">push</option>
+              <option value="give">give</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Custom action:</label>
+            <input type="text" class="form-control" id="custom" />
+          </div>
+          <div class="form-group">
+            <label>Object:</label>
+            <input type="text" class="form-control" id="object" />
+          </div>
+          <div class="form-group">
+            <label>Position:</label>
+            <input type="text" class="form-control" id="location" />
+          </div>
+          <div class="form-group">
+            <label>Response:</label>
+            <input type="text" class="form-control" id="response" />
+          </div>
+          <div class="form-group">
+            <label>Condition:</label>
+            <input type="number" class="form-control" id="condition" />
+          </div>
+          <div class="form-group">
+            <label>Trigger:</label>
+            <input type="number" class="form-control" id="trigger" />
+          </div>
+          <div class="form-group">
+            <label>Halt:</label>
+            <input type="number" class="form-control" id="halt" />
+          </div>
+
+          <button class="btn btn-primary" id="submit">Submit</button>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <ul class="list-group intslist"></ul>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <ul class="list-group command"></ul>
+        </div>
+
+      </div>
+    </div>
+
+    <script src="/js/admin.js"></script>
+    <script src="/js/functions.js"></script>
+
+  </body>
+
+</html>
