@@ -50,7 +50,7 @@ else {
     reply('warning', 'Tweet &quot;Start&quot; to play.')
   }
   else {
-    reply('warning', 'Current position: ' + Cookies.get('position'))
+    reply('warning', 'You are currently located at ' + Cookies.get('position') + ".")
   }
 };
 
@@ -110,7 +110,7 @@ $( "#tweet" ).click(function() {
   }
   // if no move was valid, reply with one of these error messages
   else {
-    var response_options = ["You can't do that.", "That can't be done.", "Didn't work.", "Oops, can't do that.", "Sorry, you can't do that.", "That didn't work.", "Try something else.", "Sorry, you'll have to try something else.", "Oops, didn't work.", "Oops, try something else.", "Nice try, but you can't do that.", "Nice try, but that didn't work."];
+    var response_options = ["You can't do that.", "That can't be done.", "Didn't work.", "Oops, can't do that.", "Sorry, you can't do that.", "That didn't work.", "Try something else.", "Sorry, you'll have to try something else.", "Oops, didn't work.", "Oops, try something else.", "Nice try, but you can't do that.", "Nice try, but that didn't work.", "Try something else, that didn't seem to work."];
     reply('info', '@familiarlilt ' + response_options[(Math.floor(Math.random() * response_options.length))]);
   }
   // update cookies
