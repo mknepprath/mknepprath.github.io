@@ -68,14 +68,6 @@ $( "#tweet" ).click(function() {
   // clears tweet
   $('#move').val('');
 
-  // stores tweet
-  var dimensions = {
-    // Define ranges to bucket data points into meaningful segments
-    tweet: tweet,
-  };
-  // Send the dimensions to Parse along with the 'search' event
-  Parse.Analytics.track('tweets', dimensions);
-
   var condition = 0;
   var response = "";
   // loop through moves
