@@ -430,6 +430,7 @@ nav {
     border-radius: 3px;
     padding: 12px 24px 8px;
     display: inline-block;
+    transition: .5s;
     &:hover, &:active {
       color: $white;
       background: $accentColor;
