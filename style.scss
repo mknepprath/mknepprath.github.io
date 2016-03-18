@@ -78,6 +78,7 @@ a {
   color: $accentColor;
   text-decoration: none;
 	cursor: pointer;
+  transition: .2s;
   &:hover, &:active {
     color: mix($accentColor, $white, 70%);
   }
@@ -430,7 +431,7 @@ nav {
     border-radius: 3px;
     padding: 12px 24px 8px;
     display: inline-block;
-    transition: .5s;
+    transition: .2s;
     &:hover, &:active {
       color: $white;
       background: $accentColor;
