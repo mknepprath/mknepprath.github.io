@@ -285,55 +285,6 @@ nav {
 }
 
 //
-// .dribbble
-//
-
-.dribbble-shot {
-  width: 25%;
-  display: inline-block;
-  position: relative;
-  img {
-    width: 100%;
-    vertical-align: top;
-  }
-  @include mobile {
-    width: 50%;
-  }
-}
-
-.shot-info {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: 100%;
-  background: rgba(38,216,210,.8);
-  display: none;
-  color: white;
-  overflow: hidden;
-  h3 {
-    color: $white;
-    margin: 20px 25px;
-  }
-}
-
-.dribbble-shot:hover .shot-info {
-  display:block;
-}
-
-.possst {
-  padding: 5px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 3px;
-  border: 1px solid #eee;
-}
-
-.nm {
-  margin: 0;
-}
-
-//
 // .main
 //
 
