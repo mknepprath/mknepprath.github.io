@@ -11,7 +11,7 @@ images:
     title: Design Prompts
 ---
 
-<img class="aligncenter" style="border:1px solid #e8e8e8" src="/images/designprompts.jpg" alt="design prompts" />
+<img class="aligncenter imgborder" src="/images/designprompts.jpg" alt="design prompts" />
 
 [Design Prompts](http://www.twitter.com/designprompts/) is a service dedicated to getting you past creative roadblocks. To get past doing nothing, sometimes you just have to do *something*. Design Prompts posts a new word every day to rekindle your creative fire.
 

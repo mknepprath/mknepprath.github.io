@@ -119,6 +119,11 @@ img {
   margin: 0 auto;
 }
 
+.imgborder {
+  border: 1px solid $lightGray;
+  border-radius: 4px;
+}
+
 .button {
     text-align: center;
   a {
