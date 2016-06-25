@@ -53,8 +53,8 @@ Until now.
 	<img class="imgborder" src="/images/pixel-portraits/vader.gif" alt="pixel portrait of vader" />
 </p>
 
-<img class="aligncenter possst" src="/images/pixel-portraits/large-burton.png" alt="pixel portrait of burton" />
-<img class="aligncenter possst" src="/images/pixel-portraits/large-jobs.png" alt="pixel portrait of jobs" />
-<img class="aligncenter possst" src="/images/pixel-portraits/large-kubrik.png" alt="pixel portrait of kubrik" />
-<img class="aligncenter possst" src="/images/pixel-portraits/large-nolan.png" alt="pixel portrait of nolan" />
-<img class="aligncenter possst" src="/images/pixel-portraits/large-vader.png" alt="pixel portrait of vader" />
+<img class="aligncenter imgborder" src="/images/pixel-portraits/large-burton.png" alt="pixel portrait of burton" />
+<img class="aligncenter imgborder" src="/images/pixel-portraits/large-jobs.png" alt="pixel portrait of jobs" />
+<img class="aligncenter imgborder" src="/images/pixel-portraits/large-kubrik.png" alt="pixel portrait of kubrik" />
+<img class="aligncenter imgborder" src="/images/pixel-portraits/large-nolan.png" alt="pixel portrait of nolan" />
+<img class="aligncenter imgborder" src="/images/pixel-portraits/large-vader.png" alt="pixel portrait of vader" />
