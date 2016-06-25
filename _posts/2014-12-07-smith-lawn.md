@@ -5,7 +5,7 @@ subtitle: Website Design & Development
 
 images:
 
-  - url: /images/smithlawn/smithlawn-feat.png
+  - url: /images/featured/smithlawn.png
     alt: web development
     title: web development
 ---

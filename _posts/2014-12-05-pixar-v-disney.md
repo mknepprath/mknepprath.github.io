@@ -6,7 +6,7 @@ published: false
 
 images:
 
-  - url: /images/pixarvdisney-feat.png
+  - url: /images/featured/pixarvdisney.png
     alt: Pixar vs Disney
     title: Pixar vs Disney
 ---
@@ -15,10 +15,10 @@ I've had a long-standing theory that when Disney acquired Pixar, they began to s
 
 On the other hand, Frozen was the first Disney film to surpass Pixar's counterpart that year, Monsters University, in the box office. So... we'll see what happens!
 
-<img class="aligncenter" src="/images/pixarvdisney-01.jpg" alt="pixar vs disney by critic ratings" />
+<img class="aligncenter" src="/images/pixarvdisney/01.jpg" alt="pixar vs disney by critic ratings" />
 
-<img class="aligncenter" src="/images/pixarvdisney-02.jpg" alt="pixar vs disney by audience ratings" />
+<img class="aligncenter" src="/images/pixarvdisney/02.jpg" alt="pixar vs disney by audience ratings" />
 
-<img class="aligncenter" src="/images/pixarvdisney-03.jpg" alt="pixar vs disney by worldwide total gross" />
+<img class="aligncenter" src="/images/pixarvdisney/03.jpg" alt="pixar vs disney by worldwide total gross" />
 
-<img class="aligncenter" src="/images/pixarvdisney-04.jpg" alt="pixar vs disney by domestic total gross" />
+<img class="aligncenter" src="/images/pixarvdisney/04.jpg" alt="pixar vs disney by domestic total gross" />

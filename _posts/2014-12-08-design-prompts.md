@@ -6,7 +6,7 @@ twitterurl: http://twitter.com/designprompts
 
 images:
 
-  - url: /images/designprompts-feat.png
+  - url: /images/featured/designprompts.png
     alt: Design Prompts
     title: Design Prompts
 ---
