@@ -10,7 +10,7 @@ images:
     title: Tardy Critic
 ---
 
-<img class="aligncenter" style="border:1px solid #e8e8e8" src="/images/tardycritic.jpg" alt="tardy critic" />
+<img class="aligncenter" src="/images/tardycritic.jpg" alt="tardy critic" />
 
 The following tweet quickly sparked [Tardy Critic](http://www.tardycritic.com/), a site where films are reviewed ten years after their original release date.
 
