@@ -129,7 +129,11 @@ img {
   color: #fff;
   background: #61C5B4;
   border-radius: 20px;
-  padding: 5px 15px;
+  padding: 5px 10px;
+}
+
+.chat.bl {
+  background: $gray;
 }
 
 .fluid-width-video-wrapper {
