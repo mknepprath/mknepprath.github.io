@@ -12,7 +12,7 @@ Husband. Father. Almost Canadian. Front-End Developer at [WHCC](http://www.whcc.
   - [Design Prompts + Dribbble Series](https://dribbble.com/mknepprath/buckets/257652-Design-Prompts-Series)
   - [Tardy Critic](http://tardycritic.com)
   - [21st Century Mankato](https://twitter.com/21stCenturyKato)
-  - Lilt ([Part 1](https://medium.com/@mknepprath/creating-lilt-part-1-2e0d1f699676#.al1u4fi2k), [Part 2](https://medium.com/@mknepprath/creating-lilt-part-2-c5f8c5d391ab#.6zhtc2ex5), [Part 3](https://medium.com/@mknepprath/creating-lilt-part-3-1b0d0b3b3977#.jizqu0133), [Part 4](https://medium.com/@mknepprath/creating-lilt-part-4-abee81209c99#.51cd2ik1f), [Part 5](https://medium.com/@mknepprath/creating-lilt-part-5-9d904f3f6f89#.ffd60c18m))
+  - [Lilt](https://twitter.com/familiarlilt) ([Part 1](https://medium.com/@mknepprath/creating-lilt-part-1-2e0d1f699676#.al1u4fi2k), [Part 2](https://medium.com/@mknepprath/creating-lilt-part-2-c5f8c5d391ab#.6zhtc2ex5), [Part 3](https://medium.com/@mknepprath/creating-lilt-part-3-1b0d0b3b3977#.jizqu0133), [Part 4](https://medium.com/@mknepprath/creating-lilt-part-4-abee81209c99#.51cd2ik1f), [Part 5](https://medium.com/@mknepprath/creating-lilt-part-5-9d904f3f6f89#.ffd60c18m))
 
 ### Contact me
 
