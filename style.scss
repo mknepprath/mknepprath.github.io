@@ -7,6 +7,7 @@
 
 @import "_reset";
 @import "_variables";
+@import "_animate";
 @import url(http://fonts.googleapis.com/css?family=Muli:300,400,300italic|Montserrat:400,700);
 // Syntax highlighting @import is at the bottom of this file
 
@@ -498,6 +499,5 @@ footer a svg {
   font-weight: 500;
 }
 
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+// At bottom so it doesn't bloat up the top of the CSS file
 @import "_highlights";
