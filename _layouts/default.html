@@ -16,6 +16,7 @@
     <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="shortcut icon" href="/images/favicon.ico">
     <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
@@ -49,14 +50,6 @@
       {% include footer.html %}
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-    <script src="/js/fitvids.js"></script>
-    <script>
-      $(document).ready(function(){
-        $(".container").fitVids();
-      });
-    </script>
-
+    {% include scripts.html %}
   </body>
 </html>
