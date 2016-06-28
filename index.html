@@ -5,20 +5,17 @@ layout: home
 <div class="posts">
   {% for post in site.posts %}
     <article class="post">
-
       <div class="col one-half">
         {% assign image = post.images[0] %}
         {% include image.html image=image %}
       </div>
-
       <div class="col one-half">
         <h3>{{ post.subtitle }}</h3>
         <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-        <div class="read-more-container">
+        <div class="see-work-container">
           <a href="{{ site.baseurl }}{{ post.url }}" class="see-work">See Work</a>
         </div>
       </div>
-
     </article>
   {% endfor %}
 </div>

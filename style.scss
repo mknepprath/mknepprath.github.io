@@ -349,7 +349,7 @@ nav {
     &:nth-child(even) {
       .col {
         float: right;
-        h1, h3, .read-more-container {
+        h1, h3, .see-work-container {
           text-align: right;
           @include mobile {
             text-align: center;
@@ -386,20 +386,8 @@ nav {
     margin-top: 10px;
   }
 
-  .read-more-container {
+  .see-work-container {
     width: 100%;
-  }
-
-  .read-more {
-    color: $white;
-    background: $accentColor;
-    border-radius: 3px;
-    padding: 0px 10px;
-    margin-top: 5px;
-    display: inline-block;
-    &:hover, &:active {
-      background: mix($accentColor, $white, 70%);
-    }
   }
 
   .see-work {
@@ -409,7 +397,7 @@ nav {
     text-transform: uppercase;
     border: 2px solid $accentColor;
     border-radius: 3px;
-    padding: 12px 24px 8px;
+    padding: 12px 24px 10px;
     display: inline-block;
     transition: .1s ease-in;
     &:hover, &:active {
