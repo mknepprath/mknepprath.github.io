@@ -30,4 +30,6 @@ Follow the Twitter account, [@tardycritic](http://twitter.com/tardycritic), to g
 
 <blockquote class="twitter-tweet" lang="en"><p>Check out our review of the psych-dram-ance-tery, Wicker Park! <a href="http://t.co/Q8Q1M8oXlh">http://t.co/Q8Q1M8oXlh</a> by <a href="https://twitter.com/MrBobDobolina">@MrBobDobolina</a> <a href="https://twitter.com/hashtag/wickerpark?src=hash">#wickerpark</a></p>&mdash; Tardy Critic (@tardycritic) <a href="https://twitter.com/tardycritic/status/507281846778863617">September 3, 2014</a></blockquote>
 
+:movie_camera:
+
 <!--<div class="button"><a href="http://www.twitter.com/tardycritic/">Tardy Critic on Twitter →</a></div>-->

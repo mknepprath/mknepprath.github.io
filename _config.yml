@@ -63,6 +63,10 @@ sass:
 
 # Use the following plug-ins
 
+# Gems
+gems:
+    - jemoji
+
 # Exclude these files from your production _site
 exclude:
     - Gemfile
