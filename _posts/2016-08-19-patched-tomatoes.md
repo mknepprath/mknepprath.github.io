@@ -11,7 +11,7 @@ images:
     title: Patched Tomatoes
 ---
 
-<img class="aligncenter" src="/images/featured/patchedtomatoes.png" alt="patched tomatoes" />
+<img class="aligncenter" src="/images/featured/patchedtomatoes.png" alt="patched tomatoes" width="300px" />
 
 Quick disclaimer, no, I didn't sign [any petitions](https://www.change.org/p/don-t-listen-to-film-criticism) aiming to take down Rotten Tomatoes. I do, however, have some [gripes](http://www.goldman.gripe/) with how their official Tomatometer score is calculated - so I built a [Chrome Extension](https://chrome.google.com/webstore/detail/patched-tomatoes/daceaaccoiggipikdodkejceenipddop) to fix it.
 
