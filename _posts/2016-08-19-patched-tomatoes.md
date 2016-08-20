@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Patched Tomatoes
-subtitle: Fixes Rotten Tomatoes
+subtitle: Chrome Extension
 published: true
 
 images:
