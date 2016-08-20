@@ -24,8 +24,8 @@ After using this extension for a few days, I've noticed a few interesting things
 - Films that get really low or really high scores are generally affected more than those closer to 50-60%.
 - Films can flip between fresh and rotten due to this extension. For instance, Man of Steel and Star Wars: Episode I - The Phantom Menace become fresh, while Bad Moms goes rotten.
 
-<img class="aligncenter" src="/images/patched-tomatoes/rt-1.png" alt="rotten tomatoes - the secret life of pets" />
+<img class="aligncenter imgborder" src="/images/patched-tomatoes/rt-1.png" alt="rotten tomatoes - the secret life of pets" />
 
-<img class="aligncenter" src="/images/patched-tomatoes/rt-2.png" alt="rotten tomatoes - bad moms" />
+<img class="aligncenter imgborder" src="/images/patched-tomatoes/rt-2.png" alt="rotten tomatoes - bad moms" />
 
-<img class="aligncenter" src="/images/patched-tomatoes/rt-3.png" alt="rotten tomatoes - suicide squad" />
+<img class="aligncenter imgborder" src="/images/patched-tomatoes/rt-3.png" alt="rotten tomatoes - suicide squad" />
