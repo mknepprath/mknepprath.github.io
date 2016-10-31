@@ -26,5 +26,5 @@ I've been featured in the following podcasts...
 [34: PokeRapper.com]:http://5by5.tv/isometric/34
 [38: Invite Him Over to Play Street Fighter]:http://5by5.tv/isometric/38
 [148: WITH NATHANIEL DEAL]:http://shoptalkshow.com/episodes/148-nathaniel-deal/
-[24: Producer in the House](http://www.culturallyirrelevant.com/podcast/ep24)
-[51: I Value Tools.](https://spec.fm/podcasts/immutable/44360)
+[24: Producer in the House]:http://www.culturallyirrelevant.com/podcast/ep24
+[51: I Value Tools.]:https://spec.fm/podcasts/immutable/44360
