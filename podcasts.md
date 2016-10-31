@@ -3,7 +3,7 @@ layout: page
 title: Podcasts
 ---
 
-# Podcasts I'm Mentioned In
+I've been featured in the following podcasts...
 
 ### This One Podcast
   - Lots of episodes.
