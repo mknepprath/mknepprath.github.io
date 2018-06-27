@@ -30,7 +30,7 @@ body {
 .container {
   margin: 0 auto;
   max-width: 890px;
-  padding: 0 10px;
+  padding: 0 20px;
   width: 100%;
 }
 
@@ -247,6 +247,11 @@ img {
   }
 }
 
+.site-logo {
+  height: 34px;
+  margin-bottom: -7px;
+}
+
 .site-name {
   margin: 0;
   cursor: pointer;
@@ -289,6 +294,7 @@ nav {
     color: $white;
     text-align: right;
     letter-spacing: .8px;
+    font-weight: bold;
     &:hover, &:active {
       color: mix($accentColor, $white, 20%);
     }
