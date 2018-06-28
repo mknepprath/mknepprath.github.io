@@ -8,7 +8,6 @@
 @import "_reset";
 @import "_variables";
 @import "_animate";
-@import url(http://fonts.googleapis.com/css?family=Muli:300,400,300italic|Montserrat:400,700);
 // Syntax highlighting @import is at the bottom of this file
 
 /**************/
@@ -137,7 +136,6 @@ img {
   max-width: 360px;
   border-radius: 18px;
   padding: 6px 12px;
-  display: inline-block;
   float: right;
 }
 
@@ -156,7 +154,7 @@ img {
   a {
     color: $white;
     background: $accentColor;
-    border-radius: 3px;
+    border-radius: 4px;
     display: inline-block;
     padding:10px 20px;
     margin: 5px 0;
@@ -233,7 +231,7 @@ img {
   }
 
   img {
-    border-radius: 5px;
+    border-radius: 4px;
   }
 }
 
@@ -276,6 +274,14 @@ img {
   }
 }
 
+img.about {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  width: 300px;
+  height: 184px;
+  object-fit: cover;
+}
+
 nav {
   float: right;
   margin-top: 14px;
@@ -294,7 +300,7 @@ nav {
     color: $white;
     text-align: right;
     letter-spacing: .8px;
-    font-weight: bold;
+    font-weight: 500;
     &:hover, &:active {
       color: mix($accentColor, $white, 20%);
     }
@@ -333,16 +339,16 @@ nav {
       text-align: left;
       font-size: 50px;
       line-height: 1.1em;
-      margin: 0 0 30px 0;
+      margin: 0 0 26px 0;
       @include mobile {
         text-align: center;
       }
     }
 
     h3 {
-      text-transform: uppercase;
       color: #26D8D2;
       font-size: 16px;
+      font-weight: 500;
       margin: 0 0 15px 0;
 
     }
@@ -399,12 +405,10 @@ nav {
 
   .see-work {
     color: $accentColor;
-    font-size: 12px;
     font-weight: 700;
-    text-transform: uppercase;
-    border: 2px solid $accentColor;
-    border-radius: 3px;
-    padding: 12px 24px 10px;
+    border: 1px solid $accentColor;
+    border-radius: 4px;
+    padding: 12px 24px;
     display: inline-block;
     transition: .1s ease-in;
     &:hover, &:active {

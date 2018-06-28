@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Giant Portraits
-subtitle: College Projects
+subtitle: College projects
 
 images:
 

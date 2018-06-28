@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Patched Tomatoes
-subtitle: Chrome Extension
+subtitle: Chrome extension
 published: true
 
 images:

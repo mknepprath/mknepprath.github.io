@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Smith Lawn and Landscape
-subtitle: Website Design & Development
+subtitle: Website design & development
 
 images:
 

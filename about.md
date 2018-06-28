@@ -3,7 +3,9 @@ layout: page
 title: About
 ---
 
-Husband. Father. Almost Canadian. Front-End Developer at [WHCC](http://www.whcc.com/). I love the point at which technology and art converge: technology, design, film, video games, etc[.](http://mknepprath.com/gifs)
+<img class='about' src='/images/about.jpg' alt='photo of Michael Knepprath' />
+
+Husband. Father. Almost Canadian. Front-End Developer at [WHCC](http://www.whcc.com/). I love the point at which technology and art converge: technology, design, film, video games, etc[.](/gifs)
 
 ### Side Projects
 

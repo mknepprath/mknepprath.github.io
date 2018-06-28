@@ -16,7 +16,7 @@ $white: #fff;
 
 // Font stacks
 $headerfont: -apple-system, BlinkMacSystemFont, sans-serif;
-$bodyfont: "Muli", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$bodyfont: -apple-system, BlinkMacSystemFont, sans-serif;
 
 // Mobile breakpoints
 @mixin mobile {
