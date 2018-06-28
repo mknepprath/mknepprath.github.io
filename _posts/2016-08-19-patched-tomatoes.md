@@ -19,7 +19,7 @@ Under their current system, the score is, "the percentage of Approved Tomatomete
 
 After using this extension for a few days, I've noticed a few interesting things:
 
-- Films never receive a score of 100% - the highest I've seen is [94%](https://www.rottentomatoes.com/m/the_wizard_of_oz_1939). I would suggest, though, that this 94% is far more impressive than the original 100%, since this tells me that all critics gave it a rating of around 9.5/10. On the original system, I'd only be able to assume that all critic ratings were over a 6/10, which isn't nearly as precise.
+- Films never receive a score of 100% - the highest I've seen is [94%](https://www.rottentomatoes.com/m/the_wizard_of_oz_1939). I would suggest, though, that this 94% is far more impressive than the original 100%, since this tells me that all critics gave it a rating of around 9.4/10. On the original system, I'd only be able to assume that all critic ratings were over a 6/10, which isn't nearly as precise.
 - DC fans will be happy to know that most [recent DC films](https://www.rottentomatoes.com/m/superman_man_of_steel/) have a better score while using this extension. That being said, their new scores are still generally not that great.
 - Films that get really low or really high scores are generally affected more than those closer to 50-60%.
 - Films can flip between fresh and rotten due to this extension. For instance, Man of Steel and Star Wars: Episode I - The Phantom Menace become fresh, while Bad Moms goes rotten.
