@@ -7,7 +7,7 @@ title: About
 
 Husband. Father. Almost Canadian. Frontend Engineer at [WHCC](http://www.whcc.com/). I love the point at which technology and art converge: technology, design, film, video games, etc[.](/gifs)
 
-## Side Projects
+## Projects
 
   - [Movie Star](http://moviestarapp.com/)
   - [Design Prompts](https://twitter.com/designprompts)
