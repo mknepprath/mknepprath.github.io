@@ -280,6 +280,10 @@ img.about {
   width: 300px;
   height: 184px;
   object-fit: cover;
+
+  @include mobile {
+    width: 100%;
+  }
 }
 
 nav {
